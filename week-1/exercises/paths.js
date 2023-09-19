@@ -14,5 +14,9 @@ const lastSlashIndex = filePath.lastIndexOf("/");
 const base = filePath.slice(lastSlashIndex + 1);
 console.log(`The base part of ${filePath} is ${base}`);
 
+const filePathDir = "/home/user/dir/file.txt";
+const extPart = filePathDir.slice(lastSlashIndex + 1);
+console.log(`The external part of ${filePathDir} is ${extPart}`);
+
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
