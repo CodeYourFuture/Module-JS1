@@ -1,4 +1,13 @@
 const num = 58.4567;
+const holeNumberPart=Math.floor(num) -2;
+console.log(holeNumberPart);
+
+const decimalPart= num-Math.floor(num) ;
+console.log(decimalPart);
+
+const roundedNum=Math.round(num)-1;
+console.log(roundedNum)
+
 
 // You should look up Math functions for this exercise https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
