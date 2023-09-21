@@ -1,2 +1,4 @@
-const 12HourClockTime = "20:53";
-const 24hourClockTime = "08:53";
+const HourClockTime = "20:53";
+const hourClockTime = "08:53";
+console.log(hourClockTime);
+console.log(HourClockTime);
