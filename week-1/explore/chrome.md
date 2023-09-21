@@ -9,10 +9,18 @@ Let's try an example.
 
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
+alert('Hello world');
 
 What effect does calling the `alert` function have?
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
+const Myname=prompt('What is your name?');
+ console.log(Myname);
+
 What effect does calling the `prompt` function have?
+
+Display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.
+
 What is the return value of `prompt`?
+The text we added in the input field of the dialog box.
