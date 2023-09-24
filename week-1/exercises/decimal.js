@@ -1,11 +1,11 @@
-const num = 58.4567;
-const holeNumberPart=Math.floor(num) -2;
-console.log(holeNumberPart);
+const num = 56.4567;
+const wholeNumberPart=Math.floor(num);
+console.log(wholeNumberPart);
 
 const decimalPart= num-Math.floor(num) ;
 console.log(decimalPart);
 
-const roundedNum=Math.round(num)-1;
+const roundedNum=Math.round(num);
 console.log(roundedNum)
 
 
