@@ -4,7 +4,7 @@ const last4Digits = cardNumber.slice(-4);
 The slice() method is used with strings to extract a portion of the string, 
 but it cannot be used directly on a numeric value.*/
 // solution
-// Convert the card number to a string by enclosing it in quotes
+// Convert the card number to a string by enclosing the value of cardNumber variable in quotes ''
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
