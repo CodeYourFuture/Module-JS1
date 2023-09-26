@@ -8,3 +8,16 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function withVat(message, price) {
+  const vatMessage = `The price of your ${message} is £${price * 1.2}`;
+  return vatMessage;
+}
+
+const sportsEquipment = withVat("sports equipment", 50);
+const kitchenEquipment = withVat("kitchen equipment", 230);
+const bathroomEquipment = withVat("bathroom equipment", 80);
+
+console.log(sportsEquipment);
+console.log(kitchenEquipment);
+console.log(bathroomEquipment);
