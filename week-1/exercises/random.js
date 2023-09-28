@@ -3,6 +3,7 @@ const maximum = 100;
 
 const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
+
 console.log(num);
 console.log(Math.floor(num));
 console.log(Math.floor(maximum - minimum + 1));
