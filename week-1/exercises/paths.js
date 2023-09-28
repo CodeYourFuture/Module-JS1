@@ -13,16 +13,6 @@ const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
 const lastSlashIndex = filePath.lastIndexOf("/");
 const base = filePath.slice(lastSlashIndex + 1);
 console.log(`The base part of ${filePath} is ${base}`);
-//note for me in how to create variables>>>
-// let dir;
-// dir = filePath.slice(0, lastSlashIndex);
-
-// let ext;
-// if (dotIndex !== -1) {
-//   ext = base.slice(dotIndex + 1);
-// } else {
-//   ext = "";
-// }
 
 // Extract the "dir" part
 const dir = filePath.slice(0, lastSlashIndex);
