@@ -1,4 +1,4 @@
-const num = 58.4567;
+const num = 56.4567;
 
 // You should look up Math functions for this exercise https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
@@ -6,4 +6,10 @@ const num = 58.4567;
 // Create a variable called decimalPart and assign to it an expression that evaluates to 0.4567 ( the decimal part of num )
 // Create a variable called roundedNum and assign to it an expression that evaluates to 57 ( num rounded to the nearest whole number )
 
+const wholeNumberPart = Math.floor(num);
+const decimalPart = (num - Math.trunc(num)).toFixed(4);
+const roundedNum = Math.ceil(num);
 // Log your variables to the console to check your answers
+console.log(wholeNumberPart);
+console.log(decimalPart);
+console.log(roundedNum);
