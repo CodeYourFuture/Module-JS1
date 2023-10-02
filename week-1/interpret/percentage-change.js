@@ -19,12 +19,17 @@ console.log(`The percentage change is ${percentageChange}%`);
        1 in this line priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
     */
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-// 'Answer' the error is carPrice.replaceAll is not a function
+// 'Answer' the error is on carPrice.replaceAll
+/*
+To make the code more widely compatible, you can replace replaceAll with replace.
+The error encountering is likely related to the replaceAll method, which is not universally 
+supported in all JavaScript environments, particularly in older browsers or environments 
+that don't support ECMAScript 2021 (ES12).
+*/
 /* 1- in this line carPrice = Number(carPrice.replaceAll(",", "")); 
-   this is occurring because of it's trying to call a function that does not created nor referring 
-   to use a string method that doesn't exist in built-in JavaScript.
+   this is occurring because of it's trying to call a function that is not supported in all JavaScript environments
    This replaceAll() as I understand the purpose of this is to remove the comma, so we use replace 
-   method like this carPrice = Number(carPrice.replace(",", ""));
+   method like this carPrice = Number(carPrice.replace(",", ""));To make the code more widely compatible
    2 in this line too priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
    i get the same error so as I understand the purpose of this line to remove the comma we use
    replace method like this priceAfterOneYear = Number(priceAfterOneYear.replace(",", ""));
@@ -52,7 +57,9 @@ console.log(`The percentage change is ${percentageChange}%`);
 // e) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
 // 'Answer'
 /*
-  it's trying to call a function that does not created nor referring to use a string method that 
-  doesn't exist in built-in JavaScript.
-  the purpose of this expression is to remove the comma and convert the string representation of carPrice into numeric values suitable for mathematical operations.
+  it's trying to call a function that could invoke an error and it is likely related to the 
+  replaceAll method, which is not universally supported in all JavaScript environments
+  the purpose of this expression is to remove the comma and convert the string representation 
+  of carPrice into numeric values suitable for mathematical operations.
 */
+// note: "as I tested the replaceAll() method it works in another system without errors but in my system I get the error"

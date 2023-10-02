@@ -1,8 +1,7 @@
 // const age = 33;
 let age = 33;
 age = age + 1;
-
-console.log("age =", age);
+// or age += 1;
 
 /*
 The issue in this code is that you are attempting to reassign a new value to a 
