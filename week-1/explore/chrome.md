@@ -9,9 +9,9 @@ Let's try an example.
 
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
-alert('Hello world');
 
 What effect does calling the `alert` function have?
+it display a dialog box with "Hello world".
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
