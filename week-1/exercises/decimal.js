@@ -2,7 +2,7 @@ const num = 56.4567;
 const wholeNumberPart=Math.floor(num);
 console.log(wholeNumberPart);
 
-const decimalPart= num-Math.floor(num) ;
+const decimalPart= num-wholeNumberPart ;
 console.log(decimalPart);
 
 const roundedNum=Math.round(num);
