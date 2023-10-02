@@ -34,4 +34,4 @@ it means first you get the subtraction of movieLength and remainingSeconds then 
 It can be the variable name const timeRemaining
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
-Yes
+Yes because using different variable value for movieLength will always change the results.
