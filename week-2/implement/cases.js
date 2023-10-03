@@ -13,3 +13,16 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function toSnakeCase(text) {
+  const textOutput = text.replaceAll(" ", "_").toUpperCase();
+  return textOutput;
+}
+
+const text1 = toSnakeCase("hello there");
+const text2 = toSnakeCase("my name is marcus,");
+const text3 = toSnakeCase("& i am currently studying at code your future...");
+
+console.log(text1);
+console.log(text2);
+console.log(text3);
