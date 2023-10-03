@@ -13,3 +13,9 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function IBM(weightKG,heightM){
+    const ibm=weightKG/(heightM*heightM);
+    return ibm.toFixed(1);
+}
+console.log(IBM(70, 1.73));
