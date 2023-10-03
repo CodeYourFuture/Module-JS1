@@ -14,7 +14,8 @@
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
 
-function UpperSnakeCase(str){
+function upperSnakeCase(str){
     return str.toUpperCase().replace(/ /g, '_');
 }
-console.log(UpperSnakeCase("lord of the rings"));
+
+console.log(upperSnakeCase("lord of the rings"));
