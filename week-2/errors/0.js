@@ -7,8 +7,7 @@
 // interpret the error message and figure out why an error is occurring
 
 function capitalise(str) {
-  let capitalizedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return capitalizedStr;
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 
 const capitaliseTest = capitalise("hello");

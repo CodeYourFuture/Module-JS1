@@ -9,15 +9,23 @@
 // When I call this function with a number
 // it returns the new price with VAT added on
 
-function withVat(message, price) {
-  const vatMessage = `The price of your ${message} is £${price * 1.2}`;
-  return vatMessage;
+function withVat(price, goods) {
+  if (goods === "electrical") {
+    const electricalVat = 1.2;
+    return `The price of your goods is £${price * electricalVat}`;
+  } else if (goods === "household") {
+    const householdVat = 1.2;
+    return `The price of your goods is £${price * householdVat}`;
+  } else if (goods === "sports") {
+    const sportsVat = 0.8;
+    return `The price of your goods is £${price * sportsVat}`;
+  }
 }
 
-const sportsEquipment = withVat("sports equipment", 50);
-const kitchenEquipment = withVat("kitchen equipment", 230);
-const bathroomEquipment = withVat("bathroom equipment", 80);
+const electricalEquipment = withVat(50, "electrical");
+const householdEquipment = withVat(210, "household");
+const sportsEquipment = withVat(145, "sports");
 
+console.log(electricalEquipment);
+console.log(householdEquipment);
 console.log(sportsEquipment);
-console.log(kitchenEquipment);
-console.log(bathroomEquipment);
