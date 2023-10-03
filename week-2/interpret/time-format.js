@@ -18,6 +18,7 @@ function formatTimeDisplay(seconds) {
 }
 
 console.log(formatTimeDisplay(61));
+console.log(formatTimeDisplay(31));
 
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
@@ -25,6 +26,7 @@ console.log(formatTimeDisplay(61));
 // Questions
 
 // a) Run this program with node, identify the line the error is thrown. Explain why this error is occurring. How can you fix this error?
+// there is no error.
 
 // b) When formatTimeDisplay is called how many times will pad be called?
 //    Three times
