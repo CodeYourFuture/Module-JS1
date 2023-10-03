@@ -8,3 +8,10 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+function Vat(num){
+    const NumWithoutMoneySymbols=num.substring(1,num.length)
+    return NumWithoutMoneySymbols*1.2;
+}
+console.log("Your new price with VAT is",Vat("£30"));
+console.log("Your new price with VAT is",Vat("£45"));
