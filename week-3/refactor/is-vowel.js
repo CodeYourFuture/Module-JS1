@@ -40,3 +40,23 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
+
+console.log("case: letter i...");
+const currentOutput4 = isVowel("i");
+const targetOutput4 = true;
+console.assert(
+  currentOutput4 === targetOutput4,
+  "current output: %s, target output: %s",
+  currentOutput4,
+  targetOutput4
+);
+
+console.log("case: letter q...");
+const currentOutput5 = isVowel("q");
+const targetOutput5 = false;
+console.assert(
+  currentOutput5 === targetOutput5,
+  "current output: %s, target output: %s",
+  currentOutput5,
+  targetOutput5
+);
