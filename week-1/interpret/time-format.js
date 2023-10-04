@@ -1,17 +1,13 @@
 const movieLength = 8784; // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
-console.log(remainingSeconds);
 const totalMinutes = (movieLength - remainingSeconds) / 60;
-console.log(totalMinutes);
 
 const remainingMinutes = totalMinutes % 60;
-console.log(remainingMinutes);
 const totalHours = (totalMinutes - remainingMinutes) / 60;
-console.log(totalHours);
+
 
 const remainingHours = totalHours % 24;
-console.log(remainingHours);
 
 const result = `${remainingHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
