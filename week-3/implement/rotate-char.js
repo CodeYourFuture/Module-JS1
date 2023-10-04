@@ -8,6 +8,21 @@
 
 // Acceptance criteria:
 
+function rotateCharacter(char, shift) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const alphabetCaps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  if ((alphabet.includes(char) && shift > 0) || shift < 0) {
+    return char;
+  } else if ((alphabetCaps.includes(char) && shift > 0) || shift < 0) {
+    const currentIndex1 = alphabetCaps.indexOf(char);
+    const targetIndex1 = (currentIndex1 + shift) % alphabetCaps.length;
+    return alphabetCaps[targetIndex1];
+  } else if (!alphabet.includes(char) || !alphabetCaps.includes(char)) {
+    return char;
+  }
+}
+
+// (alphabetCaps.includes(char)
 // Given a character (char) and a shift value (shift),
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
@@ -16,7 +31,7 @@
 // Given a lowercase letter character (char) and a positive integer shift,
 // When the function is called with these inputs,
 // Then it should rotate the lowercase letter by shift positions within the lowercase alphabet, wrapping around if necessary, and return the rotated lowercase letter as a string.
-console.log(rotateCharacter("a", 3)); // Output: "a"
+console.log(rotateCharacter("a", -3)); // Output: "a"
 console.log(rotateCharacter("f", 1)); // Output: "f"
 
 // Scenario: Rotate Uppercase Letters:
