@@ -6,6 +6,6 @@ const last4Digits = cardNumber.slice(-4);
 // Make and explain a prediction about why the code won't work
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
 
-because the slice() method extracts a part of a string and variable cardNumber was not a string.
+//because the slice() method extracts a part of a string and variable cardNumber was not a string.
 
-console.log(last4Digits);
+//console.log(last4Digits);
