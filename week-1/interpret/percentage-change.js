@@ -1,18 +1,15 @@
 let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
-console.log(carPrice);
+
 
 carPrice = Number(carPrice.replaceAll(",", ""));
-console.log(carPrice);
 priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
-console.log(priceDifference);
-
 const percentageChange = (priceDifference / carPrice) * 100;
 
 console.log(`The percentage change is ${percentageChange}`);
-
+/*
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
