@@ -1,5 +1,5 @@
 const num = 58.4567;
-const wholeNumberPart = Math.round(num);
+const wholeNumberPart = Math.floor(num);
 const decimalPart = (num - wholeNumberPart).toFixed(4);
 const roundedNum = wholeNumberPart-1;
 
