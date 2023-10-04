@@ -12,7 +12,16 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
+//Calling the alert function in JavaScript displays a pop-up dialog box with a specified message, interrupting the normal code execution until the user clicks the "OK" button.
+
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+
+//
+Calling the prompt function in JavaScript displays a pop-up dialog box with an input field, allowing the user to enter text, and returns the entered value as a string when the user submits it.
+
 What is the return value of `prompt`?
+
+
+The return value of the prompt function in JavaScript is the text entered by the user in the input field, and it is typically a string.

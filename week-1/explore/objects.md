@@ -13,4 +13,7 @@ Try also entering `typeof console`
 Answer the following questions:
 
 What does `console` store?
+
+The console object provides access to the debugging console in the browser, which allows you to log messages, errors, warnings, and interact with the console for debugging and development purposes.
+
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
