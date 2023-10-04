@@ -4,19 +4,19 @@ const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
 );
-console.log(penceStringWithoutTrailingP);
+
 
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
-console.log(paddedPenceNumberString); 
+
 
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
 );
-console.log(pounds);
+
 
 const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
-console.log(pence);
+
 
 console.log(`£${pounds}.${pence}`);
 /*
