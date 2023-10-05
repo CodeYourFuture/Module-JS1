@@ -27,4 +27,4 @@
 function toPounds(str) {
     return `£${(Number(str.substring(0, str.length-1))/100).toFixed(2)}`;
 }
-console.log(toPounds("289p"))
+console.log(toPounds("293p"))
