@@ -13,3 +13,13 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+function bmi(weight, height) {
+  squaredHeight = height * height;
+  bmiToOneDecimalPlace = (weight / squaredHeight).toFixed(1);
+  return `You Body Mass Index is: ${bmiToOneDecimalPlace}`;
+}
+
+// test the function
+console.log(bmi(70, 1.73));
+console.log(bmi(84, 1.74));
+console.log(bmi(88, 1.56));
