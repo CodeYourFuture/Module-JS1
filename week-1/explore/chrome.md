@@ -12,7 +12,12 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
+alert() function displays a popup dialog with a message to the user, temporarily halting code execution until the user acknowledges the message by clicking 'OK'
+
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+it opens a modal dialog box in web browser, with an input field and message provided as an argument to the function.
+
 What is the return value of `prompt`?
+The return value of 'prompt' was my name , since I wrote my name in 'prompt' input.
