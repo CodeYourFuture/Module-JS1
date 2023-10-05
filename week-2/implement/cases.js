@@ -13,3 +13,8 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+function upperCamelCase(str) {
+    return str.toUpperCase().replaceAll(" ", "_");
+}
+console.log(upperCamelCase("zahida zainab alan"));
