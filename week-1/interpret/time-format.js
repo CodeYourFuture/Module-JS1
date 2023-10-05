@@ -1,4 +1,4 @@
-const movieLength = 8784; // length of movie in seconds
+const movieLength = 96412 // length of movie in seconds
 
 const remainingSeconds = movieLength % 60;
 const totalMinutes = (movieLength - remainingSeconds) / 60;
@@ -9,7 +9,12 @@ const totalHours = (totalMinutes - remainingMinutes) / 60;
 const remainingHours = totalHours % 24;
 
 const result = `${remainingHours}:${remainingMinutes}:${remainingSeconds}`;
+
+// the line of code below added by me
+const result2AddedByMe = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 console.log(result);
+
+console.log(result2AddedByMe);
 
 // For the piece of code above, read the code and then answer the following questions
 
@@ -34,3 +39,6 @@ console.log(result);
 //movieLengthFormatted would be a better name for it .
 
 // f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+//this code doesn't work properly for lenghtes more than a day , 86400 , because of this this line of code  ,
+// `onst remainingHours = totalHours % 24;` so if the length is 26 hours it only shows 2 hours due to %24 ,
+//result2 variable removes this bug lol .
