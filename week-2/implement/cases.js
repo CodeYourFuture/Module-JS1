@@ -13,3 +13,19 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+function toUpperCamelCase(str) {
+  // Split the input string into words based on spaces
+  const words = inputString.split(' ');
+
+  // Capitalize the first letter of each word and join them with underscores
+  const upperCamelCase = words.map(word => word.toUpperCase()).join('_');
+
+  return upperCamelCase;
+}
+
+// Example usage:
+const input = "hello there";
+const upperCamelCaseString = toUpperCamelCase(input);
+console.log(upperCamelCaseString); // Output: "HELLO_THERE"
