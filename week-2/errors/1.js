@@ -1,6 +1,7 @@
 // Predict and explain first...
 
 // Why will an error occur when this program runs?
+// A const declaration within a function's body cannot have the same name as a parameter.
 // Try playing computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {

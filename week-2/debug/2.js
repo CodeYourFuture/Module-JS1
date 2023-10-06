@@ -1,9 +1,10 @@
 // Predict and explain first...
 
-const num = 103;
+// num = 103;
 
-function getLastDigit() {
-  return num.toString().slice(-1);
+function getLastDigit(a) {
+  const num = a.toString().slice(-1);
+  return num;
 }
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
