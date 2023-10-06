@@ -13,3 +13,28 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+
+function toUpperCamelCase(inputString) {
+
+  const words = inputString.split(' ');
+ 
+  const upperCamelCase = words.map(word => word.toUpperCase()).join('_');
+  return upperCamelCase;
+}
+
+const input = "hello there";
+const upperCamelCaseString = toUpperCamelCase(input);
+console.log(upperCamelCaseString); 
+
+
+
+
+
+
+
+
+
+
+
+
