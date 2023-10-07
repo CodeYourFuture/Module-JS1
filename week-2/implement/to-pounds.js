@@ -4,3 +4,33 @@
 // You will need to declare a function called toPounds with an appropriately named parameter.
 
 // You should call this function a number of times to check it works for different inputs
+
+
+function toPounds(penceInStringType){
+    const penceStringWithoutTrailingP = penceInStringType.substring(
+        0,
+        penceInStringType.length - 1
+    );
+
+
+    const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+
+    const pounds = paddedPenceNumberString.substring(
+        0,
+        paddedPenceNumberString.length - 2
+    );
+
+
+    const pence = paddedPenceNumberString
+        .substring(paddedPenceNumberString.length - 2)
+        .padEnd(2, "0");
+
+
+    return `£${pounds}.${pence}` ;
+}
+console.log(toPounds('120p'));
+console.log(toPounds('10p'));
+console.log(toPounds('0p'));
+console.log(toPounds('12340p'));
+console.log(toPounds('961p'));
+console.log(toPounds('1000000p'));
