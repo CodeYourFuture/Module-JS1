@@ -13,3 +13,17 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+
+// itried to use prompt to take an input from user and i face some errors i leave the code like this 
+//and without using prompt it works correctly.
+
+const prompt = require('prompt-sync')();
+function setToCamelCamelCase(str) {
+  str = str.toUpperCase().replace(/ /g, '_');
+  return str;
+}
+
+let inputt=prompt("enter a text: ")
+console.log(setToCamelCamelCase("lord of the rings"))
+
+console.log(setToCamelCamelCase(inputt))

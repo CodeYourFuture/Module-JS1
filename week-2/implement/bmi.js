@@ -13,3 +13,16 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+//const prompt = require('prompt-sync')();
+
+function bmiCalculator(weight , height){
+    let doubledheight=height*height;
+    let bmi=(weight/doubledheight).toFixed(1);
+    return bmi;
+}
+
+// let userWieght= prompt("Please in enter your weight in Kg: ");
+// let userheight= prompt("please enter your height in m(meter): ")
+// console.log(bmiCalculator2(userWieght,userheight ));
+console.log(bmiCalculator(59,1.75));
