@@ -11,8 +11,13 @@ In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
+The alert() method displays an alert box with a message and an OK button. 
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
+const myName = prompt("What is your name?");
+const myName = "Elmira";
 
 What effect does calling the `prompt` function have?
+The prompt() instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.
 What is the return value of `prompt`?
+the input value if the user clicks "OK", otherwise it returns null .
