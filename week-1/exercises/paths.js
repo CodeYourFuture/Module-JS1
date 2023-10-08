@@ -21,6 +21,5 @@ const dirPart = filePath.slice(0, filePath.lastIndexOf("/"));
 console.log(dirPart);
 
 // Extract the "dir" part
-//const dir = filePath.slice(0, lastSlashIndex);
-//const extPart = filePath.slice(filePath.lastIndexOf("."));
-//console.log(extPart);
+const extPart = filePath.slice(filePath.lastIndexOf("."));
+console.log(extPart);
