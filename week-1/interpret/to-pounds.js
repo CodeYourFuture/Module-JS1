@@ -4,7 +4,6 @@ const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
 );
-
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
 const pounds = paddedPenceNumberString.substring(
   0,

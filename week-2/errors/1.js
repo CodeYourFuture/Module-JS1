@@ -4,10 +4,13 @@
 // Try playing computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
+  // const decimalNumber = 0.5;
+  percentage = `${decimalNumber * 100}%`;
 
   return percentage;
 }
+console.log (convertToPercentage(0.5));
 
-console.log(decimalNumber);
+//Prediction: The code defines a function that takes any number given as decimalNumber as input and return the value of statement in the local scope to the console at the global scope by converting any argument to percentage.
+
+//Error: An error occurred because the variable decimalNumber was declared after it has been given as a parameter/argument to the function. Also, there is no need to declare percentage as a variable because it is a statement.

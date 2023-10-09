@@ -13,3 +13,10 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function massIndex(weight,height){
+    return (Number(height * height) / weight).toFixed(1);
+}
+console.log(
+  `Your total body mass index is ${(Number (100 / (1.73 * 1.73))).toFixed(1)}`
+);
