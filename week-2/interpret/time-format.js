@@ -23,7 +23,7 @@ console.log(formatTimeDisplay(61));
 
 // a) Run this program with node, identify the line the error is thrown. Explain why this error is occurring. How can you fix this error?
 
-// b) When formatTimeDisplay is called how many times will pad be called?
+// b) When formatTimeDisplay is called how many times will pad be called? 3 times
 
 // Call formatTimeDisplay with an input of 61, now answer the following:
 
