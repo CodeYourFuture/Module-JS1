@@ -13,4 +13,4 @@ console.log (convertToPercentage(0.5));
 
 //Prediction: The code defines a function that takes any number given as decimalNumber as input and return the value of statement in the local scope to the console at the global scope by converting any argument to percentage.
 
-//Error: An error occurred because the variable decimalNumber was declared after it has been given as a parameter/argument to the function. Also, there is no need to declare percentage as a variable because it is a statement.
+//Error: An error occurred because the variable decimalNumber was declared after it has been given as a parameter/argument to the function. Also, percentage can perform well as a variable with "let" or as a statement.

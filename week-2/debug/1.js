@@ -5,4 +5,4 @@ function sum(a, b) {
   a + b;
 }
 console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
-// the console won't be able to re-iterate through the code because the return function was not placed with the argument like this return a + b;
+// the console won't run the code because the return function was not placed with the argument like this return a + b;
