@@ -4,6 +4,7 @@
 //   }
 //   return `${time} am`;
 // }
+
 function formatAs12HourClock(time) {
   let hours = time.slice(0, 2);
   let numberHours = Number(hours);
