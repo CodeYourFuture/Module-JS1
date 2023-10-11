@@ -63,35 +63,35 @@ console.assert(
 const currentOutput2 = isProperFraction(4, 2);
 const targetOutput2 = "false";
 console.assert(
-  currentOutput === targetOutput,
+  currentOutput2 === targetOutput2,
   "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput
+  currentOutput2,
+  targetOutput2
 );
 
 const currentOutput3 = isProperFraction(3, 3);
 const targetOutput3 = "false";
 console.assert(
-  currentOutput === targetOutput,
+  currentOutput3 === targetOutput3,
   "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput
+  currentOutput3,
+  targetOutput3
 );
 
 const currentOutput4 = isProperFraction(3, 0);
 const targetOutput4 = "Error";
 console.assert(
-  currentOutput === targetOutput,
+  currentOutput4 === targetOutput4,
   "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput
+  currentOutput4,
+  targetOutput4
 );
 
 const currentOutput5 = isProperFraction(-5, 4);
 const targetOutput5 = "true";
 console.assert(
-  currentOutput === targetOutput,
+  currentOutput5 === targetOutput5,
   "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput
+  currentOutput5,
+  targetOutput5
 );
