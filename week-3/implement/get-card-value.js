@@ -57,8 +57,8 @@ console.assert(
   targetOutput
 );
 
-const currentOutput = getCardValue("A", "♥️");
-const targetOutput = 11;
+const currentOutput2 = getCardValue("A", "♥️");
+const targetOutput2 = 11;
 console.assert(
   currentOutput === targetOutput,
   "current output: %s, target output: %s",
@@ -66,8 +66,8 @@ console.assert(
   targetOutput
 );
 
-const currentOutput = getCardValue("g", "♦️️");
-const targetOutput = "Invalid card rank.";
+const currentOutput3 = getCardValue("g", "♦️️");
+const targetOutput3 = "Invalid card rank.";
 console.assert(
   currentOutput === targetOutput,
   "current output: %s, target output: %s",
