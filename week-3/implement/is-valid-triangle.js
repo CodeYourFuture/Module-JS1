@@ -50,4 +50,29 @@ function isValidTriangle(a, b, c) {
     }
 }
 
-console.log(isValidTriangle(1, 2, 4));
+const currentOutput = isValidTriangle(2, 4, -5);
+const targetOutput = "false";
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput2 = isValidTriangle(3, 1, 2);
+const targetOutput2 = "false";
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput3 = isValidTriangle(4, 5, 2);
+const targetOutput3 = "true";
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
