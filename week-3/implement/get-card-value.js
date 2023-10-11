@@ -44,14 +44,36 @@ function getCardValue(number, suit) {
   } else if (aceCard.includes(number) && suitsCards.includes(suit)) {
     return 11;
   } else {
-    return "Invalid card rank";
+    return "Invalid card rank.";
   }
 }
 
-console.log(getCardValue("9", "♣"));
-console.log(getCardValue("A", "♦️️"));
-console.log(getCardValue("K", "♠️"));
-console.log(getCardValue("c", "🍓"));
+const currentOutput = getCardValue("8", "♠️");
+const targetOutput = 8;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput = getCardValue("A", "♥️");
+const targetOutput = 11;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput = getCardValue("g", "♦️️");
+const targetOutput = "Invalid card rank.";
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
 
 
 
