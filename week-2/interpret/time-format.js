@@ -14,7 +14,7 @@ function formatTimeDisplay(seconds) {
   )}`;
 }
 
-console.log(formatTimeDisplay(61));
+console.log(formatTimeDisplay(55));
 
 // You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions

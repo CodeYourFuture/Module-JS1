@@ -15,8 +15,8 @@
 // Use the string documentation to help you find a solution
 function toString(a) {
   const words = a.split(" ");
-  //const capitalizedWords = words.map((word) => word.toUpperCase());
-  const capitalizedWords = words.toUpperCase();
+  const capitalizedWords = words.map((word) => word.toUpperCase());
+  //const capitalizedWords = words.toUpperCase();
   return capitalizedWords.join(" ");
 }
-console.log(toString(`good after noon`));
+console.log(toString(`lord_of_the_rings`));
