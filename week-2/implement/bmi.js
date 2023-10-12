@@ -13,3 +13,10 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function bmi(weight, height) {
+  let bmi = weight / height ** 2;
+  return bmi;
+}
+
+console.log(bmi(50, 2.7).toFixed(1));
