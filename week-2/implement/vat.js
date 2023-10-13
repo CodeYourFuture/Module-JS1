@@ -8,3 +8,20 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+
+
+function calcularPrecoComIVA(precoOriginal) {
+    // Taxa de IVA (20%)
+    const taxaIVA = 0.20;
+  
+    // Calcula o novo preço com IVA
+    const novoPreco = precoOriginal * (1 + taxaIVA);
+  
+    return novoPreco;
+  }
+  
+  
+  const precoOriginal = 50; // Preço original em euros
+  const novoPrecoComIVA = calcularPrecoComIVA(precoOriginal);
+  
+  console.log(`O novo preço com IVA é: ${novoPrecoComIVA} euros`);
