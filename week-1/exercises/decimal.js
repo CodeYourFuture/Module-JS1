@@ -1,4 +1,4 @@
-const num = 58.4567;
+const num = 56.4567;
 const wholeNumberPart=Math.floor(num);
 console.log(wholeNumberPart);
 
