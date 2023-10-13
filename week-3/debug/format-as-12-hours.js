@@ -15,7 +15,7 @@ console.assert(
 );
 
 const currentOutput1 = formatAs12HourClock("23:00");
-const targetOutput1 = "11:00 am";
+const targetOutput1 = "11:00 pm";
 console.assert(
   currentOutput === targetOutput,
   "current output: %s, target output: %s",
