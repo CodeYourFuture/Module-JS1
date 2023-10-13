@@ -13,3 +13,10 @@
 
 // You will need to come up with an appropriate name for the function
 // Use the string documentation to help you find a solution
+function UpperCamelCase(input) {
+  return input.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+}
+
+const input = "hello there";
+const result = UpperCamelCase(input);
+console.log(result); 
