@@ -7,7 +7,7 @@ function square(3) {
     return num * num;
 }
 
-//This code is invalid because we have specified a number to be three in the parameter of the function. Instead we can name 3 as a variable num and then use the variable num inside tghe parameters for it to work.
+//This code is invalid because we have specified a number to be three in the parameter of the function. Instead we can name 3 as a variable num and then use the variable num inside the parameters for it to work.
 /*
 let num = 3
 function square(num) {
