@@ -36,7 +36,7 @@
 function isProperFraction(numerator,denominator){
     if(numerator < denominator && numerator >0){
         return true;
-    }else if(numerator > denominator || numerator< 0 || denominator==0 ||numerator===denominator){
+    }else if(numerator > denominator || numerator< 0 || denominator===0 ||numerator === denominator){
         return false;
     }
 }
