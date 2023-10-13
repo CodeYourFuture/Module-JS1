@@ -7,4 +7,5 @@ function square(3) {
     return num * num;
 }
 
-
+/* When defining a function, you must use
+ a variable name as a parameter, not a specific value like 3.

@@ -11,3 +11,11 @@ function convertToPercentage(decimalNumber) {
 }
 
 console.log(decimalNumber);
+
+/*The error occurs because redeclaring the decimalNumber
+ variable within the function replaces the reference to the 
+ decimalNumber parameter. The variable name is reassigned to 
+ a local constant, making the parameter inaccessible within
+  the scope of the function. when we try to access decimalNumber 
+  outside the function, it is not defined in the global scope, 
+  resulting in an error.
