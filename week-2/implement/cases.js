@@ -15,21 +15,12 @@
 // Use the string documentation to help you find a solution
 
 
-function toUpperCamelCase(inputString) {
+function UpperCamelCase(inputString) {
 
-  const words = inputString.split(' ');
- 
-  const upperCamelCase = words.map(word => word.toUpperCase()).join('_');
-  return upperCamelCase;
+ return inputString.toUpperCase().replaceAll(" ", "_");
 }
 
-const input = "hello there";
-const upperCamelCaseString = toUpperCamelCase(input);
-console.log(upperCamelCaseString); 
-
-
-
-
+console.log(UpperCamelCase("hello there"));
 
 
 
