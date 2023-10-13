@@ -13,3 +13,21 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
+
+function calcularIMC(peso, altura) {
+    // Calcula o IMC dividindo o peso pela altura ao quadrado
+    const imc = peso / (altura * altura);
+  
+    // Arredonda o resultado para 1 casa decimal
+    const imcArredondado = imc.toFixed(1);
+  
+    return parseFloat(imcArredondado); // Converte a string para um número de ponto flutuante
+  }
+  
+  // Exemplo de uso:
+  const peso = 70; // Peso em quilogramas
+  const altura = 1.73; // Altura em metros
+  
+  const resultadoIMC = calcularIMC(peso, altura);
+  console.log(`Seu IMC é: ${resultadoIMC}`);
+  
