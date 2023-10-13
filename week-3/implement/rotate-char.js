@@ -1,3 +1,21 @@
+const alphabetLowerCase = [..."abcdefghijklmnopqrstuvwxyz"];
+const alphabetUpperCase = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
+function rotateCharacter(letter, shift) {
+  if (alphabetLowerCase.indexOf(letter) + shift >= 26) {
+    return alphabetLowerCase[alphabetLowerCase.indexOf(letter) + shift - 26];
+  } else if (alphabetUpperCase.indexOf(letter) + shift >= 26) {
+    return alphabetUpperCase[alphabetUpperCase.indexOf(letter) + shift - 26];
+  } else if (alphabetUpperCase.includes(letter)) {
+    return alphabetUpperCase[alphabetUpperCase.indexOf(letter) + shift];
+  } else if (alphabetLowerCase.includes(letter)) {
+    return alphabetLowerCase[alphabetLowerCase.indexOf(letter) + shift];
+  } else if (letter != alphabetLowerCase || letter != alphabetUpperCase) {
+    return letter;
+  }
+}
+
+
 // The rotateCharacter function takes a character and a shift value as input.
 // If the character is a letter (either uppercase or lowercase),
 // it rotates the character by the specified shift value within the alphabet,
@@ -40,3 +58,6 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
+
+console.log(rotateCharacter("x", 5)); // Output: "a" (unchanged, not a letter)
+
