@@ -1,4 +1,4 @@
-// Implement a function getAngleType
+// Implement a function getAngleType           
 
 // Acceptance criteria:
 
