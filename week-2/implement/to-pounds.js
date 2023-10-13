@@ -25,6 +25,10 @@
 // console.log(`£${pounds}.${pence}`);
 
 function toPounds(str) {
-    return `£${(Number(str.substring(0, str.length-1))/100).toFixed(2)}`;
+    let strWithoutP = str.substring(0, str.length-1);
+    let strToNumbers = Number(strWithoutP);
+    let pounds = (strToNumbers / 100).toFixed(2);
+    
+    return `£${pounds}`;
 }
-console.log(toPounds("293p"))
+console.log(toPounds("293p"));
