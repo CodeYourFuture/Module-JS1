@@ -29,3 +29,36 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+    const value = card[0];
+    const suit = card[1];
+   
+    if (value === 'A') {
+       return 11;
+    }
+   
+    if (value === 'J' || value === 'Q' || value === 'K') {
+       return 10;
+    }
+   
+    if (value >= '2' && value <= '9') {
+       return parseInt(value);
+    }
+   
+    throw new Error("Invalid card rank.");
+   }
+   
+   // Test cases
+   console.log(getCardValue("A♠")); // 11
+   console.log(getCardValue("2♠")); // 2
+   console.log(getCardValue("3♠")); // 3
+   console.log(getCardValue("J♠")); // 10
+   console.log(getCardValue("Q♠")); // 10
+   console.log(getCardValue("K♠")); // 10
+   
+   try {
+    console.log(getCardValue("X♠")); // Error: Invalid card rank.
+   } catch (error) {
+    console.error(error.message);
+   }

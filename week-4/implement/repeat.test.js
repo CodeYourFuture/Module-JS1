@@ -1,25 +1,41 @@
-// Implement a function repeat
-
-// Given a target string str and a positive integer count,
-// When the repeat function is called with these inputs,
-// Then it should:
-
-// case: repeat String:
-// Given a target string str and a positive integer count,
-// When the repeat function is called with these inputs,
-// Then it should repeat the str count times and return a new string containing the repeated str values.
-
-// case: handle Count of 1:
-// Given a target string str and a count equal to 1,
-// When the repeat function is called with these inputs,
-// Then it should return the original str without repetition, ensuring that a count of 1 results in no repetition.
-
-// case: Handle Count of 0:
-// Given a target string str and a count equal to 0,
-// When the repeat function is called with these inputs,
-// Then it should return an empty string, ensuring that a count of 0 results in an empty output.
-
-// case: Negative Count:
-// Given a target string str and a negative integer count,
-// When the repeat function is called with these inputs,
-// Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+function isValidPassword(password, passwords) {
+    // Check the length of the password
+    if (password.length < 5) {
+       return false;
+    }
+   
+    // Check for the presence of uppercase letters
+    if (!/[A-Z]/.test(password)) {
+       return false;
+    }
+   
+    // Check for the presence of lowercase letters
+    if (!/[a-z]/.test(password)) {
+       return false;
+    }
+   
+    // Check for the presence of numbers
+    if (!/[0-9]/.test(password)) {
+       return false;
+    }
+   
+    // Check for the presence of non-alphanumeric symbols
+    if (!/[!#$%&*.]/.test(password)) {
+       return false;
+    }
+   
+    // Check if the password is in the passwords array
+    if (passwords.includes(password)) {
+       return false;
+    }
+   
+    // If all the conditions are met, the password is valid
+    return true;
+   }
+   
+   // Test cases
+   console.log(isValidPassword("Password1!", ["Password1!", "Password2@", "Password3#"])); // false
+   console.log(isValidPassword("Password2@", ["Password1!", "Password2@", "Password3#"])); // false
+   console.log(isValidPassword("Password3#", ["Password1!", "Password2@", "Password3#"])); // false
+   console.log(isValidPassword("Password4$", ["Password1!", "Password2@", "Password3#"])); // true
+   console.log(isValidPassword("Password5&", ["Password1!", "Password2@", "Password3#"])); // true

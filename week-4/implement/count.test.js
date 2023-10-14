@@ -15,3 +15,44 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+function countChar(str, char) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+       if (str[i] === char) {
+         count++;
+       }
+    }
+    return count;
+   }
+
+
+   console.log("case: letter a...");
+const currentOutput = countChar("aaaaa", "a");
+const targetOutput = 5;
+console.assert(
+ currentOutput === targetOutput,
+ "current output: %s, target output: %s",
+ currentOutput,
+ targetOutput
+);
+
+console.log("case: letter e...");
+const currentOutput2 = countChar("hello", "e");
+const targetOutput2 = 1;
+console.assert(
+ currentOutput2 === targetOutput2,
+ "current output: %s, target output: %s",
+ currentOutput2,
+ targetOutput2
+);
+
+console.log("case: letter k...");
+const currentOutput3 = countChar("hello", "k");
+const targetOutput3 = 0;
+console.assert(
+ currentOutput3 === targetOutput3,
+ "current output: %s, target output: %s",
+ currentOutput3,
+ targetOutput3
+);
