@@ -8,3 +8,27 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function calculatePriceWithVAT(price) {
+    // Check if the input is a number
+    if (typeof price !== 'number') {
+        throw new Error('The input must be a number');
+    }
+
+    // If the input is a negative number, throw an error
+    if (price < 0) {
+        throw new Error('The input must not be a negative number');
+    }
+
+    // Calculate the new price with VAT added on
+    const vatRate = 0.2;
+    const priceWithVAT = price * (1 + vatRate);
+
+    // Return the new price with VAT added on
+    return priceWithVAT;
+}
+
+// Test the function with different inputs
+console.log(calculatePriceWithVAT(50)); // Expected output: 60
+console.log(calculatePriceWithVAT(100)); // Expected output: 120
+console.log(calculatePriceWithVAT(0)); // Expected output: 0
