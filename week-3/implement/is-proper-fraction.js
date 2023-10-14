@@ -53,16 +53,16 @@ console.assert(
 const currentOutput1 = isProperFraction(5,2);
 const targetOutput1 = false;
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput1 === targetOutput1,
     "current output: %s, target output: %s",
-    currentOutput,
-    targetOutput
+    currentOutput1,
+    targetOutput1
 );
 
 const currentOutput2 = isProperFraction(3,0);
 const targetOutput2 = false;
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput2 === targetOutput2,
     "current output: %s, target output: %s",
     currentOutput,
     targetOutput
@@ -71,17 +71,17 @@ console.assert(
 const currentOutput3 = isProperFraction(-4,7);
 const targetOutput3 = false;
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput3 === targetOutput3,
     "current output: %s, target output: %s",
-    currentOutput,
-    targetOutput
+    currentOutput3,
+    targetOutput3
 );
 
 const currentOutput4 = isProperFraction(3,3);
 const targetOutput4 = false;
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput4 === targetOutput4,
     "current output: %s, target output: %s",
-    currentOutput,
-    targetOutput
+    currentOutput4,
+    targetOutput4
 );

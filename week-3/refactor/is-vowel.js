@@ -52,9 +52,9 @@ console.log(`case: Is letter b vowel?... ${currentOutput4}`);
 const currentOutput5 = isVowel("z");
 const targetOutput5 = false;
 console.assert(
-  currentOutput3 === targetOutput3,
+  currentOutput5 === targetOutput5,
   "current output: %s, target output: %s",
-  currentOutput3,
-  targetOutput3
+  currentOutput5,
+  targetOutput5
 );
 console.log(`case:Is letter z vowel?... ${currentOutput5}`);

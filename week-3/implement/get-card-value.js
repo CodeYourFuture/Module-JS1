@@ -56,25 +56,25 @@ console.assert(
 const currentOutput1 = getCardValue("Q");
 const targetOutput1 = 10;
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput1 === targetOutput1,
     "current output: %s, target output: %s",
-    currentOutput,
-    targetOutput
+    currentOutput1,
+    targetOutput1
 );
-
+2
 const currentOutput2 = getCardValue("6");
 const targetOutput2 = 6;
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput2 === targetOutput2,
     "current output: %s, target output: %s",
-    currentOutput,
-    targetOutput
+    currentOutput2,
+    targetOutput2
 );
 const currentOutput3 = getCardValue("hjhfk");
 const targetOutput3 = "Invalid card rank.";
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput3 === targetOutput3,
     "current output: %s, target output: %s",
-    currentOutput,
-    targetOutput
+    currentOutput3,
+    targetOutput3
 );

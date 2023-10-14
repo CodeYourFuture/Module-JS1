@@ -60,17 +60,17 @@ console.assert(
 const currentOutput1 = isValidTriangle(-2, 3, 2);
 const targetOutput1 = false;
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput1 === targetOutput1,
     "current output: %s, target output: %s",
-    currentOutput,
-    targetOutput
+    currentOutput1,
+    targetOutput1
 );
 
 const currentOutput2 = isValidTriangle(1, 3, 4);
 const targetOutput2 = false;
 console.assert(
-    currentOutput === targetOutput,
+    currentOutput2 === targetOutput2,
     "current output: %s, target output: %s",
-    currentOutput,
-    targetOutput
+    currentOutput2,
+    targetOutput2
 );
