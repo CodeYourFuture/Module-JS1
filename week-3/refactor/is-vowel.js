@@ -1,12 +1,8 @@
 function isVowel(letter) {
-  return (
-    letter === "a" ||
-    letter === "e" ||
-    letter === "i" ||
-    letter === "i" ||
-    letter === "o" ||
-    letter === "u"
-  );
+ if(letter=== "a" || letter=== "e" || letter=== "i" || letter=== "o" || letter=== "u"){
+  return true;
+ }
+ return false;
 }
 
 // here is an implementation of isVowel - this function checks if a letter is a vowel
@@ -40,3 +36,25 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
+
+
+const currentOutput4 = isVowel("b");
+const targetOutput4 = false;
+console.assert(
+  currentOutput3 === targetOutput3,
+  "current output: %s, target output: %s",
+  currentOutput3,
+  targetOutput3
+);
+console.log(`case: Is letter b vowel?... ${currentOutput4}`);
+
+
+const currentOutput5 = isVowel("z");
+const targetOutput5 = false;
+console.assert(
+  currentOutput5 === targetOutput5,
+  "current output: %s, target output: %s",
+  currentOutput5,
+  targetOutput5
+);
+console.log(`case:Is letter z vowel?... ${currentOutput5}`);

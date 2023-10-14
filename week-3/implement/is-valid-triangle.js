@@ -37,3 +37,40 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+function isValidTriangle(a, b, c) {
+    if (a < 0 && b < 0 && c < 0) {
+        return false;
+    } else if (a + b >= c || b + c >= a || a + c >= b) {
+        return true;
+    } else if (a + b < c || b + c < a) {
+        return false;
+    }
+}
+
+const currentOutput = isValidTriangle(2, 3, 2);
+const targetOutput = true;
+console.assert(
+    currentOutput === targetOutput,
+    "current output: %s, target output: %s",
+    currentOutput,
+    targetOutput
+);
+
+const currentOutput1 = isValidTriangle(-2, 3, 2);
+const targetOutput1 = false;
+console.assert(
+    currentOutput1 === targetOutput1,
+    "current output: %s, target output: %s",
+    currentOutput1,
+    targetOutput1
+);
+
+const currentOutput2 = isValidTriangle(1, 3, 4);
+const targetOutput2 = false;
+console.assert(
+    currentOutput2 === targetOutput2,
+    "current output: %s, target output: %s",
+    currentOutput2,
+    targetOutput2
+);
