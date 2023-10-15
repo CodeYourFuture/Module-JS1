@@ -8,21 +8,35 @@ function getAngleType(degrees) {
   } else if (degrees < 90) {
     return "Acute angle";
   } else if (degrees > 90 && degrees < 180) {
-    return "Obtuse Angle";
+    return "Obtuse angle";
   } else if (degrees === 180) {
-    return "Straight Angle";
+    return "Straight angle";
   } else if (degrees > 180 && degrees < 360) {
-    return "Reflex Angle";
+    return "Reflex angle";
   } else {
     return "This angle has no specific name";
   }
 }
 
-console.log(getAngleType(90));
-console.log(getAngleType(80));
-console.log(getAngleType(150));
-console.log(getAngleType(180));
-console.log(getAngleType(300));
+test("to discover angle types", function () {
+  expect(getAngleType(90)).toBe("Right angle");
+});
+
+test("to discover angle types", function () {
+  expect(getAngleType(80)).toBe("Acute angle");
+});
+
+test("to discover angle types", function () {
+  expect(getAngleType(130)).toBe("Obtuse angle");
+});
+
+test("to discover angle types", function () {
+  expect(getAngleType(180)).toBe("Straight angle");
+});
+
+test("to discover angle types", function () {
+  expect(getAngleType(240)).toBe("Reflex angle");
+});
 
 // Given an angle in degrees,
 //When the function getAngleType is called with this angle,

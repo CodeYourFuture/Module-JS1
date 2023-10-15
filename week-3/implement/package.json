@@ -1,0 +1,10 @@
+{
+  "name": "week-4-tests",
+  "description": "test-file-for-week-4-activites",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
