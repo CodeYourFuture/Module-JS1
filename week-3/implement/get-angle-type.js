@@ -25,3 +25,49 @@
 // Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+function getAngleType (angle) {
+     if (angle===90) {
+       return  "Right angle";
+     }   
+      if (angle<90) {
+       return  "Acute angle";
+     } 
+      if (angle>90<180) {
+       return  "Obtuse angle";
+     }
+     if (angle===180) {
+       return  "Straight angle";
+     }
+}
+
+const currentOutput=getAngleType(90);//-->actual value
+const targetOutput="Right angle";//--> idea
+console.assert(currentOutput==targetOutput,
+        "current output: %s, target output: %s 1",
+    currentOutput,
+    targetOutput
+    );
+
+    const currentOutput1=getAngleType(30);//-->actual value
+const targetOutput1="Acute angle";//--> idea
+console.assert(currentOutput1==targetOutput1,
+        "current output: %s, target output: %s 2",
+    currentOutput1,
+    targetOutput1
+    );
+
+    const currentOutput2=getAngleType(120);//-->actual value
+const targetOutput2="Obtuse angle";//--> idea
+console.assert(currentOutput2==targetOutput2,
+        "current output: %s, target output: %s 3",
+    currentOutput2,
+    targetOutput2
+    );
+
+    const currentOutput3=getAngleType(180);//-->actual value
+const targetOutput3="Straight angle";//--> idea
+console.assert(currentOutput3==targetOutput3,
+        "current output: %s, target output: %s 4",
+    currentOutput3,
+    targetOutput3
+    );
