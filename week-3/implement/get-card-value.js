@@ -4,6 +4,12 @@
 
 // You need to write assertions for your function to check it works in different cases
 
+const numberCards = ("2", "3", "4", "5", "6", "7", "8", "9");
+const faceCard = ("j", "k", "q");
+const aceCard = ("♣", "♥", "♠", "♦" );
+console.assert(numberCards === "5");
+
+
 // Acceptance criteria:
 
 // Given a card string in the format "A♠" (representing a card in blackjack),
