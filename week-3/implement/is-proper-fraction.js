@@ -44,13 +44,49 @@ function isProperFraction(numerator, denominator) {
     return true;
   }
 }
-// console.log (isProperFraction(11,11));
-console.assert(isProperFraction(2,5) === true);
 
-console.assert(isProperFraction(3, 0) === "error");
+const currentOutput = isProperFraction(2, 5);
+const targetOutput = true;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
 
-console.assert(isProperFraction(-3, 8) === true);
+const currentOutput2 = isProperFraction(3, 0);
+const targetOutput2 = "error";
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
 
-console.assert(isProperFraction(10, 7) === false,"t");
+const currentOutput3 = isProperFraction(-3, 8);
+const targetOutput3 = true;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
 
-console.assert(isProperFraction(5,5) === false, "j");
+const currentOutput4 = isProperFraction(10, 7);
+const targetOutput4 = false;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput5 = isProperFraction(5, 5);
+const targetOutput5 = false;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
