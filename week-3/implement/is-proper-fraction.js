@@ -32,3 +32,48 @@
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) {
+    return "Error: Denominator cannot be zero";
+  } else if (numerator >= denominator) {
+    return `The fraction ${numerator}/${denominator} is an improper fraction`;
+  } else if (numerator < 0) {
+    return `The fraction is ${numerator}/${denominator} a proper fraction`;
+  } else {
+    return `The fraction ${numerator}/${denominator} is a proper fraction`;
+  }
+}
+
+//   console.log(isProperFraction(5,3));
+// const currentOutput=isProperFraction(3,5);
+// const targetOutput="is a fraction";
+// console.assert(currentOutput==targetOutput,
+//         "current output: %s, target output: %s 1",
+//     currentOutput,
+//     targetOutput
+//     );
+
+//     const currentOutput1=isProperFraction(5,3);
+// const targetOutput1="Not a valid fraction";
+// console.assert(currentOutput1==targetOutput1,
+//         "current output: %s, target output: %s 2",
+//     currentOutput1,
+//     targetOutput1
+//     );
+
+//       const currentOutput2=isProperFraction(-4,8);
+// const targetOutput2="`The fraction is ${numerator} a proper fraction`";
+// console.assert(currentOutput2==targetOutput2,
+//         "current output: %s, target output: %s 3",
+//     currentOutput2,
+//     targetOutput2
+//     );
+
+console.log(isProperFraction(-4, 8));
+console.log(isProperFraction(-4, 0));
+console.log(isProperFraction(-4, 0));
+console.log(isProperFraction(5, 2));
+console.log(isProperFraction(6, 6));
+console.log(isProperFraction(6, -8));
+// completed with Withe Elmira
