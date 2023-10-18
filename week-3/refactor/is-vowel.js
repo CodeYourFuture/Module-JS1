@@ -40,3 +40,5 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
+
+console.log(isVowel('a'));
