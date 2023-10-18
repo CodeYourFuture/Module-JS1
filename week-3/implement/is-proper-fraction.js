@@ -5,14 +5,6 @@
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
 
-// const numerator = 2;
-// const denominator = 3;
-// console.assert(numerator < denominator);
-
-// const numerator2 = 5;
-// const denominator2 = 2;
-// console.assert(numerator2 > denominator2);
-
 // Acceptance criteria:
 
 // Proper Fraction check:
@@ -41,21 +33,24 @@
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 
-function isProperFraction(numerator, denominator){
-    if (numerator < denominator){
-        return true;
-    }
-    else if (numerator > denominator){
-        return false;
-    }
-    else if( denominator === 0){
-        return error;
-    }
-    else if(numerator > 0 && denominator < 0){
-        return true;
-    }
-    else if( numerator === denominator){
-        return false;
-    }
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) {
+    return "error";
+  }else if (numerator > denominator) {
+    return false;
+  }else if (numerator === denominator){
+    return false;
+  }else{
+    return true;
+  }
 }
-console.log (isProperFraction(11,11));
+// console.log (isProperFraction(11,11));
+console.assert(isProperFraction(2,5) === true);
+
+console.assert(isProperFraction(3, 0) === "error");
+
+console.assert(isProperFraction(-3, 8) === true);
+
+console.assert(isProperFraction(10, 7) === false,"t");
+
+console.assert(isProperFraction(5,5) === false, "j");
