@@ -45,3 +45,4 @@ console.assert(
 // b) Check the assertion output and explain what the bug is
 //The current output is "5:00 pm" while target output is supposed to be "05:42 pm"
 // c) Now fix the bug and re-run all your assertions
+//
