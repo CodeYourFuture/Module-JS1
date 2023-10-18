@@ -52,7 +52,8 @@
 console.log(isValidTriangle(1,0,3));
  console.log(isValidTriangle(-2,0,3));
  console.log(isValidTriangle(6,6,3));
-
+ 
+// worked with Bahadory to gether 
 
 
 

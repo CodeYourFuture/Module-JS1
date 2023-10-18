@@ -1,34 +1,40 @@
-function formatAs12HourClock() {
+// function formatAs12HourClock() {
   
-}
-
-console.assert(formatAs12HourClock("05:00")==='05:00 am')
-
-
-// function formatAs12HourClock(time) {
-//   if (Number(time.slice(0, 2)) > 12) {
-//     return `${Number(time.slice(0, 2)) - 12}:00 pm`;
-//   }
-//   return `${time} am`;
 // }
 
-// const currentOutput = formatAs12HourClock("08:00");
-// const targetOutput = "08:00 am";
-// console.assert(
-//   currentOutput === targetOutput,
-//   "current output: %s, target output: %s",
-//   currentOutput,
-//   targetOutput
-// );
+// console.assert(formatAs12HourClock("04:00")==='05:00 am')
 
-// const currentOutput2 = formatAs12HourClock("23:00");
-// const targetOutput2 = "11:00 pm";
-// console.assert(
-//   currentOutput2 === targetOutput2,
-//   "current output: %s, target output: %s",
-//   currentOutput2,
-//   targetOutput2
-// );
+// 04<12 --> 04 am;
+//18>12 ---> 18-12=6 pm
+
+
+function formatAs12HourClock(time) {
+    let sliceStorage = Number(time.slice(0, 2)) > 12;
+    let calculateTime = `${Number(time.slice(0, 2)) - 12}`;
+
+  if (sliceStorage) {
+      return `${calculateTime}:00 pm`;
+  }
+  return `${time} am`;
+}
+
+const currentOutput = formatAs12HourClock("08:00");
+const targetOutput = "08:00 am";
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput2 = formatAs12HourClock("23:00");
+const targetOutput2 = "11:00 pm";
+console.assert(
+  currentOutput2 === targetOutput2,
+  "current output: %s, target output: %s",
+  currentOutput2,
+  targetOutput2
+);
 
 // formatAs12HourClock currently has a 🐛
 
