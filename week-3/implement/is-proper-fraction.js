@@ -5,13 +5,13 @@
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
 
-const numerator = 2;
-const denominator = 3;
-console.assert(numerator < denominator);
+// const numerator = 2;
+// const denominator = 3;
+// console.assert(numerator < denominator);
 
-const numerator2 = 5;
-const denominator2 = 2;
-console.assert(numerator2 > denominator2);
+// const numerator2 = 5;
+// const denominator2 = 2;
+// console.assert(numerator2 > denominator2);
 
 // Acceptance criteria:
 
@@ -58,3 +58,4 @@ function isProperFraction(numerator, denominator){
         return false;
     }
 }
+console.log (isProperFraction(11,11));
