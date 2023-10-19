@@ -12,7 +12,11 @@
 function rotateCharacter(char, shift){
     const alphaLower = "abcdefghijklmnopqrstuvwxyz";
     const alphaUpper = alphaLower.toUpperCase();
+    if(char >= alphaLower.length){
+        return alphaUpper.includes();
+    }
 }
+console.log(rotateCharacter(r,2));
 // Acceptance criteria:
 
 // Given a character (char) and a shift value (shift),
