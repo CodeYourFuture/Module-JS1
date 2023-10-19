@@ -35,7 +35,16 @@ function getCardValue(handle) {
   const fourSuits = ["♣", "♥", "♠", "♦"];
   const suits = handle.substring(handle.length - 1);
   if (fourSuits.includes(suits)) {
-    if (cardRank === "2" || cardRank === "3") {
+    if (
+      cardRank === "2" ||
+      cardRank === "3" ||
+      cardRank === "4" ||
+      cardRank === "5" ||
+      cardRank === "6" ||
+      cardRank === "7" ||
+      cardRank === "8" ||
+      cardRank === "9"
+    ) {
       return Number(cardRank);
     } else if (
       cardRank === "10" ||
@@ -52,4 +61,22 @@ function getCardValue(handle) {
   }
   return "Invalid card symbol!";
 }
-console.log(getCardValue(""));
+
+const currentOutput = getCardValue("2♠");
+const targetOutput = 2;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput2 = getCardValue("J♥");
+const targetOutput2 = 10;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
