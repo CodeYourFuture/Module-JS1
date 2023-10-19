@@ -5,9 +5,6 @@
 
 // This function is commonly used for text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
-// const alphaLower = "abcdefghijklmnopqrstuvwxyz";
-// const alphaUpper = alphaLower.toUpperCase();
-// console.log(alphaUpper);
 
 function rotateCharacter(char, shift) {
   const alphaLower = "abcdefghijklmnopqrstuvwxyz";
