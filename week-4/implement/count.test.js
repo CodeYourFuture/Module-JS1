@@ -15,3 +15,18 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+function charCounter(str,char){
+    let occurrences=0;
+    if(str.includes(char)){
+        for(let i=0;i<str.length;i++){
+            if(str[i]===char){
+                occurrences=occurrences+1;
+            }
+        }
+        return `${char} appears ${occurrences} times in ${str}`
+    }
+    else return `${0} times ${char} apeared in ${str}` ;
+}
+
+console.log(charCounter('helloooooo' ,'o'));
