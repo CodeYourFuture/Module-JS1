@@ -4,12 +4,6 @@
 
 // You need to write assertions for your function to check it works in different cases
 
-const numberCards = ("2", "3", "4", "5", "6", "7", "8", "9");
-const faceCard = ("j", "k", "q");
-const aceCard = ("♣", "♥", "♠", "♦" );
-console.assert(numberCards === "5");
-
-
 // Acceptance criteria:
 
 // Given a card string in the format "A♠" (representing a card in blackjack),
@@ -35,3 +29,27 @@ console.assert(numberCards === "5");
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(handle) {
+  const cardRank = handle.substring(0, handle.length - 1);
+  const fourSuits = ["♣", "♥", "♠", "♦"];
+  const suits = handle.substring(handle.length - 1);
+  if (fourSuits.includes(suits)) {
+    if (cardRank === "2" || cardRank === "3") {
+      return Number(cardRank);
+    } else if (
+      cardRank === "10" ||
+      cardRank === "J" ||
+      cardRank === "Q" ||
+      cardRank === "K"
+    ) {
+      return 10;
+    } else if (cardRank === "A") {
+      return 11;
+    } else {
+      return "Invalid card rank!";
+    }
+  }
+  return "Invalid card symbol!";
+}
+console.log(getCardValue(""));
