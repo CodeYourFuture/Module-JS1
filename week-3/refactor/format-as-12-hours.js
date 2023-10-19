@@ -11,4 +11,4 @@ function formatAs12HourClock(time) {
 }
 
 // Explain why it makes more sense to store this expression in a variable
-//answer: It makes the code neat.
+//answer: It makes the code neat.de
