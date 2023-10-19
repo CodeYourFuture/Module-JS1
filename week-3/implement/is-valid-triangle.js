@@ -49,3 +49,38 @@ function isValidTriangle(a, b, c) {
     return true;
   }
 }
+const currentOutput = isValidTriangle(4, 6, 3);
+const targetOutput = true;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput2 = isValidTriangle(3, 5, 9);
+const targetOutput2 = false;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput3 = isValidTriangle(6, 0, 5);
+const targetOutput3 = false;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput4 = isValidTriangle(-3, 7, 8);
+const targetOutput4 = false;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
