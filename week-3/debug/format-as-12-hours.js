@@ -53,6 +53,7 @@ console.assert(
 );
 // b) Check the assertion output and explain what the bug is
 //The current output is "5:00 pm" while target output is supposed to be "05:42 pm"
+//It is because in the first function they only subtracted 12hours if the time is past midday and they ignored the the last two numbers in the hour string which stand for the minutes. They gave 00 for the minutes part thats why it never changed it always remained as 00 as the last two digits
 
 // c) Now fix the bug and re-run all your assertions
 
