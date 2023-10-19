@@ -11,6 +11,7 @@
 // It's also true that b + c > a
 // It's also true that a + c > b
 
+
 // In our function isValidTriangle, we need to invalidate any triangle where the sum of any two sides is less than or equal to the length of the third side.
 // and we need to validate any triangle where the sum of any two sides is greater than the length of the third side.
 
@@ -37,3 +38,14 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+
+function isValidTriangle(a, b, c) {
+  if (a + b <= c || a + c <= b || b + c <= a) {
+    return false;
+  } else if (a <= 0 || b <= 0 || c <= 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
