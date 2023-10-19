@@ -45,16 +45,18 @@ console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
 function rotateCharacter(char, shift) {
   const alphaLower = "abcdefghijklmnopqrstuvwxyz";
   const alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowerShiftIndex = alphaLower.indexOf(char) + shift;
+  const upperShiftIndex = alphaUpper.indexOf(char) + shift;
   if (alphaLower.includes(char)) {
-    if (alphaLower.indexOf(char) + shift >= 26) {
-      return alphaLower[alphaLower.indexOf(char) + shift - 26];
+    if (lowerShiftIndex >= 26) {
+      return alphaLower[lowerShiftIndex - 26];
     }
-    return alphaLower[alphaLower.indexOf(char) + shift];
+    return alphaLower[lowerShiftIndex];
   } else if (alphaUpper.includes(char)) {
-    if (alphaUpper.indexOf(char) + shift >= 26) {
-      return alphaUpper[alphaUpper.indexOf(char) + shift - 26];
+    if (upperShiftIndex >= 26) {
+      return alphaUpper[upperShiftIndex - 26];
     }
-    return alphaUpper[alphaUpper.indexOf(char) + shift];
+    return alphaUpper[upperShiftIndex];
   }
   return char;
 }
