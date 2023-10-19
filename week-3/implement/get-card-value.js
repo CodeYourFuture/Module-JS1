@@ -80,3 +80,20 @@ console.assert(
   targetOutput
 );
 
+const currentOutput3 = getCardValue("A♥");
+const targetOutput3 = 11;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput4 = getCardValue("4@");
+const targetOutput4 = "Invalid card symbol!";
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
