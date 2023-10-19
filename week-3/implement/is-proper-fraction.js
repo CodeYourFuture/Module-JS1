@@ -1,5 +1,26 @@
+
 // You wil need to implement a function isProperFraction
+  function isProperFraction(numerator, denominator) {
+    if (denominator === 0) {
+      return Error;
+    } else if (denominator < numerator) {
+      return false;
+    } else if (denominator === numerator) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+console.assert(isProperFraction(1, 2) === true);
+console.assert(isProperFraction(2, 1) === false);
+console.assert(isProperFraction(2, 2) === false);
+console.assert(isProperFraction(2, 0) === Error);
+console.assert(isProperFraction(0, 1) === true);
+console.assert(isProperFraction(-2, 3) === true);
+
+// }
 // You need to write assertions for your function to check it works in different cases
+// console.assert(currentOutput === targetOutput, `currentOutput: %s, targetOutput: %s`, currentOutput,targetOutput);
 
 // Terms:
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j

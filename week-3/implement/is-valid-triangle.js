@@ -6,6 +6,18 @@
 // Side b = 3
 // Side c = 3
 
+function isValidTriangle(a,b,c){
+    if ((a + b > c) && (a + c > b) && (b + c > a)){
+        return "valid triangle";
+    }return "invalid triangle";
+}
+
+console.assert(isValidTriangle(2,3,5) === "invalid triangle", "1");
+console.assert(isValidTriangle(3, 4, 5) === "valid triangle", "2");
+console.assert(isValidTriangle(2, 4, 0) === "invalid triangle", "3");
+console.assert(isValidTriangle(2, -3, 5) === "invalid triangle", "4");
+console.assert(isValidTriangle(8, 4, 5) === "valid triangle", "5");
+console.assert(isValidTriangle(0, 0, -5) === "invalid triangle", "6");
 // This is a valid triangle, because a plus b = 6 and 6 is greater than 3
 // Another way to write this is a + b > c
 // It's also true that b + c > a
