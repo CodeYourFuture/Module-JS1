@@ -48,32 +48,55 @@ function getCardValue(number, suit) {
   }
 }
 
-const currentOutput = getCardValue("8", "♠️");
-const targetOutput = 8;
-console.assert(
-  currentOutput === targetOutput,
-  "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput
-);
+test("gives value for number cards `2` to `9`", function () {
+  const currentOutput = getCardValue("8", "♠️");
+  const targetOutput = 8;
+  expect(currentOutput).toBe(targetOutput);
+  expect(getCardValue("6", "♦️️")).toBe(6);
+});
 
-const currentOutput2 = getCardValue("A", "♥️");
-const targetOutput2 = 11;
-console.assert(
-  currentOutput2 === targetOutput2,
-  "current output: %s, target output: %s",
-  currentOutput2,
-  targetOutput2
-);
+test("gives value for face cards `10`,`J`,`K` and `Q`", function () {
+  const currentOutput = getCardValue("10", "♠️");
+  const targetOutput = 10;
+  expect(currentOutput).toBe(targetOutput);
+  expect(getCardValue("K", "♦️️")).toBe(10);
+});
 
-const currentOutput3 = getCardValue("g", "♦️️");
-const targetOutput3 = "Invalid card rank.";
-console.assert(
-  currentOutput3 === targetOutput3,
-  "current output: %s, target output: %s",
-  currentOutput3,
-  targetOutput3
-);
+test("gives value for ace card `A`", function () {
+  const currentOutput = getCardValue("A", "♠️");
+  const targetOutput = 11;
+  expect(currentOutput).toBe(targetOutput);
+});
+
+
+
+
+// const currentOutput = getCardValue("8", "♠️");
+// const targetOutput = 8;
+// console.assert(
+//   currentOutput === targetOutput,
+//   "current output: %s, target output: %s",
+//   currentOutput,
+//   targetOutput
+// );
+
+// const currentOutput2 = getCardValue("A", "♥️");
+// const targetOutput2 = 11;
+// console.assert(
+//   currentOutput2 === targetOutput2,
+//   "current output: %s, target output: %s",
+//   currentOutput2,
+//   targetOutput2
+// );
+
+// const currentOutput3 = getCardValue("g", "♦️️");
+// const targetOutput3 = "Invalid card rank.";
+// console.assert(
+//   currentOutput3 === targetOutput3,
+//   "current output: %s, target output: %s",
+//   currentOutput3,
+//   targetOutput3
+// );
 
 
 
