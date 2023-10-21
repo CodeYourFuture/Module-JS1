@@ -8,7 +8,7 @@
 // Given the input string str,
 // And a character char that may occur multiple times with overlaps within str (e.g., 'a' in 'aaaaa'),
 // When the function is called with these inputs,
-// Then it should correctly count overlapping occurrences of char (e.g., 'a' appears five times in 'aaaaa').
+// Then it should correctly count consecutive occurrences of char (e.g., 'a' appears five times in 'aaaaa').
 
 // Scenario: No Occurrences
 // Given the input string str,
