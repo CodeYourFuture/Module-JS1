@@ -19,7 +19,7 @@ console.log(result);
 // b) How many function calls are there?
 // There isn't any function calls.
 
-// c) Using documentation, explain what the expression movieLength % 60 represents
+// c) Using documentation on MDN, explain what the expression movieLength % 60 represents
 
 // This represents how many seconds are in a minute.
 // This ensures that all the minutes are accounted for, and any remainders will be formatted in seconds.
@@ -33,6 +33,7 @@ console.log(result);
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
 
+<<<<<<< HEAD
 // The amount of time left of the film
 // const filmTimeLeft = `${remainingHours}:${remainingMinutes}:${remainingSeconds}`;
 
@@ -42,3 +43,9 @@ console.log(result);
 // the timer will display 0(Hours):0(Minutes):1(Seconds).
 // I did notice though that if I changed this number to a ridiculous number for example: 100000000000000 or 1000000000,
 // it would return the same value, which it should not
+=======
+// f) Think about whether this program will work for all values of movieLength.
+//    Think of what values may cause problems for the code.
+//    Decide the result should be for those values, then test it out.
+//    Can you find any values of movieLength which don't give you what you'd expect?
+>>>>>>> 03fce56db903fb986ff36f73e4d57cebfa18707c

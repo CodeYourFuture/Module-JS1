@@ -31,4 +31,7 @@ Here is a recommended order:
 
 ## 💪 Stretch
 
-Implement `rotateChar` as defined in `implement/rotate-char`
+Raise a PR with your work so far before tackling the **stretch** tasks.
+After you've raised a PR, have a go at:
+
+Implement `rotateChar` as defined in the `stretch` directory.

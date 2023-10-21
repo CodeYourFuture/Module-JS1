@@ -1,7 +1,7 @@
 // Predict and explain first...
-
+// Write down the error you predict will be raised
 // Why will an error occur when this program runs?
-// Try playing computer with the example to work out what is going on
+// Play computer with the example to work out what is going on
 
 //This will not work because in line 7 the variable decimal number declaration came after the function. It should come first then the function declaration.
 //Also we need to call the function in the console log for it to work.

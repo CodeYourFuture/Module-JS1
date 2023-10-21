@@ -22,8 +22,10 @@ console.log(`£${pounds}.${pence}`);
 
 // You need to do a step-by-step breakdown of each line in this program
 // Try and describe the purpose / rationale behind each step
+// You should use MDN to look up substring, padStart and padEnd to interpret this program
 
 // To begin, we can start with
+<<<<<<< HEAD
 //  const penceString = "399p": initialises a string variable with the value "399p"
 
 // It stores actual number value of the string.From index of 0 until second last index of the string.so it can exclude letter p.
@@ -37,3 +39,7 @@ console.log(`£${pounds}.${pence}`);
 //while excluding remaining number. After extracting the last two digits, 
 //the padEnd method is used to ensure that the string is always two characters long. If the extracted substring is less than two characters, it pads the string with zeros on the right side until it reaches a length of 2.
 //It is displaying total number of pounds and pence. 
+=======
+
+// 1. const penceString = "399p": initialises a string variable with the value "399p"
+>>>>>>> 03fce56db903fb986ff36f73e4d57cebfa18707c
