@@ -1,6 +1,6 @@
 function formatAs12HourClock(time) {
   if (Number(time.slice(0, 2)) > 12) {
-    return `${Number(time.slice(0, 2)) - 12}:00 pm`;
+    return `${Number(time.slice(0, 2)) - 12}:${Number(time.slice(3,5))} pm`;
   }
   return `${time} am`;
 }
@@ -26,5 +26,16 @@ console.assert(
 // formatAs12HourClock currently has a 🐛
 
 // a) Write an assertion to check the return value of formatAs12HourClock when it is called with an input "17:42"
+const currentOutput3 = formatAs12HourClock("17:42");
+const targetOutput3 = "05:42 pm";
+console.assert(
+  currentOutput3 === targetOutput3,
+  "current output: %s, target output: %s",
+  currentOutput3,
+  targetOutput3
+);
 // b) Check the assertion output and explain what the bug is
+// The bug is becuase it always adds "am" to the time, even when the hour is more than 12, which is a fault in the formatAs12HourClock function. When the hour falls in the afternoon or evening, this leads to inaccurate production.
+
 // c) Now fix the bug and re-run all your assertions
+
