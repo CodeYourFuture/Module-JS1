@@ -1,7 +1,7 @@
 // Predict and explain first...
-
+// Write down the error you predict will be raised
 // Why will an error occur when this program runs?
-// Try playing computer with the example to work out what is going on
+// Play computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
   const decimalNumber = 0.5;

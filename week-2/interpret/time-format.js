@@ -1,5 +1,8 @@
 function pad(num) {
-  return num.toString().padStart(2, "0");
+  if (num < 10) {
+    return `0${num}`;
+  }
+  return num;
 }
 
 function formatTimeDisplay(seconds) {
@@ -14,23 +17,27 @@ function formatTimeDisplay(seconds) {
   )}`;
 }
 
-console.log(formatTimeDisplay(61));
+console.log(formatTimeDisplay(143));
 
-// You will need to play computer with this example - use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
+// You can play computer with this example
+// Use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
 // to help you answer these questions
 
 // Questions
 
-// a) Run this program with node, identify the line the error is thrown. Explain why this error is occurring. How can you fix this error?
+// a) When formatTimeDisplay is called how many times will pad be called?
 
-// b) When formatTimeDisplay is called how many times will pad be called?
+// Call formatTimeDisplay with an input of 143, now answer the following:
 
-// Call formatTimeDisplay with an input of 61, now answer the following:
+// b) What value is assigned to the parameter num when pad is called for the first time?
 
-// c) What is the value assigned to num when pad is called for the first time?
+// c) What is the return value of pad when it is called for the first time?
 
-// d) What is the return value of pad is called for the first time?
+// d) What is the value assigned to the parameter num when pad
+// is called for the last time in this program?  Explain your answer
 
-// e) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
+// e) What is the return value when pad is called
+// for the last time in this program?  Explain your answer
 
-// f) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
+// f) Research an alternative way of padding the numbers in this code.
+// Look up the string functions on mdn

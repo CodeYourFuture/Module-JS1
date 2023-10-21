@@ -19,7 +19,7 @@ console.log(result);
 // b) How many function calls are there?
 // There isn't any function calls.
 
-// c) Using documentation, explain what the expression movieLength % 60 represents
+// c) Using documentation on MDN, explain what the expression movieLength % 60 represents
 
 // This represents how many seconds are in a minute.
 // This ensures that all the minutes are accounted for, and any remainders will be formatted in seconds.

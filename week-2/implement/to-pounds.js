@@ -1,6 +1,5 @@
-// In week-1, there is a program written in interpret/to-pounds.js
+// Find to-pounds.js in an earlier week in this repo
 
-// You will need to take this code and turn it into a reusable block of code.
-// You will need to declare a function called toPounds with an appropriately named parameter.
-
-// You should call this function a number of times to check it works for different inputs
+// Take this code and turn it into a reusable block of code.
+// Declare a function called toPounds with an appropriately named parameter.
+// Call this function a number of times to check it works for different inputs

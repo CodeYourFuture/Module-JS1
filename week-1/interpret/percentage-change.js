@@ -18,7 +18,7 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 
-// c) Identify all the lines that are variable reassignment statements
+// c) Identify all the lines that are variable declarations
 
 // There are 2. On line 4 and line 5
 

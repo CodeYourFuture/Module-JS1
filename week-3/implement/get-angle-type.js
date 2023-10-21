@@ -1,10 +1,6 @@
-// Implement a function getAngleType
+// Implement a function getAngleType, and tests for each of the acceptance criteria.
 
 // Acceptance criteria:
-
-// Given an angle in degrees,
-// When the function getAngleType is called with this angle,
-// Then it should:
 
 // Identify Right Angles:
 // When the angle is exactly 90 degrees,

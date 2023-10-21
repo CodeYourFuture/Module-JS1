@@ -3,7 +3,7 @@
 // it rotates the character by the specified shift value within the alphabet,
 // considering wrapping around if necessary. Non-letter characters are returned unchanged.
 
-// This function is commonly used for text encryption and decryption,
+// This function is commonly used for weak text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
 // Acceptance criteria:
@@ -17,7 +17,7 @@
 // When the function is called with these inputs,
 // Then it should rotate the lowercase letter by shift positions within the lowercase alphabet, wrapping around if necessary, and return the rotated lowercase letter as a string.
 console.log(rotateCharacter("a", 3)); // Output: "d"
-console.log(rotateCharacter("f", 1)); // Output: "f"
+console.log(rotateCharacter("f", 1)); // Output: "g"
 
 // Scenario: Rotate Uppercase Letters:
 // Given an uppercase letter character (char) and a positive integer shift,

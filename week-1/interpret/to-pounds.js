@@ -22,6 +22,7 @@ console.log(`£${pounds}.${pence}`);
 
 // You need to do a step-by-step breakdown of each line in this program
 // Try and describe the purpose / rationale behind each step
+// You should use MDN to look up substring, padStart and padEnd to interpret this program
 
 // To begin, we can start with
 //  const penceString = "399p": initialises a string variable with the value "399p"

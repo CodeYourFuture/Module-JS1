@@ -16,7 +16,7 @@ Keep running `npm test` to check the new tests you've created.
 
 ## 🔍 Investigate
 
-In this exercise, you'll need to **play computer** with the function `find`. This function makes use of while loop statement. Your task will be to step through the code to figure out what is happening when the computer executes the code.
+In this exercise, you'll need to **play computer** with the function `find`. This function makes use of a while loop statement. Your task will be to step through the code to figure out what is happening when the computer executes the code.
 
 ## 🔧 Implement
 
