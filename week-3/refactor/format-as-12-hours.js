@@ -6,11 +6,15 @@ function formatAs12HourClock(time) {
     const hour = Number(time.slice(0,2));
     if (hour > 12) {
     return `${hour - 12}:${time.slice(3)} pm`;
+  }else if (hour === 12){
+    return `${time} pm`;
+  }else if (hour === 0){
+    return `12:${time.slice(3)} am`;
   }
   return `${time} am`;
 }
 // test the function
-console.log(formatAs12HourClock("17:52"));
+console.log(formatAs12HourClock("23:40"));
 
 
 // Explain why it makes more sense to store this expression in a variable
