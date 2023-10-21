@@ -14,3 +14,25 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+function checkValidPassword(password){
+    
+
+}
+
+
+// let password = "Zahide3%";
+
+// function numberCheck(password) {
+//   let number = ["0", "1", "2", "3"];
+//   let index = 0;
+//   while (index < number.length) {
+//     if (password.includes(number[index])) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//     index++;
+//   }
+// }
+
+// console.log(numberCheck(password));
