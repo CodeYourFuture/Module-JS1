@@ -4,6 +4,42 @@
 // When the repeat function is called with these inputs,
 // Then it should:
 
+function timesToRepeatString(str, times) {
+  if (times === 0) {
+    return " ";
+  } else if (times >= 1) {
+    return str.repeat(times);
+  } else if (times < 0) {
+    return "Sorry, you cannot return a negative number for an amount of times to display a string.";
+  }
+}
+
+test("returns a string the specified amount of times", function () {
+  expect(timesToRepeatString("Marcus ", 2)).toBe("Marcus Marcus ");
+});
+
+test("returns a string the specified amount of times", function () {
+  expect(timesToRepeatString("Marcus ", 1)).toBe("Marcus ");
+});
+
+test("returns a string the specified amount of times", function () {
+  expect(timesToRepeatString("Marcus ", 0)).toBe(" ");
+});
+
+test("returns a string the specified amount of times", function () {
+  expect(timesToRepeatString("Marcus ", -6)).toBe(
+    "Sorry, you cannot return a negative number for an amount of times to display a string."
+  );
+});
+
+console.log(timesToRepeatString("Marcus ", 6));
+console.log(timesToRepeatString("Marcus ", 0));
+console.log(timesToRepeatString("Marcus ", -1));
+
+// test("Repeats string by specified amount of times", function () {
+//   expect(timesToRepeatString(2).toBe("Marcus Marcus"));
+// });
+
 // case: repeat String:
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
