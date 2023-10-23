@@ -1,6 +1,6 @@
-const cardNumber = 4533787178994213;
-const last4Digits = cardNumber.toString().slice(-4);
+// const 12HourClockTime = "20:53";
+// const 24hourClockTime = "08:53";
 
-console.log(`I was born in ${last4Digits}`);
-
-// invalid variable name that start with a digit which is not allowed in JS. we should use $ or _ or a letter at the start of the variable or following it.
+//corrected example =>
+const _12HourClockTime = "20:53";
+const _24hourClockTime = "08:53";
