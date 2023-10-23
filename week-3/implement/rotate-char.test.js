@@ -15,6 +15,26 @@ function rotateCharacter(letter, shift) {
   }
 }
 
+test("rotates a character according to the shift input given", function () {
+  const currentOutput = rotateCharacter("a", 3);
+  const targetOutput = "d";
+  expect(currentOutput).toBe(targetOutput);
+});
+test("rotates a character according to the shift input given", function () {
+  const currentOutput = rotateCharacter("F", 1);
+  const targetOutput = "G";
+  expect(currentOutput).toBe(targetOutput);
+});
+test("rotates a character according to the shift input given", function () {
+  const currentOutput = rotateCharacter("7", 5);
+  const targetOutput = "7";
+  expect(currentOutput).toBe(targetOutput);
+});
+test("rotates a character according to the shift input given", function () {
+  const currentOutput = rotateCharacter("x", 5);
+  const targetOutput = "c";
+  expect(currentOutput).toBe(targetOutput);
+});
 
 // The rotateCharacter function takes a character and a shift value as input.
 // If the character is a letter (either uppercase or lowercase),

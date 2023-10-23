@@ -40,39 +40,55 @@
 
 function isValidTriangle(a, b, c) {
     if(a <= 0, b <= 0, c <= 0){
-        return "false";
+        return false;
     }
     else if(a + b > c && a + c > b && c + b > a){
-        return "true";
+        return true;
     }
     else {
-        return "false";
+        return false;
     }
 }
 
-const currentOutput = isValidTriangle(2, 4, -5);
-const targetOutput = "false";
-console.assert(
-  currentOutput === targetOutput,
-  "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput
-);
+test("checks if its a valid triangle", function () {
+  const currentOutput = isValidTriangle(2, 4, -5);
+  const targetOutput = false;
+  expect(currentOutput).toBe(targetOutput);
+});
+test("checks if its a valid triangle", function () {
+  const currentOutput = isValidTriangle(3, 1, 2);
+  const targetOutput = false;
+  expect(currentOutput).toBe(targetOutput);
+});
+test("checks if its a valid triangle", function () {
+  const currentOutput = isValidTriangle(4, 5, 2);
+  const targetOutput = true;
+  expect(currentOutput).toBe(targetOutput);
+});
 
-const currentOutput2 = isValidTriangle(3, 1, 2);
-const targetOutput2 = "false";
-console.assert(
-  currentOutput2 === targetOutput2,
-  "current output: %s, target output: %s",
-  currentOutput2,
-  targetOutput2
-);
+// const currentOutput = isValidTriangle(2, 4, -5);
+// const targetOutput = false;
+// console.assert(
+//   currentOutput === targetOutput,
+//   "current output: %s, target output: %s",
+//   currentOutput,
+//   targetOutput
+// );
 
-const currentOutput3 = isValidTriangle(4, 5, 2);
-const targetOutput3 = "true";
-console.assert(
-  currentOutput3 === targetOutput3,
-  "current output: %s, target output: %s",
-  currentOutput3,
-  targetOutput3
-);
+// const currentOutput2 = isValidTriangle(3, 1, 2);
+// const targetOutput2 = false;
+// console.assert(
+//   currentOutput2 === targetOutput2,
+//   "current output: %s, target output: %s",
+//   currentOutput2,
+//   targetOutput2
+// );
+
+// const currentOutput3 = isValidTriangle(4, 5, 2);
+// const targetOutput3 = true;
+// console.assert(
+//   currentOutput3 === targetOutput3,
+//   "current output: %s, target output: %s",
+//   currentOutput3,
+//   targetOutput3
+// );

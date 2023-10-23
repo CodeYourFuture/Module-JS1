@@ -38,60 +38,86 @@ function isProperFraction(numerator, denominator) {
         return "Error";
     }
     else if(numerator > denominator){
-        return "false";
+        return false;
     }
     else if(numerator < denominator) {
-      return "true";
+      return true;
     } 
     else if(numerator < 0 && denominator > 0) {
-      return "true";
+      return true;
     } 
     else if(numerator === denominator) {
-      return "false";
+      return false;
     }
 }
 
-const currentOutput = isProperFraction(2, 5);
-const targetOutput = "true";
-console.assert(
-  currentOutput === targetOutput,
-  "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput
-);
+test("checks if its a proper fraction if the numerator is less than the denominator", function () {
+  const currentOutput = isProperFraction(2, 5);
+  const targetOutput = true;
+  expect(currentOutput).toBe(targetOutput);
+});
+test("checks if its a proper fraction if the numerator is less than the denominator", function () {
+  const currentOutput = isProperFraction(4, 2);
+  const targetOutput = false;
+  expect(currentOutput).toBe(targetOutput);
+});
+test("checks if its a proper fraction if the numerator is less than the denominator", function () {
+  const currentOutput = isProperFraction(3, 3);
+  const targetOutput = false;
+  expect(currentOutput).toBe(targetOutput);
+});
+test("checks if its a proper fraction if the numerator is less than the denominator", function () {
+  const currentOutput = isProperFraction(3, 0);
+  const targetOutput = "Error";
+  expect(currentOutput).toBe(targetOutput);
+});
+test("checks if its a proper fraction if the numerator is less than the denominator", function () {
+  const currentOutput = isProperFraction(-5, 4);
+  const targetOutput = true;
+  expect(currentOutput).toBe(targetOutput);
+});
 
-const currentOutput2 = isProperFraction(4, 2);
-const targetOutput2 = "false";
-console.assert(
-  currentOutput2 === targetOutput2,
-  "current output: %s, target output: %s",
-  currentOutput2,
-  targetOutput2
-);
+// const currentOutput = isProperFraction(2, 5);
+// const targetOutput = true;
+// console.assert(
+//   currentOutput === targetOutput,
+//   "current output: %s, target output: %s",
+//   currentOutput,
+//   targetOutput
+// );
 
-const currentOutput3 = isProperFraction(3, 3);
-const targetOutput3 = "false";
-console.assert(
-  currentOutput3 === targetOutput3,
-  "current output: %s, target output: %s",
-  currentOutput3,
-  targetOutput3
-);
+// const currentOutput2 = isProperFraction(4, 2);
+// const targetOutput2 = false;
+// console.assert(
+//   currentOutput2 === targetOutput2,
+//   "current output: %s, target output: %s",
+//   currentOutput2,
+//   targetOutput2
+// );
 
-const currentOutput4 = isProperFraction(3, 0);
-const targetOutput4 = "Error";
-console.assert(
-  currentOutput4 === targetOutput4,
-  "current output: %s, target output: %s",
-  currentOutput4,
-  targetOutput4
-);
+// const currentOutput3 = isProperFraction(3, 3);
+// const targetOutput3 = false;
+// console.assert(
+//   currentOutput3 === targetOutput3,
+//   "current output: %s, target output: %s",
+//   currentOutput3,
+//   targetOutput3
+// );
 
-const currentOutput5 = isProperFraction(-5, 4);
-const targetOutput5 = "true";
-console.assert(
-  currentOutput5 === targetOutput5,
-  "current output: %s, target output: %s",
-  currentOutput5,
-  targetOutput5
-);
+// const currentOutput4 = isProperFraction(3, 0);
+// const targetOutput4 = "Error";
+// console.assert(
+//   currentOutput4 === targetOutput4,
+//   "current output: %s, target output: %s",
+//   currentOutput4,
+//   targetOutput4
+// );
+
+// const currentOutput5 = isProperFraction(-5, 4);
+// const targetOutput5 = true;
+// console.assert(
+//   currentOutput5 === targetOutput5,
+//   "current output: %s, target output: %s",
+//   currentOutput5,
+//   targetOutput5
+// );
