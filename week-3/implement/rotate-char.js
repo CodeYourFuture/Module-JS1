@@ -40,3 +40,7 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
+
+function rotateCharacter( char, shift) {
+    
+}
