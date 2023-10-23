@@ -26,7 +26,7 @@ function countChar (str,char) {
     return count;
 }
 
-test("correctly counts overlapping occurrences of the character", function () {
+test("test to count overlapping of the character", function () {
     expect(countChar("ZahraKhademi", "a")).toBe(3);
 });
 
