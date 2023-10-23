@@ -1,5 +1,5 @@
 function getOrdinalNumber(num) {
-  if (num===11){
+  if (num === 11){
     return `${num}th`;
   }
   return `${num}st`;

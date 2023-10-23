@@ -23,3 +23,28 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+function repeat(str,num) {
+        if (num===0) {
+                return "";      
+        }
+        else if (num>=1) {
+                return str.repeat(num);
+                
+        } 
+        else if(num<0){
+                return "negative counts are not valid";
+
+        }
+             
+        
+}
+
+test('Repeating a string multiple times', () => {
+  expect(repeat('cat', 3)).toBe('catcatcat');
+});
+test('Repeating a string once', () => {
+  expect(repeat('hello', 1)).toBe('hello');
+});
+test('Repeating a string zero times', () => {
+  expect(repeat('eli', 0)).toBe('');
+});
