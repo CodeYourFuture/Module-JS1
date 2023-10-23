@@ -31,3 +31,53 @@
 // Then it should throw an error indicating "Invalid card rank."
 
 
+
+let numberCard = [ "2", "3","4","5","6","7","8","9"]
+let faceCard = ["10","Q","J","K"]
+let aceCard = ["A"]
+let suitsCard = ["♠", "♥", "♣","♦"]
+
+function getCardValue(number, suits) {
+
+    if (numberCard.includes(number) && suitsCard.includes(suits)) {
+
+        return number;
+    }
+ 
+    else if (faceCard.includes (number) && suitsCard.includes(suits)) {
+
+        return 10;
+    }
+
+    else if (aceCard.includes (number) && suitsCard.includes (suits)){
+
+        return 11;
+    }
+
+    else {
+        return " Invalid card rank";
+    }
+
+}
+
+
+
+  
+const currentOutput = getCardValue("A", "♥");
+const targetOutput = 11;
+console.assert(
+  currentOutput === targetOutput,
+  `current output: ${currentOutput}, target output: ${targetOutput}`
+);
+const currentOutput2 = getCardValue("3", "♥");
+const targetOutput2 = 3;
+console.assert(
+  currentOutput === targetOutput,
+  `current output: ${currentOutput}, target output: ${targetOutput}`
+);
+const currentOutput3 = getCardValue("Q", "♥");
+const targetOutput3 = 10;
+console.assert(
+  currentOutput === targetOutput,
+  `current output: ${currentOutput}, target output: ${targetOutput}`
+);
