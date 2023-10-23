@@ -22,7 +22,7 @@ function isPrime(number){
     
 }
 
-// there are some ways that code could to be optimized a bit more in execution time , like if thr last digit is even or 5 
+// there are some ways that code could to be optimized a bit more in execution time , like if the last digit is even or 5 
 //the number is not prime or if the sum of the digit is divideable to 3 it's not prime as well. it's useful for larg numbers;
 // but this was the easiest way
 
