@@ -15,9 +15,18 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 function checkValidPassword(password){
-    
+    let upperCase = /[A-Z]/;
+    let lowerCase = /[a-z]/;
+    let number = /[0-9]/;
+    let symbol = ["!", "#", "$", "%", ".", "*", "&"];
+    for(let i = 0; i < password.length; i++ ){
+        if () {
+          
+        }
+    }
 
 }
+console.log(checkValidPassword("Zahide3%"));
 
 
 // let password = "Zahide3%";
