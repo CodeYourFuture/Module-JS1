@@ -18,4 +18,6 @@ test("works for any number ending in 1", () => {
   expect(getOrdinalNumber(11)).toBe("11th");
   expect(getOrdinalNumber(32)).toBe("32nd");
   expect(getOrdinalNumber(43)).toBe("43rd");
+  expect(getOrdinalNumber(143)).toBe("143rd");
+  expect(getOrdinalNumber(1142)).toBe("1142nd");
 });
