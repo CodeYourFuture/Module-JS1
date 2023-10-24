@@ -10,6 +10,7 @@ function getOrdinalNumber(num) {
   } else if (num % 10 === 3 && num % 100 != 13) {
     return `${num}rd`;
   }
+   return `${num}th`;
 }
 
 test("works for any number ending in 1", () => {
