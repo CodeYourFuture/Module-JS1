@@ -16,7 +16,7 @@ function getOrdinalNumber(num) {
   const toSt = num % 10 === 1 && num % 100 != 11;
   const toNd = num % 10 === 2 && num % 100 != 12;
   const toRd = num % 10 === 3 && num % 100 != 13;
-
+  
   return toSt ? `${num}st` : toNd ? `${num}nd` : toRd ? `${num}rd` : `${num}th`;
 }
 
