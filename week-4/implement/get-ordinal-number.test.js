@@ -2,7 +2,11 @@
 
 // continue testing and implementing getOrdinalNumber for additional cases
 // Write your tests using Jest - remember to run your tests often for continual feedback
-
+function getOrdinalNumber(num) {
+  if (num % 10 === 1 && num % 100 != 11) {
+    return `${num}st`;
+  } 
+}
 
 test("works for any number ending in 1", () => {
   expect(getOrdinalNumber(1)).toBe("1st");
