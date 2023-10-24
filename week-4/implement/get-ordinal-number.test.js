@@ -29,3 +29,21 @@ function getOrdinalNumber(number){
 console.log (getOrdinalNumber(1))
 
 
+test('Returns ordinal number for 1', () => {
+    expect(getOrdinalNumber(1)).toBe("1st");
+});
+
+test('Returns ordinal number for 2', () => {
+    expect(getOrdinalNumber(2)).toBe("2nd");
+});
+
+test('Returns ordinal number for 3', () => {
+    expect(getOrdinalNumber(3)).toBe("3rd");
+});
+
+test('Returns ordinal number for other numbers', () => {
+    expect(getOrdinalNumber(4)).toBe("4th");
+    expect(getOrdinalNumber(11)).toBe("11th");
+    expect(getOrdinalNumber(22)).toBe("22nd");
+    expect(getOrdinalNumber(100)).toBe("100th");
+});
