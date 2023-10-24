@@ -16,7 +16,7 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 
 function passwordwordValidator(password){
-    const passwordHolder=[];
+     const passwordHolder=[];
     let gotUpper=/[A-Z]/.test(password);
     let gotLower=/[a-z]/.test(password);
     let gotDigit=/[0-9]/.test(password);
