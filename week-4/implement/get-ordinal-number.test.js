@@ -5,7 +5,9 @@
 function getOrdinalNumber(num) {
   if (num % 10 === 1 && num % 100 != 11) {
     return `${num}st`;
-  } 
+  } else if (num % 10 === 2 && num % 100 != 12) {
+    return `${num}nd`;
+  }
 }
 
 test("works for any number ending in 1", () => {
