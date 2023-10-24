@@ -43,7 +43,7 @@ function isValidTriangle(a,b,c){
     return (a + b > c && a + c > b && b + c > a) ? "valid triangle":"invalid triangle";
 }
 console.log(isValidTriangle(1,3,5));
-
+module.exports = isValidTriangle;
 
 console.assert(isValidTriangle(2, 3, 5) === "invalid triangle", "1");
 console.assert(isValidTriangle(3, 4, 5) === "valid triangle", "2");

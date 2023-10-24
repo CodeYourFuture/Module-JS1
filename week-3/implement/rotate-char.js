@@ -64,3 +64,4 @@ function rotateCharacter(char, shift) {
   return "Invalid shift value: select a shift less than 26";
 }
 
+module.exports = rotateCharacter;
