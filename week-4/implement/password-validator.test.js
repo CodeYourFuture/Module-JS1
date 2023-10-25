@@ -14,99 +14,76 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-function isValidPassword(password, previous) {
-    const number = "0123456789";
-    const symbol = "!#$%*&.";
-    const caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+// password-validator.js
 
-let hasPasswordLength=false
-    if (password.length > 5) {
-        hasPasswordLength=true;
-    }
-    let hasNumber = false;
-    for (let i = 0; i < number.length; i++) {
-        if (password.includes(number[i])) {
-            hasNumber = true;
-        }
-    }
-    let hasSpecialChar = false;
-    for (let i = 0; i < symbol.length; i++) {
-        if (password.includes(symbol[i])) {
-            symbol = true;
-        }
-    }
-    let hasCaps = false;
-    for (let i = 0; i < caps.length; i++) {
-        if (password.includes(caps[i])) {
-            hasCaps = true;
-        }
+// Function to check if the password is valid
+
+function passwordValidator(passwords){
+    const passwordHolder=[];
+    for (let i = 0; i < passwords.length; i++) {
+        const password = passwords[i]; 
+    // const validChar=/^[A-Za-z0-9!$%.&*]+$/.test(password);
+    let gotUpper=/[A-Z]/.test(password);
+    let gotLower=/[a-z]/.test(password);
+    let gotDigit=/[0-9]/.test(password);
+    let gotSymbol=/[!$%&*.#]/.test(password);
+    const passwordLength=password.length;
+    let uinquePassword=true;
+    for(let j=0; j<i;j++){
+        if(passwords[j]===password){
+
+        uinquePassword =false;
+
+        }else uinquePassword =true;
 
     }
-    let hasLowerCase = false;
-    for (let i = 0; i < lowercase.length; i++) {
-        if (password.includes(lowercase[i])) {
-            hasLowerCase = true;
-        }
+    // const isUniquePassword = passwords.indexOf(password) === i; -->
+    // const uinquePassword=!passwordHolder.includes(password);
+    if(
+        typeof password==='string' &&
+        passwordLength>5 &&
+        // validChar &&
+        uinquePassword&& 
+        gotUpper &&
+        gotLower &&
+        gotDigit &&
+        gotSymbol 
+    ){
+        passwordHolder.push(true);
+        
     }
-    let hasPreviousPassword = false;
-    if (!previous.includes(password)) {
-        hasPreviousPassword = true;
-    }
-    if (hasPasswordLength==true && hasCaps==true && hasLowerCase==true && hasNumber==true && hasPreviousPassword==true && hasSpecialChar==true) {
-        return true;
-    } else {
-        return false;
-    }
-
+    else passwordHolder.push(false);
+}
+    return passwordHolder;
 }
 
-const previous= ["Password1!", "SecurePass123#", "StrongPwd%456","ADbn!jk5"];
+
+test("check if the array of password is valid", function () {
+const passwords= ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tT37."];  
+    expect(passwordValidator(passwords)).toStrictEqual([true, true, true, false, false]);
+});
+test("check if the array of password is valid", function () {
+    const passwords= ["Eop45!", "Eop45!", "dvyy87!5", "qwb=j76%", "tytT3729."];  
+    expect(passwordValidator(passwords)).toStrictEqual([true, false, false, false, true]);
+    });
 
 
-test("Check if it is a valid password", function () {
-    const currentOutput = isValidPassword("bdhbhbd", previous);
-    const targetOutput = false;
-    expect(currentOutput).toBe(targetOutput);
-});
 
-test("Check if it is a valid password", function () {
-    const currentOutput = isValidPassword("SecurePWUV123#", previous);
-    const targetOutput = true;
-    expect(currentOutput).toBe(targetOutput);
-});
+// test("check if it is a valid password", function () {
+//     const currentOutput = isValidPassword("HiMy01233455");
+//     const targetOutput = false;
+//     expect(currentOutput).toBe(targetOutput);
+// });
+// test("check a valid password", function () {
+//     const currentOutput = isValidPassword("El4565@m");
+//     const targetOutput = true;
+//     expect(currentOutput).toBe(targetOutput);
+// });
 
-test("Check if it is a valid password", function () {
-    const currentOutput = isValidPassword("ADcn!jk5",previous );
-    const targetOutput = true;
-    expect(currentOutput).toBe(targetOutput);
-});
 
-test("Check if it is a valid password", function () {
-    const currentOutput = isValidPassword("adT",previous );
-    const targetOutput = false;
-    expect(currentOutput).toBe(targetOutput);
-});
 
-test("Check if it is a valid password", function () {
-    const currentOutput = isValidPassword("*****", previous);
-    const targetOutput = false;
-    expect(currentOutput).toBe(targetOutput);
-});
 
-test("Check if it is a valid password", function () {
-    const currentOutput = isValidPassword("*****",previous);
-    const targetOutput = false;
-    expect(currentOutput).toBe(targetOutput);
-});
 
-test("Check if it is a valid password", function () {
-    const currentOutput = isValidPassword("HiMy01233455",previous);
-    const targetOutput = false;
-    expect(currentOutput).toBe(targetOutput);
-});
-test("Check if it is a valid password", function () {
-    const currentOutput = isValidPassword("5Adniya&",previous);
-    const targetOutput = true;
-    expect(currentOutput).toBe(targetOutput);
-});
+
+
+

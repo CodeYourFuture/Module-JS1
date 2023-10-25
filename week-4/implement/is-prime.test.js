@@ -2,29 +2,25 @@
 // When the isPrime function is called with num as input,
 // Then it should check if the num is prime
 function isPrim(num) {
-    if (num === 1) {
-        return "no prime";       
-    }
-    if(num===2){
-        return "is a prime";
-    }
-    
-    if(num===3){
-         return "is a prime"
-    }
-    if (num % 4 == 0 || num % 3 == 0 || num % 2 == 0) {
-        return "no prime"
+    if (typeof num === 'number' && num > 1 && Number.isInteger(num)) {
+        for (let i = 2; i <= Math.floor(num/2); i++) {
+            if (num % i === 0) {
+                return `${num} is not a prime number`;
+            }
+        }
+        return `${num} is a prime number`;
+    } else if (typeof num === 'number' && num === 1) {
+        return `${1} is not a prime number`;
     } else {
-        return "is a prime"
+        return `try by a valid number`;
     }
-
 }
 
 test('checks if the number is prime', () => {
-    expect(isPrim(1)).toBe("no prime");
-    expect(isPrim(2)).toBe("is a prime");
-    expect(isPrim(3)).toBe("is a prime");
-    expect(isPrim(4)).toBe("no prime");
-    expect(isPrim(5)).toBe("is a prime");
+    expect(isPrim(1)).toBe("is not a prime number");
+    expect(isPrim(2)).toBe("is a prime number");
+    expect(isPrim(3)).toBe("is a prime number");
+    expect(isPrim(12)).toBe("is not a prime number");
+    expect(isPrim(877)).toBe("is a prime number");
     // Add more test cases as needed
 });

@@ -24,12 +24,20 @@ function countChar (str,char){
          }    
     }
      return count;
+     
+
 }
+
+
+
 test("correctly counts overlapping occurrences of the character", function () {
     expect(countChar("elmirazangeneh", "a")).toBe(2);
 });
 test("correctly counts overlapping occurrences of the character", function () {
     expect(countChar("mohammad", "m")).toBe(3);
+});
+test("correctly counts overlapping occurrences of the character", function () {
+    expect(countChar("baleeeee", "e")).toBe(5);
 });
 
 test("returns 0 when no occurrences of the character are found", function () {
