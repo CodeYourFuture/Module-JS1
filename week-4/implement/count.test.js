@@ -3,7 +3,17 @@
 // Given a string str and a single character char to search for,
 // When the countChar function is called with these inputs,
 // Then it should:
-
+function countChar(str, char) {
+  let count = 0;
+  for (i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      count++;
+    }
+  }
+  return `${char} appeared ${count} time${
+    count > 1 ? "s" : ""
+  } in the word ${str}`;
+}
 
 // Scenario: Multiple Occurrences
 // Given the input string str,
