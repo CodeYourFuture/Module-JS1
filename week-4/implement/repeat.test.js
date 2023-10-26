@@ -34,5 +34,10 @@ function repeatString(str, count) {
 // console.log(repeatString("Ooh ooh it worked! ", 1));
 test("This is to check for the repeat value of the string", () => {
   expect(repeatString("Ooh ooh it worked! ", 1)).toBe("Ooh ooh it worked! ");
-  
+  expect(repeatString("Ooh ooh it worked! ", 4)).toBe("Ooh ooh it worked! Ooh ooh it worked! Ooh ooh it worked! Ooh ooh it worked! ");
+  expect(repeatString("Ooh ooh it worked! ", 0)).toBe(`" "`);
+  expect(repeatString("Ooh ooh it worked! ", -8)).toBe(
+    "Invalid string not accepted!"
+  );
+
 });
