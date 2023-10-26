@@ -31,3 +31,4 @@ function repeatString(str, count) {
       ? `" "`
       : str.repeat(count);
 }
+console.log(repeatString("Ooh ooh it worked! ", 1));
