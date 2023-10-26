@@ -15,3 +15,23 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+function countChar(str,char){
+    if (str.includes(char)){
+        let count = 0
+        for (i = 0;i < str.length ; i++){
+            if (str[i]=== char){
+                count++;
+            }
+        } return `${char} appears ${count} time${count > 1 ? "s":""} in ${str}`;
+        
+    } return `${char} does not occur in ${str}`;
+}
+// test the code with console
+// console.log(countChar("bpabaPpP", "P"));
+
+// test with jest
+test ("Returns the number of occurrence of a character", function (){
+
+    expect(countChar("appears", "a")).toBe("a appears 2 times in appears");
+});

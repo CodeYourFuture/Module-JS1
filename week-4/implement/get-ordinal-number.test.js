@@ -16,10 +16,6 @@ function getOrdinalNumber(num) {
     ? `${num}rd`
     : `${num}th`;
 }
-
-// console test check
-// console.log(getOrdinalNumber(5));
-
 // JEST test
 // to loop through the tests
 const ordinals = [
@@ -35,19 +31,19 @@ const ordinals = [
   "512th",
 ];
 test("Return num to ordinal", function () {
-//   test listed ordinals above
+  //   test listed ordinals above
   for (i = 0, num = 1; i < ordinals.length; i++, num *= 2) {
     expect(getOrdinalNumber(num)).toBe(ordinals[i]);
   }
-//   test specific output
+  //   test specific output
   const currentOutput = getOrdinalNumber(2);
   const targetOutput = "2nd";
   expect(currentOutput).toBe(targetOutput);
 
-//   test some other specific examples
+  //   test some other specific examples
   expect(getOrdinalNumber(1)).toBe("1st");
   expect(getOrdinalNumber(3)).toBe("3rd");
   expect(getOrdinalNumber(11)).toBe("11th");
   expect(getOrdinalNumber(71)).toBe("71st");
-  expect(getOrdinalNumber(5462)).toBe("5462nd");
+  expect(getOrdinalNumber(515462)).toBe("515462nd");
 });
