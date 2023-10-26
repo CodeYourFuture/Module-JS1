@@ -25,5 +25,9 @@
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 
 function repeatString(str, count) {
-    
+    return count < 0
+      ? "Invalid string not accepted!"
+      : count === 0
+      ? `" "`
+      : str.repeat(count);
 }
