@@ -4,7 +4,10 @@
 function isPrime(num) {
    if (num < 2) {
      return false;
-   } 
+   }
+   for (let index = 2; index <= Math.sqrt(num); index++) {
+     
+   }
 }
 
 test("To check if a number is prime", () => {
