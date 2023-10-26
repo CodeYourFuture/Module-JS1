@@ -3,7 +3,7 @@ function find(str, char) {
 
   while (index < str.length) {
     if (str[index] === char) {
-      return index;
+       return index;;
     }
     index++;
   }

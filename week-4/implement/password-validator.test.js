@@ -55,7 +55,7 @@ function passwordValidator(password) {
             previousPassword.push(password);
             return "Congratulations! Password accepted";
         }
-        return "Rejected! Password have been used before";
+        return "Rejected! Password has been used before";
         
     }return "Try again! Character conditions not met.";
   }
