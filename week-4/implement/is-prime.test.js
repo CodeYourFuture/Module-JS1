@@ -6,7 +6,9 @@ function isPrime(num) {
      return false;
    }
    for (let index = 2; index <= Math.sqrt(num); index++) {
-     
+    if (num % index === 0) {
+      return false;
+    } 
    }
 }
 
