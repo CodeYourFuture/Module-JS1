@@ -14,3 +14,6 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+test("This is to check the validity of user's password", ()=>{
+    expect(validPassword("Olamide.6732")).toB(true);
+});
