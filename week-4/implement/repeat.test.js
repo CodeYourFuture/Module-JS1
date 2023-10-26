@@ -31,4 +31,8 @@ function repeatString(str, count) {
       ? `" "`
       : str.repeat(count);
 }
-console.log(repeatString("Ooh ooh it worked! ", 1));
+// console.log(repeatString("Ooh ooh it worked! ", 1));
+test("This is to check for the repeat value of the string", () => {
+  expect(repeatString("Ooh ooh it worked! ", 1)).toBe("Ooh ooh it worked! ");
+  
+});
