@@ -9,4 +9,5 @@ function isPrime(num) {
 
 test("To check if a number is prime", () => {
   expect(isPrime(1)).toBe(false);
+  expect(isPrime(-84)).toBe(false);
 });
