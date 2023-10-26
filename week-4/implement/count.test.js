@@ -4,6 +4,18 @@
 // When the countChar function is called with these inputs,
 // Then it should:
 
+// Scenario: Multiple Occurrences
+// Given the input string str,
+// And a character char that may occur multiple times with overlaps within str (e.g., 'a' in 'aaaaa'),
+// When the function is called with these inputs,
+// Then it should correctly count overlapping occurrences of char (e.g., 'a' appears five times in 'aaaaa').
+
+// Scenario: No Occurrences
+// Given the input string str,
+// And a character char that does not exist within the case-sensitive str,
+// When the function is called with these inputs,
+// Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
 function countChar(str, char) {
   let count = 0;
   for (i = 0; i < str.length; i++) {
@@ -16,18 +28,6 @@ function countChar(str, char) {
   } in the word ${str}`;
 }
 
-
-// Scenario: Multiple Occurrences
-// Given the input string str,
-// And a character char that may occur multiple times with overlaps within str (e.g., 'a' in 'aaaaa'),
-// When the function is called with these inputs,
-// Then it should correctly count overlapping occurrences of char (e.g., 'a' appears five times in 'aaaaa').
-
-// Scenario: No Occurrences
-// Given the input string str,
-// And a character char that does not exist within the case-sensitive str,
-// When the function is called with these inputs,
-// Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
 test("to count the number of times a letter appears in a given word", () => {
   expect(countChar("babbab", "b")).toBe(
     "b appeared 4 times in the word babbab"
