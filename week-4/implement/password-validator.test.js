@@ -50,7 +50,14 @@ function validPassword(input) {
       isAlphaNumericSymbol = true;
     }
   }
-  
+  if (validLength && isUpper && isLower && isNum && isAlphaNumericSymbol) {
+    if (!myPasswords.includes(input)) {
+      myPasswords.push(input);
+      return "Success!";
+    }
+    return "Oops! password has been used.";
+  }
+  return "Please check your password";
 }
 
 test("This is to check the validity of user's password", () => {
