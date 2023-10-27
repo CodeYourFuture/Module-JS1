@@ -31,7 +31,6 @@ function validPassword(input) {
 
   if (input.length >= 5) {
     validLength = true;
-    // return "Oops! Make it up to or more than 5 characters.";
   }
   for (index = 0; index < input.length; index++) {
     if (upper.includes(input[index])) {
@@ -62,12 +61,6 @@ function validPassword(input) {
   }
   return "Please check your password";
 }
-
-// console.log(validPassword("Olamide*6732"));
-// console.log(validPassword("OlamideAra*6732"));
-// console.log(validPassword("ladera*6732"));
-// console.log(validPassword("OlamideAra*6732"));
-// console.log(validPassword("Or*2"));
 
 test("This is to check the validity of user's password", () => {
   expect(validPassword("Olamide*6732")).toBe("Success!");
