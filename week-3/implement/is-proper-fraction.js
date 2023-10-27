@@ -43,8 +43,19 @@ function isProperFraction(numerator,denominator){
     else if(Math.abs(numerator)<Math.abs(denominator)){
         return true;
     }
-    else return false;
+    else if(Math.abs(numerator)>Math.abs(denominator)){
+        return false;
+    }
+    else {
+        throw new Error('Enter a valid value');
+    }
 }
+
+module.exports = {
+    isProperFraction,
+};
+
+
 
 // let outPut= isProperFraction(1,0);
 // console.assert(outPut instanceof Error && outPut.message==='denominator can not be zero please enter a valid value');
@@ -56,4 +67,5 @@ function isProperFraction(numerator,denominator){
 // console.assert(isProperFraction(-5,2)===false);
 // console.log(isProperFraction(1,0))
 // console.log(isProperFraction(-5,-3))
+// console.log(isProperFraction(true,'g'));
 

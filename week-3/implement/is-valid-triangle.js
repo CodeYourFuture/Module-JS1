@@ -55,18 +55,25 @@ function isValidTriangle(a,b,c){
         }
     }
     else {
-        return 'a,b,c are not valid values to create a traingle';
+        return 'values are not valid to create a trangle';
     }
 }
+
+
 
 // this function beside checking for valid value's to create a traingle based on the theory it also indicate
 // which type of triangle the vlue's make 
 
-console.assert(isValidTriangle(4,4,4)=== 'its a equialterial taringle');
-console.assert(isValidTriangle(3,3,5)=== 'its isosecle traingle');
-console.assert(isValidTriangle(3,5,3)=== 'its isosecle traingle');
-console.assert(isValidTriangle(5,3,3)=== 'its isosecle traingle');
-console.assert(isValidTriangle(3,4,5)=== 'its a scalene traingle');
-console.assert(isValidTriangle(3,'4',5)=== 'a,b,c are not valid values to create a traingle');
-console.assert(isValidTriangle(3,-4,5)=== 'a,b,c are not valid values to create a traingle');
-console.assert(isValidTriangle(3,-4,0)=== 'a,b,c are not valid values to create a traingle');
+// console.assert(isValidTriangle(4,4,4)=== 'its a equialterial taringle');
+// console.assert(isValidTriangle(3,3,5)=== 'its isosecle traingle');
+// console.assert(isValidTriangle(3,5,3)=== 'its isosecle traingle');
+// console.assert(isValidTriangle(5,3,3)=== 'its isosecle traingle');
+// console.assert(isValidTriangle(3,4,5)=== 'its a scalene traingle');
+// console.assert(isValidTriangle(3,'4',5)=== 'a,b,c are not valid values to create a traingle');
+// console.assert(isValidTriangle(3,-4,5)=== 'a,b,c are not valid values to create a traingle');
+// console.assert(isValidTriangle(3,-4,0)=== 'a,b,c are not valid values to create a traingle');
+
+
+module.exports = {
+    isValidTriangle,
+};

@@ -50,11 +50,18 @@ function getCardValue(cardValue){
 
 }
 
-console.assert(getCardValue('3♠')===3,'3 is not working');
-console.assert(getCardValue('Q♠')===10,'q is not working');
-console.assert(getCardValue('A♠')===11,'Ace is not working');
-console.assert(getCardValue('K♠')===10,'kings not working');
-console.assert(getCardValue('J')===10,'joker is not working');
-console.assert(getCardValue('h') instanceof Error, 'other card values are not working');
-console.assert(getCardValue(true) instanceof Error,'other card values are not working')
-console.assert(getCardValue('9')===9,'3 is not working');
+module.exports = {
+    getCardValue,
+};
+
+
+
+// console.assert(getCardValue('3♠')===3,'3 is not working');
+// console.assert(getCardValue('Q♠')===10,'q is not working');
+// console.assert(getCardValue('A♠')===11,'Ace is not working');
+// console.assert(getCardValue('K♠')===10,'kings not working');
+// console.assert(getCardValue('J')===10,'joker is not working');
+// console.assert(getCardValue('h') instanceof Error, 'other card values are not working');
+// console.assert(getCardValue(true) instanceof Error,'other card values are not working')
+// console.assert(getCardValue('9')===9,'3 is not working');
+

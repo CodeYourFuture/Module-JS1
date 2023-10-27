@@ -26,20 +26,20 @@
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 
-function getAngleType(angel){
+function getAngleType(angle){
 
-    if(typeof angel=='number'){
-        if(angel===90) return 'Right angel';
+    if(typeof angle=='number'){
+        if(angle===90) return 'Right angle';
 
-        else if(angel<90 && angel>=0) return 'Acute angel';
+        else if(angle<90 && angle>=0) return 'Acute angle';
 
-        else if(angel>90 && angel<180) return 'Obtuse angel' ;
+        else if(angle>90 && angle<180) return 'Obtuse angle' ;
 
-        else if(angel===180) return 'Straight angel' ;
+        else if(angle===180) return 'Straight angle' ;
 
-        else if (angel>180 && angel<360) return 'Reflex angel' ;
+        else if (angle>180 && angle<360) return 'Reflex angle' ;
 
-        else if(angel===360) return 'Full angel';  // it hasn't been menthioned if angel is 360 degree ; which is a full angel.
+        else if(angle===360) return 'Full angle';  // it hasn't been menthioned if angle is 360 degree ; which is a full angle.
 
         else return `Please Enter the degree's value in range of [0,360] (Including)`;
 
@@ -53,18 +53,20 @@ function getAngleType(angel){
 
         
 
-    
+module.exports = {
+  getAngleType,
+};
 
 
-console.assert(getAngleType(90)==='Right angel');
-console.assert(getAngleType(76)==='Acute angel');
+// console.assert(getAngleType(90)==='Right angle');
+// console.assert(getAngleType(76)==='Acute angle');
 
-console.log(getAngleType(123));
-console.log(getAngleType(0));
-console.log(getAngleType(90));
-console.log(getAngleType(180));
-console.log(getAngleType(270));
-console.log(getAngleType(720));
-console.log(getAngleType(true));
-console.log(getAngleType('t'));
-console.log(getAngleType('9'));
+// console.log(getAngleType(123));
+// console.log(getAngleType(0));
+// console.log(getAngleType(90));
+// console.log(getAngleType(180));
+// console.log(getAngleType(270));
+// console.log(getAngleType(720));
+// console.log(getAngleType(true));
+// console.log(getAngleType('t'));
+// console.log(getAngleType('9'));
