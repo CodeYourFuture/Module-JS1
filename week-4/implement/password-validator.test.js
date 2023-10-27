@@ -19,6 +19,10 @@ function validPassword(input) {
     const lower = "abcdefghijklmnopqrstuvwxyz";
     const num = "0123456789";
     const alphaSymbol = "!#$%.*&";
+    if (input.length >= 5) {
+      return "Oops! Make it up to or more than 5 characters.";
+    }
+
 }
 
 
