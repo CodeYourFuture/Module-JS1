@@ -50,6 +50,7 @@ function validPassword(input) {
       isAlphaNumericSymbol = true;
     }
   }
+  
 }
 
 test("This is to check the validity of user's password", () => {
