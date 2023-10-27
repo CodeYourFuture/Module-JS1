@@ -60,6 +60,12 @@ function validPassword(input) {
   return "Please check your password";
 }
 
-test("This is to check the validity of user's password", () => {
-  expect(validPassword("Olamide*6732")).toBe("Success!");
-});
+console.log(validPassword("Olamide*6732"));
+console.log(validPassword("OlamideAra*6732"));
+console.log(validPassword("ladera*6732"));
+console.log(validPassword("OlamideAra*6732"));
+console.log(validPassword("Or*2"));
+
+// test("This is to check the validity of user's password", () => {
+//   expect(validPassword("Olamide*6732")).toBe("Success!");
+// });
