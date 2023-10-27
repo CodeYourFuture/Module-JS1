@@ -69,6 +69,12 @@ function validPassword(input) {
 // console.log(validPassword("OlamideAra*6732"));
 // console.log(validPassword("Or*2"));
 
-// test("This is to check the validity of user's password", () => {
-//   expect(validPassword("Olamide*6732")).toBe("Success!");
-// });
+test("This is to check the validity of user's password", () => {
+  expect(validPassword("Olamide*6732")).toBe("Success!");
+  expect(validPassword("OlamideAra*6732")).toBe("Success!");
+  expect(validPassword("ladera*6732")).toBe("Please check your password");
+  expect(validPassword("OlamideAra*6732")).toBe(
+    "Oops! password has been used."
+  );
+  expect(validPassword("Or*2")).toBe("Please check your password");
+});
