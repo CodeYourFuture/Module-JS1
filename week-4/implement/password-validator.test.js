@@ -15,7 +15,10 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 function validPassword(input) {
-    
+    const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lower = "abcdefghijklmnopqrstuvwxyz";
+    const num = "0123456789";
+    const alphaSymbol = "!#$%.*&";
 }
 
 
