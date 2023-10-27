@@ -14,6 +14,9 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+let myPasswords = [];
+
 function validPassword(input) {
   const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lower = "abcdefghijklmnopqrstuvwxyz";
@@ -60,11 +63,11 @@ function validPassword(input) {
   return "Please check your password";
 }
 
-console.log(validPassword("Olamide*6732"));
-console.log(validPassword("OlamideAra*6732"));
-console.log(validPassword("ladera*6732"));
-console.log(validPassword("OlamideAra*6732"));
-console.log(validPassword("Or*2"));
+// console.log(validPassword("Olamide*6732"));
+// console.log(validPassword("OlamideAra*6732"));
+// console.log(validPassword("ladera*6732"));
+// console.log(validPassword("OlamideAra*6732"));
+// console.log(validPassword("Or*2"));
 
 // test("This is to check the validity of user's password", () => {
 //   expect(validPassword("Olamide*6732")).toBe("Success!");
