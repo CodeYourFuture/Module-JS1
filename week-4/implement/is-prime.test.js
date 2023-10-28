@@ -20,6 +20,12 @@ function isPrime(num) {
 }
 
 test("Check if number is prime", function () {
+    const input = 2;
+    const currentOutput = isPrime(2);
+    const targetOutput = "A Prime Number";
+    expect(currentOutput).toBe(targetOutput);
+});
+test("Check if number is prime", function () {
     const input = 3;
     const currentOutput = isPrime(3);
     const targetOutput = "A Prime Number";
