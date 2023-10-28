@@ -4,10 +4,22 @@
 // Write your tests using Jest - remember to run your tests often for continual feedback
 
 function getOrdinalNumber(num) {
-  if (num === 11){
-    return `${num}th`;
+  let stringedNum = num.toString();
+  if (typeof num==='number' && num>=1 && Number.isInteger(num)){
+    if(stringedNum[stringedNum.length-1]==='1' && stringedNum!='11')
+    return stringedNum+'st';
+    }
+    else if (stringedNum[stringedNum.length-1]==='2' &&stringedNum!='12'){
+      return stringedNum+'nd';
+    }
+    else if (stringedNum[stringedNum.length-1]==='3' &&stringedNum!='13'){
+      return stringedNum+ 'rd';
+    } else {
+      return stringedNum+'th';
+    }
+  else{
+  return value must be integar
   }
-  return `${num}st`;
 }
 
 test("works for any number ending in 1", function () {

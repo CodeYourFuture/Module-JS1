@@ -33,3 +33,8 @@ These are the requirements your project needs to fulfill:
 - Return a boolean from the function to indicate whether the credit card number is valid.
 
 Good luck!
+
+function cardValidator(number){
+if (number)
+
+}
