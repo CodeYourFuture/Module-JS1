@@ -1,4 +1,5 @@
 function cardValidator(creditCard) {
+    
   let myCard = [];//the empty array was created to store values and also for modification 
 
   for (i = 0; i < String(creditCard).length; i++) {//for i = 0, and if i is less than creditCard. The credit was converted to string because ".length" does not work for integers. 
