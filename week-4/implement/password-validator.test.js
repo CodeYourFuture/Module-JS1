@@ -15,13 +15,19 @@ To be valid, a passwordword must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 
+// import { expect } from "expect";
+// import { test } from "picomatch";
+
+//import { test } from "jest-runner";
+
 function passwordwordValidator(password){
      const passwordHolder=[];
     let gotUpper=/[A-Z]/.test(password);
     let gotLower=/[a-z]/.test(password);
     let gotDigit=/[0-9]/.test(password);
-    let gotSymbol=/["!", "#", "$", "%", ".", "*", "&"]/.test(password);
-    let validChars=/^[A-Za-z0-9!#$%.*&]+$/.test(password);   // this line has been written by chatGPT
+    let gotSymbol = /[!#$%.&*@]/.test(password);
+
+    let validChars=/^[A-Za-z0-9!#$%.*&@]+$/.test(password);   // this line has been written by chatGPT
     let passwordLength=password.length;
 
     if(
@@ -31,7 +37,7 @@ function passwordwordValidator(password){
         gotDigit &&
         gotSymbol &&
         validChars &&
-        passwordLength>5 &&
+        passwordLength>=5 &&
         !passwordHolder.includes(password)
     ){
         passwordHolder.push(password);
@@ -46,3 +52,19 @@ console.log(passwordwordValidator('1265432'));
 console.log(passwordwordValidator(''));
 console.log(passwordwordValidator('AAcc11%$'));
 console.log(passwordwordValidator('Anc12))'));
+
+test('should return true for 12ACzx%*',()=>{
+    expect(passwordwordValidator('12Ghas%$!')).toBe(true);
+});
+
+test('should return true for 12Aa1212',()=>{
+    expect(passwordwordValidator('12AHbcd*&^5')).toBe(false);
+});
+
+test('should return true for 12Aa1212',()=>{
+    expect(passwordwordValidator('')).toBe(false);
+});
+
+test('should return true for 12Aa1212',()=>{
+    expect(passwordwordValidator('12345ACzx@')).toBe(true);
+});
