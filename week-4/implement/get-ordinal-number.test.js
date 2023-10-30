@@ -29,6 +29,11 @@ function getOrdinalNumber(num) {
   return `${num}th`;
 }
 
+console.log(getOrdinalNumber(1));
+console.log(getOrdinalNumber(12));
+console.log(getOrdinalNumber(10));
+console.log(getOrdinalNumber(33));
+console.log(getOrdinalNumber(3));
 // function getOrdinalNumber(num) {
 //   if (num % 100 >= 11 && num % 100 <= 13) {
 //     return `${num}th`;

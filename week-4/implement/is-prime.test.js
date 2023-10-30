@@ -22,3 +22,13 @@ function isPrime(num) {
 
   return true;
 }
+console.log(isPrime(2));
+console.log(isPrime(3));
+console.log(isPrime(5));
+console.log(isPrime(7));
+console.log(isPrime(11));
+console.log(isPrime(13));
+console.log(isPrime(17));
+console.log(isPrime(8));
+console.log(isPrime(10));
+console.log(isPrime(18));
