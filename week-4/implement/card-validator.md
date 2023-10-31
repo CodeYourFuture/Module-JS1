@@ -34,7 +34,4 @@ These are the requirements your project needs to fulfill:
 
 Good luck!
 
-function cardValidator(number){
-if (number)
 
-}
