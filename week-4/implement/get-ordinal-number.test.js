@@ -18,7 +18,7 @@ function getOrdinalNumber(num) {
       return stringedNum+'th';
     }
   else{
-  return value must be integar
+  return value must be an integer;
   }
 }
 
