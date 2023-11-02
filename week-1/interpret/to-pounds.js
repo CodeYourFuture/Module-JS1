@@ -25,3 +25,10 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+
+//const penceStringWithoutTrailingP = penceString.substring(0, penceString.length - 1);: Removes the trailing 'p' from the penceString by creating a substring that excludes the last character. The result is stored in the penceStringWithoutTrailingP variable.
+
+//const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");: Adds leading zeros to the penceStringWithoutTrailingP to ensure it has a total length of 3 characters. This is done using padStart, and the result is stored in the paddedPenceNumberString variable.
+
+// const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2);: Extracts the part of paddedPenceNumberString representing pounds (the first part of the string) by creating a substring, excluding the last two characters. The result is stored in the pounds variable.
+
