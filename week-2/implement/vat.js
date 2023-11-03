@@ -8,3 +8,14 @@
 // Given a number,
 // When I call this function with a number
 // it returns the new price with VAT added on
+function addVAT(originalPrice) {
+  if (typeof originalPrice === "number" && originalPrice >= 0) {
+    originalPrice = originalPrice.toFixed(2);
+    let newPrice = originalPrice * 1.2;
+    newPrice = newPrice.toFixed(2);
+    return `Original Price: £${originalPrice}\nPrice with VAT: £${newPrice}`;
+  } else {
+    return "Invalid input. Please provide a positive number.";
+  }
+}
+console.log(addVAT(1.248899));

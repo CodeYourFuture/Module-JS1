@@ -13,14 +13,30 @@
 // Given someone's weight in kg and height in metres
 // Then when we call this function with the weight and height
 // It should return their Body Mass Index to 1 decimal place
-function calculateBMI(weightInKg, heightInM) {
-  let bmi = weightInKg / (heightInM * heightInM); // BMI formula
-  bmi = bmi.toFixed(1); // Round BMI to 1 decimal place and store as a string
-  return bmi;
+function calculateBMI(weightKg, heightMeters) {
+  const weightStone = Math.floor(weightKg * 0.1575); // Convert kg to stone
+  const heightFeet = Math.floor(heightMeters * 3.28084); // Convert meters to feet
+  const remainingInches = Math.round(
+    (heightMeters * 3.28084 - heightFeet) * 12
+  ); // Calculate remaining inches
+  const bmi = (weightKg / (heightMeters * heightMeters)).toFixed(1);
+
+  return {
+    weightKg,
+    weightStone,
+    heightMeters,
+    heightFeet,
+    heightInches: remainingInches,
+    bmi,
+  };
 }
 
-// Example usage:
-const weight = 70; // weight in kilograms
-const height = 1.73; // height in meters
-const bmiResult = calculateBMI(75, 1.75);
-console.log(`BMI: ${bmiResult}`);
+const result = calculateBMI(70, 1.73);
+
+console.log(
+  `Weight: ${result.weightKg} kg (Approximately ${result.weightStone} stones)`
+);
+console.log(
+  `Height: ${result.heightMeters} meters (Approximately ${result.heightFeet} feet and ${result.heightInches} inches)`
+);
+console.log(`Your Body Mass Index (BMI) result: ${result.bmi}`);
