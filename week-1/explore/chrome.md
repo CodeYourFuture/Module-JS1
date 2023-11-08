@@ -12,7 +12,16 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
+ans: I used function greeting(){
+alert("Hello World!")
+};
+greeting();
+
+To invoke mean to call or execute. So when i invoke function 'greeting', a message pops up on screen. It mean alert will appeared the message in screen.
+
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+ans: It well pop up box of information for user.
 What is the return value of `prompt`?
+ans: What is your name? With textbox.
