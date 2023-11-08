@@ -10,5 +10,5 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 //Answer
 
-// The variable num wil contain a random number between 1 and 100.
+// The variable -num- wil contain a random number between 1 and 100.
 
