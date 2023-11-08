@@ -1,5 +1,10 @@
-const cardNumber = 4533787178994213;
+const cardNumber = "4533787178994213";
 const last4Digits = cardNumber.slice(-4);
+
+console.log("Last 4 digits : ${last4Digits}");
+
+/*1.The slice method is typically used with strings to extract a portion of the string. 
+to extract the last 4 digits of the card number, we must first convert it to a string and then use the slice method.So we put the number in string */
 
 // The last4Digits variable should store the last 4 digits of cardNumber
 // However, the code isn't working
