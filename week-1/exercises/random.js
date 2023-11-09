@@ -12,4 +12,4 @@ console.log(num);
 
 //ans : we declared variable minimum with vale 1, and maximum with 100. We have an other variable num with statement. 
  //We use Meth.floor method to erase decimal point and Math.random method to take any number include 0 and exclusive 101.
- //Math.random will take any number between 
+ 
