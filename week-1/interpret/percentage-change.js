@@ -13,8 +13,16 @@ console.log(`The percentage change is ${percentageChange}`);
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
+//ans; 2 functions, line 4 and 5.
+
 // b) Identify all the lines that are variable reassignment statements
+
+//ans; there are 2 line 4, 5.  ` carPrice `, `priceAfterOneYear `.
 
 // c) Identify all the lines that are variable declarations
 
+//ans; line 1, 2, 7, 8
+
 // d) Describe what the expression Number(carPrice.replaceAll(",","")) is doing - what is the purpose of this expression?
+
+// ans; It will replace the value of carPrice. Which means it will bring the number without comma. 

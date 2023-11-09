@@ -22,6 +22,6 @@ To invoke mean to call or execute. So when i invoke function 'greeting', a messa
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
-ans: It well pop up box of information for user.
+ans: It well pop up box of information for user to input some text.
 What is the return value of `prompt`?
-ans: What is your name? With textbox.
+ans: What is your name? With textbox that user put there name..
