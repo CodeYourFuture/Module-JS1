@@ -2,18 +2,19 @@ const penceString = "399p";
 
 const penceStringWithoutTrailingP = penceString.substring(
   0,
-  penceString.length - 1
+  penceString.length - 1 // takes out the p with -1
 );
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); // padStarts add a zero infront of the number
 const pounds = paddedPenceNumberString.substring(
   0,
-  paddedPenceNumberString.length - 2
+  paddedPenceNumberString.length - 2 // last two numbers ignored  we have 03
 );
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
   .padEnd(2, "0");
+//This method is used to pad a string with a specified character at the beginning until it reaches a certain length. While doing this, the original string remains unchanged; a new string is returned.The first parameter of the padStart method specifies the target length, and the second parameter specifies the character to be added during the padding.
 
 console.log(`£${pounds}.${pence}`);
 
