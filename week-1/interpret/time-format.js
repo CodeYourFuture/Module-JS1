@@ -15,7 +15,7 @@ console.log(result);
 
 // a) How many variable declarations are there in this program?
 
-//ans; 1  variable declarations.
+//ans; Their is no variable declarations.
 
 // b) How many function calls are there?
 
@@ -23,17 +23,22 @@ console.log(result);
 
 // c) Using documentation on MDN, explain what the expression movieLength % 60 represents
 
-//ans; it represents how long will the move take.
+//ans; the remainder of the division of movieLength by 60
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
 
-//ans; it mean what ever the value of remainingSeconds is we subtract it from and divide it by 60. 
-
+//ans; the total remainingSeconds is in integer.
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
+
+//ans; the length of move in hours minutes and seconds. can be length.
 
 //ans; it will bring an output result of 2 : 26: 24
 
-// f) Think about whether this program will work for all values of movieLength.
-//    Think of what values may cause problems for the code.
+// f) Think about whether this program will work for all values of movieLength.  
+//ans ; yes
+//    Think of what values may cause problems for the code. 
+// ans; infinity
 //    Decide the result should be for those values, then test it out.
+// ans; the results undefine
 //    Can you find any values of movieLength which don't give you what you'd expect?
+//ans; no
