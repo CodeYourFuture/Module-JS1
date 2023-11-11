@@ -1,4 +1,6 @@
 // Predict and explain first...
+// The function always returns 3, because num is a constant and the function doesn't expect any input.
+// So, the console.log will print the string correctly, but the number will be always 3 (ignoring the input)
 
 const num = 103;
 
