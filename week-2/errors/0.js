@@ -7,6 +7,5 @@ function capitalise(str) {
   str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
-
+console.log(capitalise("maria"));
 //"str" has already been declared, you don't need to use the key word "let"
-console.log(capitalise("hi"));
