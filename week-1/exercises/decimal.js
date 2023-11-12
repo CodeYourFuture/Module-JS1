@@ -15,3 +15,8 @@ const roundedNum = Math.round(num); // Round to the nearest whole number is 56,5
 console.log("Whole Number Part:", wholeNumberPart);
 console.log("Decimal Part:", decimalPart);
 console.log("Rounded Number:", roundedNum);
+
+/* a) The Math.floor function is used to round down a decimal number to the nearest integer that is less than or equal to the original number.
+If Math.floor(-8.4), the result will be -9. This is because -9 is the closest integer that is less than or equal to -8.4. The function essentially rounds down to the nearest whole number.*/
+
+/* b) If Math.floor(8.4), the result will be 8. The Math.floor function rounds down the given decimal number to the nearest integer that is less than or equal to the original number. In this case, 8 is the closest integer that satisfies this condition for the decimal 8.4. */

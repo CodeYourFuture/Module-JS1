@@ -1,14 +1,14 @@
 const movieLength = 8784; // length of movie in seconds
 
-const remainingSeconds = movieLength % 60;
-const totalMinutes = (movieLength - remainingSeconds) / 60;
+const remainingSeconds = movieLength % 60; // This line calculates the remaining seconds by taking the modulus (%) of movieLength divided by 60.
+const totalMinutes = (movieLength - remainingSeconds) / 60; //This line calculates the total minutes by subtracting remainingSeconds from movieLength and then dividing the result by 60.
 
-const remainingMinutes = totalMinutes % 60;
-const totalHours = (totalMinutes - remainingMinutes) / 60;
+const remainingMinutes = totalMinutes % 60; //This line calculates the remaining minutes by taking the modulus of totalMinutes divided by 60.
+const totalHours = (totalMinutes - remainingMinutes) / 60; //This line calculates the total hours by subtracting remainingMinutes from totalMinutes and then dividing the result by 60.
 
-const remainingHours = totalHours % 24;
+const remainingHours = totalHours % 24; //This line calculates the remaining hours by taking the modulus of totalHours divided by 24.
 
-const result = `${remainingHours}:${remainingMinutes}:${remainingSeconds}`;
+const result = `${remainingHours}:${remainingMinutes}:${remainingSeconds}`; // time format "HH:MM:SS".
 console.log(result);
 
 // For the piece of code above, read the code and then answer the following questions
@@ -46,7 +46,10 @@ const movieDurationDisplay */
 //The program correctly converts the total seconds into a formatted string representing hours, minutes, and seconds.It should work correctly for any positive integer value of movieLength.
 
 //    Think of what values may cause problems for the code.
+// If the movieLength is negative or if movieLength is a floating-point number, or If movieLength is 0, we  may have  problems
 
-//    Decide the result should be for those values, then test it out.
+//    Decide the result should be for those values, then test it out.  ......
 
 //    Can you find any values of movieLength which don't give you what you'd expect?
+const movieLength = "not a number";
+const movieLength = 3661.5;
