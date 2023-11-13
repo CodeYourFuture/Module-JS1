@@ -15,3 +15,10 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function UCase(str) {
+    str = `${str.toUpperCase()}`;
+    str = `${str.replaceAll(' ','_')}`;
+    return(str);
+}
+console.log(UCase("few relations in earth never die"));
