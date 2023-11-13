@@ -25,19 +25,19 @@ console.log(formatTimeDisplay(143));
 
 // Questions
 
-// a) When formatTimeDisplay is called how many times will pad be called?
+// a) When formatTimeDisplay is called how many times will pad be called? // 3 times
 
 // Call formatTimeDisplay with an input of 143, now answer the following:
 
-// b) What value is assigned to the parameter num when pad is called for the first time?
+// b) What value is assigned to the parameter num when pad is called for the first time? // assigned value is: 0
 
-// c) What is the return value of pad when it is called for the first time?
+// c) What is the return value of pad when it is called for the first time? // return value of pad is: 00
 
 // d) What is the value assigned to the parameter num when pad
-// is called for the last time in this program?  Explain your answer
+// is called for the last time in this program?  Explain your answer  // assigned value is: 23 it's the remainingSeconds
 
 // e) What is the return value when pad is called
-// for the last time in this program?  Explain your answer
+// for the last time in this program?  Explain your answer // return value is: 23. the assigned value will be returned as it is.
 
-// f) Research an alternative way of padding the numbers in this code.
+// f) Research an alternative way of padding the numbers in this code. // I think using padStart and padEnd.
 // Look up the string functions on mdn
