@@ -12,6 +12,7 @@
 
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "9",
+
 // When the function is called with such a card,
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 
@@ -29,3 +30,26 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+  if (typeof card !== "string") {
+    return "Invalid input. Please provide a string representing a card.";
+  }
+  const numbers = "23456789";
+  const cardTypes = "♣♦♥♠";
+  const faceCards = "JQK";
+  if (numbers.includes(card[0]) && cardTypes.includes(card[1])) {
+    return card[0];
+  }
+  if (faceCards.includes(card[0]) && cardTypes.includes(card[1])) {
+    return "10";
+  }
+  if (card[0] === "A") {
+    return "11";
+  }
+  if (card[0] === "1" && card[1] === "0" && cardTypes.includes(card[2])) {
+    return "10";
+  }
+   return "Invalid card.";
+}
+console.log(getCardValue('10♠'));
