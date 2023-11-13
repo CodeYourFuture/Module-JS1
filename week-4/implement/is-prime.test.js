@@ -11,9 +11,8 @@ function isPrime(num) {
       return false; 
     }
   }
-
   return true; 
-}
+} 
 
 
 console.log(isPrime(7)); 
