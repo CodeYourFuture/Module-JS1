@@ -17,8 +17,6 @@
 // Use the string documentation to help you plan your solution
 
 
-
-
 //   // Replace spaces with underscores and convert to uppercase
 
 function toUpperSnakeCase(inputString) {

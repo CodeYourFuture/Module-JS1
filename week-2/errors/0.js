@@ -11,4 +11,5 @@ function capitalise(str) {
 
 console.log(capitalise (str));
 
-// First it didn't work because Identifier 'str' has already been declared in function. I put let str above the function with a string then it works
+// *First it didn't work because Identifier 'str' has already been declared in function. 
+// I put let str above the function with a string then it works

@@ -9,4 +9,4 @@ function square(num) {
 
 console.log(square(3));
 
-// we need to change parameter 3 to "num" and write as console.log(square(3));
+// *we need to change parameter 3 to "num" and write as console.log(square(3));
