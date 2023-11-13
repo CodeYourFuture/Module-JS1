@@ -5,11 +5,8 @@
 // Call this function a number of times to check it works for different inputs
 
 function pounds(str) {
-  const penceString = str;
-  const penceStringWithoutTrailingP = penceString.substring(
-    0,
-    penceString.length - 1
-  );
+  //const penceString = str;
+  const penceStringWithoutTrailingP = str.substring(0, str.length - 1);
   const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
   const pounds = paddedPenceNumberString.substring(
     0,
