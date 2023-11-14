@@ -6,5 +6,5 @@ let lastName = "Johnson";
 // Log the variable in each case
 
 
-let initials = `${firstName[0].toUpperCase()}${middleName[0].toUpperCase()}${lastName[0].toUpperCase()}`
+let initials = `${firstName.charAt(0) + middleName.charAt(0) + lastName.charAt(0)}`
 console.log(initials);
