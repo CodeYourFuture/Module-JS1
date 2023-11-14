@@ -15,3 +15,14 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+
+//   // Replace spaces with underscores and convert to uppercase
+
+function toUpperSnakeCase(inputString) {
+  return inputString.replace(/ /g, '_').toUpperCase();
+}
+
+console.log(toUpperSnakeCase("lord of the rings")); 
+console.log(toUpperSnakeCase("the great gatsby")); 
+console.log(toUpperSnakeCase("the da vinci code")); 
