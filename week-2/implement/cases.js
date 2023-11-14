@@ -15,3 +15,12 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function upperCamelCase(text) {
+  let upperCamelCaseText = text.replaceAll(" ", "_").toUpperCase();
+  return upperCamelCaseText;
+}
+
+console.log(upperCamelCase("lord of the rings"));
+console.log(upperCamelCase("the great gatsby"));
+console.log(upperCamelCase("the da vinci code"));
