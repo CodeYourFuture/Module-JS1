@@ -13,5 +13,11 @@
 // Test case: we expect "the great gatsby" to be "THE_GREAT_GATSBY"
 // Test case: we expect "the da vinci code" to be "THE_DA_VINCI_CODE"
 
-// Come up with a clear, simple name for the function
-// Use the string documentation to help you plan your solution
+// You will need to come up with an appropriate name for the function
+// Use the string documentation to help you find a solution
+
+function upperSnakeCase(str) {
+  return str.toUpperCase().replace(/ /g, "_");
+}
+
+console.log(upperSnakeCase("lord of the rings"));

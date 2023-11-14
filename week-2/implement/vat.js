@@ -7,4 +7,14 @@
 
 // Given a number,
 // When I call this function with a number
-// Then it returns the new price with VAT added on
+// it returns the new price with VAT added on
+
+function priceWithVAT(price) {
+  newPrice = price * 1.2;
+  return `New price (20% VAT inclusive): £${newPrice}`;
+}
+
+
+console.log(priceWithVAT(60));
+console.log(priceWithVAT(39));
+console.log(priceWithVAT(28));
