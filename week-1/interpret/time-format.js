@@ -19,7 +19,7 @@ console.log(result);
 
 // b) How many function calls are there?
 
-//ans; 1 function, console.log
+//ans;  there is no function have been called.
 
 // c) Using documentation on MDN, explain what the expression movieLength % 60 represents
 
