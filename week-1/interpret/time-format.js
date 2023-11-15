@@ -15,7 +15,7 @@ console.log(result);
 
 // a) How many variable declarations are there in this program?
 
-//ans; Their is no variable declarations.
+//ans; Their is 7 variable declarations. In line 1,3, 4, 6, 7, 9, and 11.
 
 // b) How many function calls are there?
 
