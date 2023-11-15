@@ -17,7 +17,7 @@
 
 function calculateBMI(weight, height) {
     
-    let heightInMeters = height / 100; // Convert height to meters from centimeter.
+    let heightInMeters = height / 100; // Convert height into meters from centimeter.
     let bmi = (weight / (heightInMeters * heightInMeters)).toFixed(1);    /// the formula for calculating body mass is, BMI = weight(kg)/height(m)2
 
     return bmi;

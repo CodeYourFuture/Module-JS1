@@ -1,10 +1,14 @@
 
 // Predict and explain first...
+//ans;I think we will get refrenceError.
 // this function should square any number but instead we're going to get an error
 // what is happening? How can we fix it?
 
-function square(3) {
+function square(num) {
     return num * num;
 }
+
+console.log(square(3));
+
 
 

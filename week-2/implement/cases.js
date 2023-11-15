@@ -10,7 +10,7 @@
 // Then it returns the string in UPPER_CAMEL_CASE, so "HELLO_THERE"
 
 function camelCaseToWords(text) {
-    const result = text.replace(/\s/g, "_");     // Use \s to match whitespace characters and replace them with underscores (g) is  replacement should be done globally into hyphen.
+    const result = text.replace(/\s/g, "_");     // Use '\s' to match whitespace characters and replace them with underscores (g) mean replacement should be done globally .
   return result.toUpperCase();
 }
 const text = 'hello there';
