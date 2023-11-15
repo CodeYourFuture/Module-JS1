@@ -41,3 +41,21 @@ console.log(formatTimeDisplay(143));
 
 // f) Research an alternative way of padding the numbers in this code.
 // Look up the string functions on mdn
+//..........................................................................
+
+ANSWER
+
+// a) When we use `formatTimeDisplay`, we also use a helper called `pad` three times. We use it for hours, minutes, and seconds to make them look neat.
+
+// b) The first time we use `pad`, it helps us with the hours. It takes the total hours and divides them by 24 to get a special kind of hours.
+
+// c) The result we get from the first use of `pad` is a string that represents the hours, but it has zeros added in front to make it look good in our time display.
+
+// d) The last time we use `pad` in this program, it helps with the seconds. We give it the number of seconds, and it adds zeros in front to make it look nice.
+
+// e) The final result we get from the last use of `pad` is a string representing the seconds, but it's formatted with zeros in front to fit well in our time display.
+
+// f) There's another method called `String.prototype.padStart()`. It's like another tool we can use to make our numbers look neat. Here's an example:
+
+
+// function pad(num) { return String(num).padStart(2, '0');}
