@@ -40,3 +40,34 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
+
+function rotateCharacter(char, shift) {
+  const lowercaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  const uppercaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  if (typeof char !== "string" || char.length !== 1) {
+    return "Invalid input. Please provide a single character.";
+  }
+
+  if (typeof shift !== "number") {
+    return "Invalid input. Please provide a number.";
+  }
+  if (lowercaseAlphabet.includes(char)) {
+    // Rotate within the lowercase alphabet
+    const rotatedIndex = (lowercaseAlphabet.indexOf(char) + shift) % 26;
+    const rotatedChar = lowercaseAlphabet[rotatedIndex];
+    return rotatedChar;
+  } else if (uppercaseAlphabet.includes(char)) {
+    // Rotate within the uppercase alphabet
+    const rotatedIndex = (uppercaseAlphabet.indexOf(char) + shift) % 26;
+    const rotatedChar = uppercaseAlphabet[rotatedIndex];
+    return rotatedChar;
+  } else {
+    // Non-letter characters are returned unchanged
+    return `${char} unchanged, not a letter`;
+  }
+}
+console.log(rotateCharacter("A", 1));
+console.log(rotateCharacter("X", 1)); 
+
+
