@@ -13,3 +13,9 @@
 // Given someone's weight in kg and height in metres
 // When we call this function with the weight and height
 // Then it returns their Body Mass Index to 1 decimal place
+function bmi(weight,height){
+    str = height*height;
+    calculate = weight/str
+    return calculate.toFixed(1)
+}
+console.log(bmi(70,1.73));
