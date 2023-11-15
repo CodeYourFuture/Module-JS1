@@ -1,12 +1,6 @@
 function isVowel(letter) {
-  return (
-    letter === "a" ||
-    letter === "e" ||
-    letter === "i" ||
-    letter === "i" ||
-    letter === "o" ||
-    letter === "u"
-  );
+  const vowels = "aeiou";
+  return vowels.includes(letter[0].toLowerCase());
 }
 
 // here is an implementation of isVowel - this function checks if a letter is a vowel
@@ -40,3 +34,5 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
+console.log(isVowel("u"));
+console.log(isVowel("l"));
