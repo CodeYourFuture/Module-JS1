@@ -58,4 +58,4 @@ ANSWER
 // f) There's another method called `String.prototype.padStart()`. It's like another tool we can use to make our numbers look neat. Here's an example:
 
 
-// function pad(num) { return String(num).padStart(2, '0');}
+// function pad(num) { return String(num).padStart(2, '0');}clear
