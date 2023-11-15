@@ -17,7 +17,7 @@ alert("Hello World!")
 };
 greeting();
 
-To invoke mean to call or execute. So when i invoke function 'greeting', a message pops up on screen. It mean alert will appeared the message in screen.
+To invoke mean to call or execute. So when i invoke function 'greeting', a message pops up on screen. It mean alert will appeared the message in screen(Hello world!).
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
