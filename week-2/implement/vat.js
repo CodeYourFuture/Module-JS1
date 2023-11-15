@@ -8,3 +8,9 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function vat(number) {
+  return (number * 1.2).toFixed(2);
+}
+
+console.log("£" + vat(100));
