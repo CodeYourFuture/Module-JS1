@@ -14,3 +14,29 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+function isPasswordvalid () {
+  if (password.length<5) {
+    return false;
+  }
+  if (!/[A-Z]/.test(password)) {
+    return false;
+  }
+  if (!/[a-z]/.test(password)) {
+    return false;
+}
+if (!/[\d]/.test(password)) {
+    return false;
+  }
+if (!/[!#$%.&*]/.test(password)) {
+    return false;
+  }
+  if (previousPasswords.includes(password)) {
+    return false;
+  }
+
+  return true;
+}
+const passwords = ["Passw0rd!", "Secure123", "MyP@ssw0rd"];
+const newPassword = "NewP@ssw0rd";
+
+console.log(isPasswordvalid(newPassword, passwords));
