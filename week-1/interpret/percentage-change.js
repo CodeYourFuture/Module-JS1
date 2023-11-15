@@ -14,8 +14,8 @@ console.log(`The percentage change is ${percentageChange}`);
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
 
 //ans; in total four
-//2 calls to Number()
-//2 calls to replaceAll()
+//2 calls to Number();
+//2 calls to replaceAll();
 
 // b) Identify all the lines that are variable reassignment statements
 
