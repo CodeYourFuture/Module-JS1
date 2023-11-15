@@ -5,6 +5,16 @@
 
 function square(3) {
     return num * num;
-}
+   }
 
+
+//ANSWER
+
+
+function square(num) {
+    return num * num;
+  }
+  
+console.log(square(4)); 
+console.log(square(7)); 
 
