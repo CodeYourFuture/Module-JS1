@@ -10,6 +10,8 @@
 // Then it returns the new price with VAT added on
 //.........................................................
 
+//             ANSWER
+
 function calculatePriceWithVAT(originalPrice) {
     const vatRate = 1.2; // 20% VAT rate
     const priceWithVAT = originalPrice * vatRate;
