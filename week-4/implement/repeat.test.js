@@ -43,7 +43,7 @@ function repeat(str, count) {
 
 // console.log(repeat("test", 3));
 
-test("Valid input", () => {
+test("repeat a givin word number of times by a givin number ", () => {
   expect(repeat("test", 3)).toBe("TestTestTest");
   expect(repeat(123, 3)).toBe(
     "Invalid input types. Please make this 123 a string if not and this 3 a number if not."

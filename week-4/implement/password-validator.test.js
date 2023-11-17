@@ -108,7 +108,7 @@ function isPasswordValid(password, previousPasswords) {
 // const isValid = isPasswordValid(password, previousPasswords);
 // console.log(isValid);
 
-test("testing all of these example inputs", () => {
+test("testing a givin password is a valid password or is an existing password", () => {
   expect(isPasswordValid("CYF@test3", ["Password123", "SecurePwd!"])).toBe(
     true
   );

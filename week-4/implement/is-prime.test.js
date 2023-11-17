@@ -21,3 +21,13 @@ if (isPrime(numToCheck)) {
 } else {
   console.log(`${numToCheck} is not prime.`);
 }
+
+test("Check if a givin number is a prime numbers", () => {
+  expect(isPrime(7)).toBe(true);
+
+  expect(isPrime(10)).toBe(false);
+
+  expect(isPrime(1)).toBe(false);
+
+  expect(isPrime(13)).toBe(true);
+});

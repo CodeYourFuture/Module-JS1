@@ -26,8 +26,17 @@ function countChar(str, char) {
   }
   return count;
 }
-
+/*
 const str = "the sum of all numbers in a function are a lot";
 const charToCount = "a";
 const occurrences = countChar(str, charToCount);
 console.log(`Occurrences of "${charToCount}" in "${str}" : ${occurrences}`);
+*/
+
+test("Count occurrences of a given character in a givin string", () => {
+  expect(countChar("the sum of all numbers in a function are a lot", "a")).toBe(
+    4
+  );
+
+  expect(countChar("Code Your Future", "z")).toBe(0);
+});
