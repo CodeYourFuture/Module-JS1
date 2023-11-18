@@ -15,3 +15,11 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function changeText(str) {
+  const capital = str.toUpperCase();
+  const underScore = "_";
+  return capital.split(" ").join(underScore);
+}
+
+console.log(changeText("hello there"));
