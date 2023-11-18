@@ -40,4 +40,5 @@ console.assert(
 // b) Check the assertion output and explain what the bug is
 // Ans. The problem is that the hours are being calculated fine but minutes are not being considered as we don't have a calculation for minutes 
 // c) Now fix the bug and re-run all your assertions
-// Ans. Replaced 00 in line 3 with ${time.slice(3,5)} to return the minutes part back,
+// Ans. Replaced 00 in line 3 with ${time.slice(3,5)} to return the minutes part back, and added another if statement to get the desired result
+// from line 3 to line 8.
