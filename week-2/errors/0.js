@@ -17,3 +17,11 @@ let text = "i like ice-cream";
 console.log(capitalize(text));
 
 
+
+//here is the correct
+function capitalize(text) {
+  let str = `${text[0].toUpperCase()}${text.slice(1)}`;
+  return str;
+}
+let text = "i like ice-cream";
+console.log(capitalize(text));

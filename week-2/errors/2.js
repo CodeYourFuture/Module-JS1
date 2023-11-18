@@ -15,3 +15,11 @@ console.log(square(3));
 
 
 
+
+//here is the correct
+function square(num) {
+    return num * num;
+}
+
+console.log(square(3));
+
