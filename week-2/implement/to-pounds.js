@@ -7,9 +7,7 @@
 function toPounds(food, flour){
     return food + flour;
 }
-let a= 54;
-let b = 100;
-console.log(toPounds(a, b));
+console.log(toPounds(34, 50));
 
 
 let x= 20;

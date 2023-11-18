@@ -5,6 +5,7 @@ function pad(num) {
   return num;
 }
 
+
 function formatTimeDisplay(seconds) {
   const remainingSeconds = seconds % 60;
   const totalMinutes = (seconds - remainingSeconds) / 60;
