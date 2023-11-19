@@ -20,13 +20,13 @@ console.log(result);
 // Ans. None
 
 // c) Using documentation on MDN, explain what the expression movieLength % 60 represents
-//Ans. This expression is providing us with the remainder of any seconds which are less than 60.
+//Ans. This expression is providing us with the remainder of any seconds which are less than 60, essentially telling us about the remaining seconds which cannot take one more whole minute
 
 // d) Interpret line 4, what does the expression assigned to totalMinutes mean?
-//Ans. It is calculating the minutes of movie which are less than 60 after taking out any extra seconds which are less than 60
+//Ans. It is calculating the minutes of movie which are less than 60 after taking out any extra seconds which are less than 60, essentially total number of minutes which cannot form one whole hour
 
 // e) What do you think the variable result represents? Can you think of a better name for this variable?
-// Ans. It represents the total length of movie broken down in hour, mins and seconds. We can also call it MovieRuntime
+// Ans. It represents the total length of movie broken down in hour, mins and seconds. We can also call it HoursMinutesSeconds
 
 // f) Think about whether this program will work for all values of movieLength.
 //    Think of what values may cause problems for the code.
