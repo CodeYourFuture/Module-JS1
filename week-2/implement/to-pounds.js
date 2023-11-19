@@ -9,7 +9,7 @@ function toPounds(food, flour){
 }
 console.log(toPounds(34, 50));
 
-
+//here is next solution as well.
 let x= 20;
 let y = 10;
 console.log(toPounds(x, y));
