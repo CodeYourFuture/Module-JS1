@@ -51,17 +51,20 @@ function isProperFraction (a,b){
         return false;
     }
 }
-const currentOutput = isProperFraction(8,0); //Change the values here to check against different assertions
+
+console.log("This Assertion is fails when it's not a proper fraction");
+const currentOutput = isProperFraction(8,9); 
 const targetOutput = true;
-const targetOutput1 = false;
 console.assert(
   currentOutput === targetOutput,
-  `This Assertion is fails when it's not a proper fraction
-  current output: ${currentOutput}, target output: ${targetOutput} `
+  `current output: ${currentOutput}, target output: ${targetOutput} `
 );
+
+console.log("This Assertion is fails when it's a proper fraction");
+const currentOutput1 = isProperFraction(8, 4); 
+const targetOutput1 = false;
 console.assert(
-  currentOutput === targetOutput1,
-  `This Assertion is fails when it's a proper fraction
-  current output: ${currentOutput}, target output: ${targetOutput1} `
+  currentOutput1 === targetOutput1,
+  `current output: ${currentOutput1}, target output: ${targetOutput1} `
 );
 

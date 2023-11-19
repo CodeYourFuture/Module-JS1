@@ -41,24 +41,34 @@ function getCardValue(str) {
 }
 //  console.log( typeof getCardValue("2"));
 
-const currentOutput = getCardValue("A"); //Change the value here to check against different assertions
+console.log("Checking result for 2");
+const currentOutput = getCardValue("2"); 
 const targetOutput = 2;
-const targetOutput1 = 5;
-const targetOutput2 = 10; // This will be true for "10", "J", "K" and "Q"
-const targetOutput3 = 11;
 console.assert(
   currentOutput === targetOutput,
   `current output: ${currentOutput}, target output: ${targetOutput} `
 );
+
+console.log("Checking result for 5");
+const currentOutput1 = getCardValue("5"); 
+const targetOutput1 = 5;
 console.assert(
-  currentOutput === targetOutput1,
-  `current output: ${currentOutput}, target output: ${targetOutput1} `
+  currentOutput1 === targetOutput1,
+  `current output: ${currentOutput1}, target output: ${targetOutput1} `
 );
+
+console.log("Checking result for K");
+const currentOutput2 = getCardValue("K"); 
+const targetOutput2 = 10; // This will be true for "10", "J", "K" and "Q"
 console.assert(
-  currentOutput === targetOutput2,
-  `current output: ${currentOutput}, target output: ${targetOutput2} `
+  currentOutput2 === targetOutput2,
+  `current output: ${currentOutput2}, target output: ${targetOutput2} `
 );
+
+console.log("Checking result for A");
+const currentOutput3 = getCardValue("A"); 
+const targetOutput3 = 11;
 console.assert(
-  currentOutput === targetOutput3,
-  `current output: ${currentOutput}, target output: ${targetOutput3} `
+  currentOutput3 === targetOutput3,
+  `current output: ${currentOutput3}, target output: ${targetOutput3} `
 );
