@@ -12,9 +12,14 @@
 function goods(s, p){
     return `£${s * p}`;
 }
+console.log( goods(45, 3.2));
+
+
+// second solution
 let sells = "20";
 let priceCharge = "1.3";
 console.log( goods(sells, priceCharge ));
+
 
 
 
