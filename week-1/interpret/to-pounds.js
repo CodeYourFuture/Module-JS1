@@ -5,11 +5,11 @@ const penceStringWithoutTrailingP = penceString.substring(
   penceString.length - 1
 );    // Initializes a new variable to remove the last character from the string
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); // Initializes a new variable to pad the whole number
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); // Initializes a new variable to pad the whole number So that it can separate the pence from pounds
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
-); // New variable to pad the number to make value in pounds 
+); // This variable to return just the pounds part of the given value which is taking off the last 2 digits from the number we have 
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
