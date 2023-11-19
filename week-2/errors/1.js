@@ -13,5 +13,8 @@ function convertToPercentage(decimalNumber) {
 
   return percentage;
 }
-const decimalNumber = 0.5;
-console.log(convertToPercentage(decimalNumber));
+console.log(convertToPercentage(0.5));
+
+// here is the second solution
+// const decimalNumber = 0.5;
+// console.log(convertToPercentage(decimalNumber));
