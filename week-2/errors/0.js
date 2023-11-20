@@ -16,5 +16,11 @@ function capitalize(text) {
   let str = `${text[0].toUpperCase()}${text.slice(1)}`;
   return str;
 }
+console.log(capitalize("i like ice-cream"));
+
+
+// you can go through second option
 let text = "i like ice-cream";
 console.log(capitalize(text));
+
+
