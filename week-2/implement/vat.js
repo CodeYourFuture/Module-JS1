@@ -8,3 +8,11 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function convertToPriceWithVat(price) {
+  const priceWithVat = price * (1.2);
+  const priceWithVatRounded = priceWithVat.toFixed(2)
+  return `£${priceWithVatRounded}`;
+}
+
+console.log(convertToPriceWithVat(100.58));
