@@ -16,10 +16,18 @@
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
 
-function upperCamelCase(text) {
+/* function upperCamelCase(text) {
   let upperCamelCaseText = text.replaceAll(" ", "_").toUpperCase();
   return upperCamelCaseText;
+} */
+
+// This approach is supported by all browser versions (except Android Browser 2.1 - 4.3 due toUpperCase)
+function upperCamelCase(text) {
+  const upperCaseTextArray = text.toUpperCase().split(" ");
+
+  return upperCaseTextArray.join("_");
 }
+
 
 console.log(upperCamelCase("lord of the rings"));
 console.log(upperCamelCase("the great gatsby"));
