@@ -19,3 +19,6 @@ function toPounds(pences) {
 }
 
 console.log(toPounds(399));
+console.log(toPounds(178));
+console.log(toPounds(32));
+console.log(toPounds(3458));
