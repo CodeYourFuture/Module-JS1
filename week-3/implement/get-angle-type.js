@@ -27,7 +27,7 @@ function getAngleType(angle){
     if (angle === 90){
         return "Right angle";
     } else if (angle != 90 && angle < 90){
-        return "Acute angle";
+        return "Right angle";
     }else if (angle > 90 && angle < 180){
         return "Obtuse angle";
     }else if (angle <= 180 && angle === 180){
@@ -37,4 +37,4 @@ function getAngleType(angle){
     }
 }
 
-console.log(getAngleType(270));
+console.log(getAngleType(200));
