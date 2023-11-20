@@ -9,13 +9,6 @@
 // interpret the error message and figure out why it's happening, if your prediction was wrong
 //ans;  My prediction was right about syntaxError..
 
-function capitalize(text) {
-  let str = `${text[0].toUpperCase()}${text.slice(1)}`;
-  return str;
-}
-let text = "i like ice-cream";
-console.log(capitalize(text));
-
 
 
 //here is the correct
