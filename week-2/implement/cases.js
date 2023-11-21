@@ -7,7 +7,7 @@
 
 // Given a string input like "hello there"
 // When we call this function with the input string
-// Then it returns the string in UPPER_CAMEL_CASE, so "HELLO_THERE"
+// Then it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
 
 // Test case: we expect "lord of the rings" to be "LORD_OF_THE_RINGS"
 // Test case: we expect "the great gatsby" to be "THE_GREAT_GATSBY"
@@ -15,3 +15,15 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function ToUpperSnakeCase(strInput) {
+  const snakeCasedString = strInput.replaceAll(" ", "_");
+  const upperSnakeCasedString = snakeCasedString.toUpperCase();
+  return upperSnakeCasedString;
+}
+
+const test1 = "lord of the rings";
+const test2 = "the great gatsby";
+const test3 = "the da vinci code";
+
+console.log(ToUpperSnakeCase(test1));
