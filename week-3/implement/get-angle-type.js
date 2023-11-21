@@ -27,10 +27,11 @@ function getAngleType(angle) {
     if(angle === 90) {return "Right angle.";}
     if(angle < 180) {return "Obtuse angle.";}
     if(angle === 180) {return "Straight angle.";}
+    if(angle === 360) {return "A Circle.";}
     if ((angle > 180) && (angle < 360)) {return "Reflex Angles";}
     return "not an angle;";
   };
   
-  let a = 30;
+  let a = 360;
   console.log(a + " " + "is :" + " " + getAngleType(a));   
   
