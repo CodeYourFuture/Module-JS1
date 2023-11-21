@@ -32,6 +32,6 @@ function getAngleType(angle) {
     return "not an angle;";
   };
   
-  let a = 360;
+  let a = 190;
   console.log(a + " " + "is :" + " " + getAngleType(a));   
   
