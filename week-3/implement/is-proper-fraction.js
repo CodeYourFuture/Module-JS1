@@ -33,3 +33,37 @@
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+
+
+
+
+
+// function dived(a, b) {
+//   if (a < b) {
+//     return true;
+//   } else if (a >= b {
+//     return false;
+//   } else if (b == 0){
+//     return "Error (Denominator cannot be zero)";
+//   }else if(abs.a < b)){
+//     return true;
+//   }else if ( a === b){
+//     return false;
+//   }
+// }
+
+// console.log(dived(-2, 3));
+
+
+
+function isProperFraction(a, b) {
+  if(b === 0){
+    return "Error (Denominator cannot be zero)";
+  }
+  return a < b;
+}
+
+console.log(isProperFraction(2, 3)); // This will return true
+console.log(isProperFraction(5, 2)); // This will return false
+console.log(isProperFraction(3, 0)); // This will return false
