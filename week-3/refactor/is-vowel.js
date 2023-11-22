@@ -1,13 +1,29 @@
+// function isVowel(letter) {
+//   return (
+//     letter === "a" ||
+//     letter === "e" ||
+//     letter === "i" ||
+//     letter === "i" ||
+//     letter === "o" ||
+//     letter === "u"
+//   );
+// }
+//...............................................
+
+//ANSWER
+//The letter (i) is included two times, that is why i commented it out 
+//                     otherwise the code is fine when on (i) is removed.
+
 function isVowel(letter) {
   return (
     letter === "a" ||
     letter === "e" ||
     letter === "i" ||
-    letter === "i" ||
     letter === "o" ||
     letter === "u"
   );
 }
+localStorage
 
 // here is an implementation of isVowel - this function checks if a letter is a vowel
 
@@ -40,3 +56,4 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
+
