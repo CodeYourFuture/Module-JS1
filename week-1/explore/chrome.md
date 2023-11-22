@@ -8,11 +8,13 @@ Just like the Node REPL, you can input JavaScript code into the Console tab and 
 Let's try an example.
 
 In the Chrome console,
-invoke the function `alert` with an input string of `"Hello world!"`;
-
+invoke the function `alert`with an input string of `"Hello world!"`;
+<!-- the chrome new tab page says "hello world" -->
 What effect does calling the `alert` function have?
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
-
+<!-- it gives me an input to add a name, when I add "my name" my name apperared on the console -->
 What effect does calling the `prompt` function have?
+<!-- it brings a user input -->
 What is the return value of `prompt`?
+<!-- the return value is the value you add on the input -->
