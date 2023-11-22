@@ -15,3 +15,12 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+function capitalise(str){
+    words = str.split(" ");
+    camel = words.map(word => word.toUpperCase());
+    camelsnake = camel.join("_");
+  return camelsnake;
+}
+console.log(capitalise("lord of the rings"));
+console.log(capitalise("the great gatsby"));
+console.log(capitalise("the da vinci code"));
