@@ -8,9 +8,11 @@
 //     letter === "u"
 //   );
 // }
+//...............................................
 
-//P.S. The letter (i) is included two times, that is why i commented it out 
-// otherwise the code is fine when on (i) is removed.
+//ANSWER
+//The letter (i) is included two times, that is why i commented it out 
+//                     otherwise the code is fine when on (i) is removed.
 
 function isVowel(letter) {
   return (
