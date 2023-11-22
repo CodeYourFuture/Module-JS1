@@ -3,7 +3,7 @@
 // That implementation currently uses the expression Number(time.slice(0, 2)) twice
 // Store this expression in a variable and reference it twice in the function in the correct place
 
-//ans :I should not use (0, 2) twice in function because it will change the value of minute and turn 5 : 17
+//ans :I could not use (0, 2) twice in function because it will change the value of minute and turn 5 : 17,
 //as i want my output 5 : 45; 
 
 
