@@ -39,23 +39,6 @@
 
 
 
-// function dived(a, b) {
-//   if (a < b) {
-//     return true;
-//   } else if (a >= b {
-//     return false;
-//   } else if (b == 0){
-//     return "Error (Denominator cannot be zero)";
-//   }else if(abs.a < b)){
-//     return true;
-//   }else if ( a === b){
-//     return false;
-//   }
-// }
-
-// console.log(dived(-2, 3));
-
-
 
 function isProperFraction(a, b) {
   if(b === 0){
