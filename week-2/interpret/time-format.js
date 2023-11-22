@@ -41,3 +41,19 @@ console.log(formatTimeDisplay(143));
 
 // f) Research an alternative way of padding the numbers in this code.
 // Look up the string functions on mdn
+
+// Answers:
+
+// a) 3 times
+
+// b) The value assigned to the parameter num for the first time is the same as the value of variable remainingHours which is 0 in this case.
+
+// c) It is 0 with a 0 at the beginning which will be 00
+
+// d) The value assigned to the parameter num for the last time is the same as the value of the variable remainingSeconds which is 23(143-120).
+
+// e) The return value is the same as the value of the variable remainingSecond because 23 is grater than or equal to 10, so no padding needed.
+
+// f) We can convert the number data type to a string data type using string function
+// and then using .padStart() method to ensure the result has the needed character length (which is at least 2 in this case) and if not adds a padding with what we need (which is 0 in this case).
+// return string(num).padStart(2, '0');
