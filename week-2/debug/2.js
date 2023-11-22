@@ -1,7 +1,7 @@
 // Predict and explain first...
 
 //Constant (const) declaration of 103
-//return converts the value of the num variable to a string (using the toString() method), and then takes the last character of the string.
+//return converts the value of the num variable to a string (using the toString() method),
 // console.log gives last digit of any number.
 
 // This program should tell the user the last digit of each number...

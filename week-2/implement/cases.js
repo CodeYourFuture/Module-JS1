@@ -15,3 +15,21 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+///answer
+
+function toUpperCamelCase(inputString) {
+  // Split the input string by spaces
+  const words = inputString.split(" ");
+
+  // Capitalize each word and join them with underscores
+  const upperCamelCase = words.map((word) => word.toUpperCase()).join("_");
+
+  return upperCamelCase;
+}
+
+// Test cases
+console.log(toUpperCamelCase("lord of the rings")); //  "LORD_OF_THE_RINGS"
+console.log(toUpperCamelCase("the great gatsby")); // "THE_GREAT_GATSBY"
+console.log(toUpperCamelCase("the da vinci code")); // "THE_DA_VINCI_CODE"
+console.log(toUpperCamelCase("darkness of the night"));
