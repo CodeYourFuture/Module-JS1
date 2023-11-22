@@ -55,6 +55,6 @@ function getCardValue(card) {
     // after that If the card is not recognized, show an error
     else {
       // Show an error message for cards we don't understand
-      throw new Error("Invalid caRd.");
+      throw new Error("Invalid card.");
     }
   }
