@@ -23,6 +23,9 @@
 // Then the function should return "Reflex angle"
 
 // Function to identify the type of angle
+//...............................................
+
+//Answer
 
 
 function getAngleType(angle) {
@@ -45,4 +48,3 @@ function getAngleType(angle) {
       return "Unknown angle";
     }
   }
-  
