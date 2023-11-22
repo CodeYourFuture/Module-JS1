@@ -3,8 +3,8 @@
 // Take this code and turn it into a reusable block of code.
 // Declare a function called toPounds with an appropriately named parameter.
 // Call this function a number of times to check it works for different inputs
-function price(a,b){
-return a+b;
+function toPoud(Birr){
+return birr / 45 ;
 
 }
-console.log(price(10,20));
+console.log(toPound(50));

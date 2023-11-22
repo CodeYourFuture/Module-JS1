@@ -14,6 +14,7 @@
 // When we call this function with the weight and height
 // Then it returns their Body Mass Index to 1 decimal place
 function bmi(weight,height){
+    if (weight <= 0 || height <= 0) { return "it is a wrong input";}
     str = height*height;
     calculate = weight/str
     return calculate.toFixed(1)

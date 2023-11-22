@@ -4,7 +4,7 @@
 // Play computer with the example to work out what is going on
 // it doesn't work
 // the code used decimal as a constant variable inside the function and again as a parameter.
-// If we take out thr variable decimal inside the local scope and put it as global will make it work.
+// If we take out the variable decimal inside the local scope and put it as global will make it work.
 
 function convertToPercentage(decimalNumber) {
   
