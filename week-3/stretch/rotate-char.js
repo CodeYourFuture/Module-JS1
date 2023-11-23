@@ -7,12 +7,20 @@
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
 function isLetterOrNumber(char) {
-  return /^[a-zA-Z0-9]+$/.test(char);
+  return /[a-zA-Z0-9]/.test(char); //check if input is a valid letter or number
 }
 
 function rotateCharacter(char, shift) {
-  if (isLetterOrNumber(char) && char.length == 1 && typeof shift == "number" && shift >= 0) {
-    if (char.charCodeAt() > 47 && char.charCodeAt() < 58) {
+  if (
+    char.length === 1 &&
+    isLetterOrNumber(char) &&
+    typeof shift == "number" &&
+    shift >= 0
+  ) {
+    if (
+      char.charCodeAt() > 47 &&
+      char.charCodeAt() < 58 /* check if input is a valid number */
+    ) {
       return char;
     } else {
       const isUpperCase = /[A-Z]/.test(char);
