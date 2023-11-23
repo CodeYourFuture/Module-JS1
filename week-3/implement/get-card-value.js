@@ -43,19 +43,15 @@ function getCardValue(card) {
     switch (true) {
       case cardRank == "A":
         return 11;
-        break;
 
       case cardRank > 1 && cardRank < 11:
         return 5;
-        break;
 
       case cardRank == "J" || cardRank == "Q" || cardRank == "K":
         return 10;
-        break;
 
       default:
         return `Invalid card rank.`;
-        break;
     }
   } else {
     return "Invalid card suit. Please use one of the following: ♡,♢,♣,♠.";
