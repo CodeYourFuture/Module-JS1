@@ -6,14 +6,7 @@ function isVowel(letter) {
     console.log(`Case: ${letter}...`);
   }
 
-  return (
-    letter === "a" ||
-    letter === "e" ||
-    // letter === "i" || repeated comparison
-    letter === "i" ||
-    letter === "o" ||
-    letter === "u"
-  );
+  return ["a", "e", "i", "o", "u"].includes(letter);
 }
 
 // here is an implementation of isVowel - this function checks if a letter is a vowel
