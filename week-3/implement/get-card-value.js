@@ -31,3 +31,42 @@
 // Then it should throw an error indicating "Invalid card rank."
 
 
+function getCardValue(card){
+    let string = "A♥, A♦, A♣, A♠";
+    if (string.includes(card)){
+        return Number(card)
+    }else if (/^[2-9]|10$/.test(card)) {
+        return +card;
+    }else if (card === "J" || card === "Q" || card === "K"){
+        return 10;
+    }else if (card === "A") {
+        return 11;
+    }else{
+        return "Invalid card rank."
+    }
+}
+
+function assertion(card, targetOutput) {
+  const currentOutput = getCardValue(card);
+  console.log(
+    currentOutput === targetOutput,
+    `Test for ${card}. Current output: %s, target output: %s`,
+    currentOutput,
+    targetOutput
+  );
+}
+
+assertion(getCardValue("J")) //output ; 10
+assertion(getCardValue("A")) //output ; 11
+assertion(getCardValue("4")) //output ; 4
+
+
+
+
+// here is the explanation for line 39 (+card)
+
+let card = "10";
+let cardAsNumber = +card;
+
+console.log(cardAsNumber); // Output: 10
+console.log(typeof cardAsNumber); 

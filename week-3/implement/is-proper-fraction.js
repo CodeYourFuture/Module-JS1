@@ -40,13 +40,25 @@
 
 
 
-function isProperFraction(a, b) {
-  if(b === 0){
-    return "Error (Denominator cannot be zero)";
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) {
+    return 'Error (Denominator cannot be zero)';
   }
-  return a < b;
+  return numerator < denominator;
 }
 
-console.log(isProperFraction(2, 3)); // This will return true
-console.log(isProperFraction(5, 2)); // This will return false
-console.log(isProperFraction(3, 0)); // This will return false
+function assertion(numerator, denominator, targetOutput) {
+    const currentOutput = isProperFraction(numerator, denominator);
+    console.assert(
+        currentOutput === targetOutput,
+        `Test for ${numerator}/${denominator}. Current output: %s, target output: %s`,
+        currentOutput,
+        targetOutput
+    );
+};
+
+
+assertion(2, 3, true);
+assertion(5, 2, false);
+
+module.exports = isProperFraction;

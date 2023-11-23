@@ -37,4 +37,15 @@ function getAngleType(angle){
     }
 }
 
-console.log(getAngleType(200));
+
+function assertion(angle, targetOutput) {
+  const currentOutput = getAngleType(angle);
+  console.log(
+    currentOutput === targetOutput,
+    `Test for ${angle}. Current output: %s, target output: %s`,
+    currentOutput,
+    targetOutput
+  );
+}
+
+assertion(getAngleType(200));  // it return "Reflex angle";

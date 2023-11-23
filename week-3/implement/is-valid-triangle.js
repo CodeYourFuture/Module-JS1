@@ -41,12 +41,16 @@
 
 
 
-function isValidTriangle(a, b, c){
-   
-   if (a + b > c && a + c > b && b + c > a) {
-        return false;
-    }return true;
-}
+function assertion(a, b, c, targetOutput){
+    const currentOutput = isValidTriangle(a, b, c);
+    console.assert(
+        currentOutput === targetOutput,
+         `Test for ${a}, ${b}, ${c}. Current output: %s, target output: %s`,
+    currentOutput,
+    targetOutput
 
-console.log(isValidTriangle(5, 5, 2)) // it will return true;
-console.log(isValidTriangle(-3, -2, 0)) // it will return false;
+    )
+};
+
+assertion(3, 4, 5, true);
+assertion(1, 1, 3, false);
