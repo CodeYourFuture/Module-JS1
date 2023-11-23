@@ -40,3 +40,4 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
+
