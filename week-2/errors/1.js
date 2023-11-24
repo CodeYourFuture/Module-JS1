@@ -13,7 +13,7 @@
 console.log(decimalNumber); */
 
 /*Answers
-This code tries to make a special function called convertToPercentage. This function wants a number to work with, called decimalNumber. But inside this function, there's a mistake. It tries to create a special number and calls it decimalNumber again, which causes confusion. To fix this mix-up, here is my solution*/
+This code tries to make a special function called convertToPercentage. This function wants a number to work with, called decimalNumber. But inside this function, there's a mistake. It tries to create a special number and calls it decimalNumber again, which causes confusion. To fix this mix-up, here is my solution */
 
 function convertToPercentage(decimalNumber) {
   return `${decimalNumber * 100}%`;
