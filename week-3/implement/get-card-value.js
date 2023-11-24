@@ -6,7 +6,7 @@
 
 // Acceptance criteria:
 
-// Given a card string in the format "A♠" (representing a card in blackjack),
+// Given a card string in the format "A♠"  (representing a card in blackjack),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
 
@@ -29,3 +29,52 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+const faceCards = ["J", "K", "Q"]
+function getCardValue(card){
+    const cardRank = card.slice(0,1);
+    if (cardRank === "A"){
+        return 11;
+    }
+    else if ( Number(cardRank) >= 2 && Number(cardRank) < 11){
+        return Number(cardRank)
+    }
+    else if (faceCards.includes(cardRank) ){
+        return 10;
+    }
+    throw Error("Invalid card rank.");
+}
+
+// Handle Ace (A):
+
+const currentOutput = getCardValue("A♠");
+const targetOutput = 11;
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+// Handle Number Cards (2-10):
+
+const currentOutput2 = getCardValue("2♠");
+const targetOutput2 = 2;
+console.assert(
+  currentOutput2 === targetOutput2,
+  "current output: %s, target output: %s",
+  currentOutput2,
+  targetOutput2
+);
+
+// Handle Face Cards (J, Q, K):
+
+const currentOutput3 = getCardValue("s♠");
+const targetOutput3 = 10;
+console.assert(
+  currentOutput3 === targetOutput3,
+  "current output: %s, target output: %s",
+  currentOutput3,
+  targetOutput3
+);
+
