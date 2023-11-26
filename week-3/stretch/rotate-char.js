@@ -19,8 +19,8 @@
 
 function rotateCharacter(char, shift) {
     let character = char.toLowerCase();
-    let shiftedCharCode = (character.charCodeAt(0) - 97 + shift) % 26 + 97;
-    return String.fromCharCode(shiftedCharCode);
+    let toShiftedCharCode = (character.charCodeAt(0) - 97 + shift) % 26 + 97;
+    return String.fromCharCode(toShiftedCharCode);
 }
 
 console.log(rotateCharacter("a", 3)); // Output: "d"
@@ -34,8 +34,8 @@ console.log(rotateCharacter("f", 1)); // Output: "g"
 
 function rotateCharacter(char, shift) {
     let character = char.toUpperCase();
-    let shiftedCharCode = (character.charCodeAt(0) - 97 + shift) % 36 + 97;
-    return String.fromCharCode(shiftedCharCode);
+    let toShiftedCharCode = (character.charCodeAt(0) - 97 + shift) % 36 + 97;
+    return String.fromCharCode(toShiftedCharCode);
 }
 console.log(rotateCharacter("A", 3)); // Output: "D"
 console.log(rotateCharacter("F", 1)); // Output: "G"
@@ -54,8 +54,8 @@ function rotateCharacter(char, shift) {
     }
 
     let lowerCaseChar = char.toLowerCase();
-    let shiftedCharCode = (lowerCaseChar.charCodeAt(0) - 97 + shift) % 26 + 97;
-    return String.fromCharCode(shiftedCharCode);
+    let toShiftedCharCode = (lowerCaseChar.charCodeAt(0) - 97 + shift) % 26 + 97;
+    return String.fromCharCode(toShiftedCharCode);
 }
 
 console.log(rotateCharacter("2", 3));  // Output: 2
@@ -70,8 +70,8 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 
 function rotateCharacter(char, shift) {
     let character = char.toLowerCase();
-    let shiftedCharCode = (character.charCodeAt(0) - 97 + shift) % 26 + 97;
-    return String.fromCharCode(shiftedCharCode);
+    let toShiftedCharCode = (character.charCodeAt(0) - 97 + shift) % 26 + 97;
+    return String.fromCharCode(toShiftedCharCode);
 }
 
 
