@@ -41,10 +41,13 @@
 
 
 function isProperFraction(numerator, denominator) {
-  if (denominator === 0) {
+	if (numerator < denominator){
+  return true;
+    }else if (denominator === 0) {
     return 'Error (Denominator cannot be zero)';
+  }else {
+    return false;
   }
-  return numerator < denominator;
 }
 
 function assertion(numerator, denominator, targetOutput) {
