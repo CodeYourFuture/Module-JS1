@@ -23,5 +23,5 @@ function capitalize(text) {
   let str = `${text[0].toUpperCase()}${text.slice(1)}`;
   return str;
 }
-let text = "i like ice-cream";
+let text1 = "i like ice-cream";
 console.log(capitalize(text));
