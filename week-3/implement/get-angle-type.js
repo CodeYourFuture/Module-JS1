@@ -49,3 +49,5 @@ function assertion(angle, targetOutput) {
 }
 
 assertion(getAngleType(200));  // it return "Reflex angle";
+
+module.exports = getAngleType;

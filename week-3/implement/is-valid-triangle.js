@@ -61,3 +61,6 @@ const currentOutput = isValidTriangle(a, b, c);
     };
 assertion(3, 4, 5, true);
 assertion(1, 1, 3, false);
+
+
+module.exports = isValidTriangle;

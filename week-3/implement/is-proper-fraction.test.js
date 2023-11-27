@@ -1,4 +1,4 @@
-const formatAs12HourClock = require('./is-proper-fraction');
+const isProperFraction = require('./is-proper-fraction');
 
 
 test('isProperFraction returns true for proper fraction', () => {
@@ -9,18 +9,6 @@ test('isProperFraction returns true for proper fraction', () => {
 
   // Use the expect function to check if the result matches the expected output
   expect(result).toBe(true);
-});
-
-test('isProperFraction returns false for improper fraction', () => {
-  // Arrange
-  const numerator = 5;
-  const denominator = 3;
-
-  // Act
-  const result = isProperFraction(numerator, denominator);
-
-  // Assert
-  expect(result).toBe(false);
 });
 
 test('The function should throw an error when the denominator is zero, as it\'s not a valid fraction', () => {
@@ -34,6 +22,20 @@ test('The function should throw an error when the denominator is zero, as it\'s 
   // Assert
   expect(result).toBe('Error (Denominator cannot be zero)');
 });
+
+
+test('isProperFraction returns false for improper fraction', () => {
+  // Arrange
+  const numerator = 5;
+  const denominator = 3;
+
+  // Act
+  const result = isProperFraction(numerator, denominator);
+
+  // Assert
+  expect(result).toBe(false);
+});
+
 
 
 

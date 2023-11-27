@@ -35,7 +35,7 @@ function getCardValue(card){
     let string = "A♥, A♦, A♣, A♠";
     if (string.includes(card)){
         return Number(card)
-    }else if (/^[2-9]|10$/.test(card)) {
+    }else if (/^(2|3|4|5|6|7|8|9|10)$/.test(card)) {
         return +card;
     }else if (card === "J" || card === "Q" || card === "K"){
         return 10;
@@ -66,7 +66,10 @@ assertion(getCardValue("4")) //output ; 4
 // here is the explanation for line 39 (+card)
 
 let card = "10";
-let cardAsNumber = +card;
+let secondCard = +card;
 
-console.log(cardAsNumber); // Output: 10
-console.log(typeof cardAsNumber); 
+console.log(secondCard); // Output: 10
+console.log(typeof secondCard); 
+
+
+module.exports = getCardValue;
