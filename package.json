@@ -1,6 +1,9 @@
 {
     "name": "week-4-exercises",
     "description": "Created this package for the JS1 week 4 exercises",
+    "scripts": {
+        "test":"jest"
+    },
     "devDependencies": {
         "jest": "^29.7.0"
     }
