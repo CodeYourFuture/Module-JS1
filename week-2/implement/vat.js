@@ -8,3 +8,21 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function goods(s, p){
+    return `£${s * p}`;
+}
+console.log( goods(45, 3.2));
+
+
+// second solution
+let sells = "20";
+let priceCharge = "1.3";
+console.log( goods(sells, priceCharge ));
+
+
+
+
+
+
+
