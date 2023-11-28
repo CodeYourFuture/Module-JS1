@@ -96,22 +96,10 @@ test('Sum of all the digits greater than 16', () => {
 test('The card is valid', () => {
   expect(cardValidator(1234567898765432)).toBe(true)
   expect(cardValidator('1234567898765432')).toBe(true)
-  expect(cardValidator('12345678987aa433')).toBe(
-    `Invalid Card Number. All digits should be numbers`
-  )
-  expect(cardValidator(424242422424242)).toBe(
-    `Invalid Card Number. Card number should be 16 digits long`
-  )
-  expect(cardValidator(1234567898744433)).toBe(
-    `Invalid Card Number. The last digit should be even`
-  )
-  expect(cardValidator(8888888888888888)).toBe(
-    `Invalid Card Number. At least one digit should be different from the others`
-  )
-  expect(cardValidator(1001120000001112)).toBe(
-    `Invalid Card Number. Sum of digits should be bigger than 16`
-  )
-  expect(cardValidator(111111111111111)).toBe(
-    `Invalid Card Number. Card number should be 16 digits long. The last digit should be even. At least one digit should be different from the others. Sum of digits should be bigger than 16`
-  )
+  expect(cardValidator('12345678987aa433')).toBe(`Invalid Card Number. All digits should be numbers`)
+  expect(cardValidator(424242422424242)).toBe(`Invalid Card Number. Card number should be 16 digits long`)
+  expect(cardValidator(1234567898744433)).toBe(`Invalid Card Number. The last digit should be even`)
+  expect(cardValidator(8888888888888888)).toBe(`Invalid Card Number. At least one digit should be different from the others`)
+  expect(cardValidator(1001120000001112)).toBe(`Invalid Card Number. Sum of digits should be bigger than 16`)
+  expect(cardValidator(111111111111111)).toBe(`Invalid Card Number. Card number should be 16 digits long. The last digit should be even. At least one digit should be different from the others. Sum of digits should be bigger than 16`)
 })
