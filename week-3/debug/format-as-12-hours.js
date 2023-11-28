@@ -1,28 +1,14 @@
-/*function formatAs12HourClock(time) {
+function formatAs12HourClock(time) {
   if (Number(time.slice(0, 2)) > 12) {
-    return `${Number(time.slice(0, 2)) - 12}:00 pm`;
+    return `${(Number(time.slice(0, 2)) - 12)
+      .toString()
+      .padStart(2, "0")}:${time.slice(time.indexOf(":") + 1)} pm`;
   }
   return `${time} am`;
 }
-*/
 
-// a) Write an assertion to check the return value of formatAs12HourClock when it is called with an input "17:42"
-// b) Check the assertion output and explain what the bug is
-// c) Now fix the bug and re-run all your assertions
-
-function formatAs12HourClock(time) {
-  const [hours, minutes] = time.split(":");
-
-  if (Number(hours) > 12) {
-    return `${Number(hours) - 12}:${minutes} pm`;
-  }
-
-  return `${hours}:${minutes} am`;
-}
-
-const currentOutput = formatAs12HourClock("09:00");
-const targetOutput = "09:00 am";
-
+const currentOutput = formatAs12HourClock("08:00");
+const targetOutput = "08:00 am";
 console.assert(
   currentOutput === targetOutput,
   "current output: %s, target output: %s",
@@ -30,14 +16,27 @@ console.assert(
   targetOutput
 );
 
-const currentOutput3 = formatAs12HourClock("17:42");
-const targetOutput3 = "5:42 pm";
-
+const currentOutput2 = formatAs12HourClock("23:00");
+const targetOutput2 = "11:00 pm";
 console.assert(
-  currentOutput3 === targetOutput3,
+  currentOutput2 === targetOutput2,
   "current output: %s, target output: %s",
-  currentOutput3,
-  targetOutput3
+  currentOutput2,
+  targetOutput2
 );
 
-// The bug lies in the logic within the formatAs12HourClock function. When the time input is greater than 12 hours, it subtracts 12 from the hours to convert it to the 12-hour format. However, it always sets the minutes part to ":00" and adds "pm" or "am" based on the condition. So, for "17:42", it returns "5:00 pm" instead of "5:42 pm". We need to fix it by modifying the function to include the minutes  when the hour is greater than 12.
+// formatAs12HourClock currently has a 🐛
+
+// a) Write an assertion to check the return value of formatAs12HourClock when it is called with an input "17:42"
+const currentOutput3 = formatAs12HourClock("17:42");
+const targetOutput3 = "05:42 pm";
+console.assert(
+  currentOutput3 === targetOutput3,
+  `${currentOutput3} and ${targetOutput3}`
+);
+
+// b) Check the assertion output and explain what the bug is
+
+//because minute is not passed to return value
+
+// c) Now fix the bug and re-run all your assertions
