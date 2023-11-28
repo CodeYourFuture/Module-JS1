@@ -6,7 +6,7 @@
 function getOrdinalNumber(integer) {
   const lastDigit = integer % 10;
   const lastTwoDigits = integer % 100;
-
+if (Number.isInteger(integer)) {
   switch (lastDigit) {
     case 1:
       if (lastTwoDigits === 11) {
@@ -23,7 +23,17 @@ function getOrdinalNumber(integer) {
     default:
       return integer + "th";
   }
+} return 'Invalid input!'
+  
 }
+
+test('Should be a invalid input', () => {
+  expect(getOrdinalNumber('a')).toBe("Invalid input!");
+  expect(getOrdinalNumber(true)).toBe("Invalid input!");
+  expect(getOrdinalNumber(NaN)).toBe("Invalid input!");
+  expect(getOrdinalNumber(0 / 0)).toBe("Invalid input!");
+  expect(getOrdinalNumber(undefined)).toBe("Invalid input!");
+});
 
 test("works for any number ending in 1", () => {
   expect(getOrdinalNumber(1)).toBe("1st");
