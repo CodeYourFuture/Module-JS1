@@ -23,3 +23,35 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+function repeat(str, count) {
+  let resultStr = "";
+  let resultArray = [];
+
+  if (!Number.isInteger(count)) {
+    return "Non integer counts are not valid";
+  }
+
+  switch (true) {
+    case count < 0:
+      return "Negative counts are not valid";
+
+    case count === 0:
+      return resultStr;
+
+    default:
+      for (let i = 0; i < count; i++) {
+        resultArray.push(str);
+        resultStr = resultArray.join(" ");
+      }
+      return resultStr;
+  }
+}
+
+test('check if is integer', () => { 
+  expect(repeat("nice", 0)).toBe("");
+  expect(repeat("nice", 1)).toBe("nice");
+  expect(repeat("nice", -1)).toBe("Negative counts are not valid");
+  expect(repeat("nice", 1.1)).toBe("Non integer counts are not valid");
+  expect(repeat("nice", "a")).toBe("Non integer counts are not valid");
+ })
