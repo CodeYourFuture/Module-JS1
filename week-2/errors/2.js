@@ -5,6 +5,9 @@
 
 function square(3) {
     return num * num;
+    console.log (square(3));//12
+    console.log (square(6));//18
 }
+
 
 
