@@ -34,7 +34,7 @@ function isThereNumber(password) {
 }
 
 function isThereSymbol(password) {
-  return /[\p{S}*@]/u.test(password)
+  return /[\p{P}\p{S}]/u.test(password)
 }
 
 function isPreviousPassword(password) {
