@@ -1,27 +1,32 @@
+// Check if the card number is a number
 function isNumber(cardNumber) {
   if (!isNaN(cardNumber)) {
     return true;
   } return 'All digits should be numbers';
 }
 
+// check if the card number has 16 digits
 function is16DigitsLong(cardNumber) {
   if (cardNumber.toString().length == 16) {
     return true
   } return 'Card number should be 16 digits long';
 }
 
+// check if the card number ends with a even number
 function isLastDigitEven(cardNumber) {
   if (Number(cardNumber.toString().slice(-1)) % 2 === 0) {
     return true
   } return 'The last digit should be even';
 }
 
+// check if the card number has at least on digit different of the others
 function isAnyDigitDifferent(cardNumber) {
   if (cardNumber.toString().split('').every((digit) => digit === cardNumber.toString()[0])) {
     return 'At least one digit should be different from the others';
   } return true;
 }
 
+// check if the sum of all card-number's digits is greater than 16
 function isSumGreaterThan16(cardNumber) {
   cardNumberString = cardNumber.toString();
   let cardNumberArray = []
@@ -34,6 +39,7 @@ function isSumGreaterThan16(cardNumber) {
   } return 'Sum of digits should be bigger than 16';
 }
 
+// general function that calls all the others and generate the return
 function cardValidator(cardNumber) {
   const absoluteCardNumber = Math.abs(cardNumber);
   const isNumberValue = isNumber(absoluteCardNumber);
