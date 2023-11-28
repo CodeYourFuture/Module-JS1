@@ -38,3 +38,28 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+function isValidTriangle(a, b, c) {
+  if (a <= 0 || b <= 0 || c <= 0) {
+    return false;
+  }
+
+  if (a + b <= c || a + c <= b || b + c <= a) {
+    return false;
+  }
+
+  return true;
+}
+
+console.assert(
+  isValidTriangle(3, 3, 3) === true,
+  "Equilateral triangle is valid"
+);
+console.assert(
+  isValidTriangle(3, 3, 0) === false,
+  "Sum of two sides not greater than the third side"
+);
+console.assert(
+  isValidTriangle(0, 3, 3) === false,
+  "Zero side length is invalid"
+);

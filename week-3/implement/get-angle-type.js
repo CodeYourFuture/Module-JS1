@@ -23,21 +23,13 @@
 // Then the function should return "Reflex angle"
 
 function getAngleType(angle) {
-  if (angle === 90) {
-    return "Right angle";
-  } else if (angle < 90) {
-    return "Acute angle";
-  } else if (angle === 180) {
-    return "Straight angle";
-  } else if (angle > 90 && angle < 180) {
-    return "Obtuse angle";
-  } else if (angle === 360) {
-    return "Full angle";
-  } else if (angle > 180 && angle < 360) {
-    return "Reflex angle";
-  } else {
-    return "Unknown angle";
-  }
+  if (angle === 90) return "Right angle";
+  if (angle < 90) return "Acute angle";
+  if (angle === 180) return "Straight angle";
+  if (angle < 180) return "Obtuse angle";
+  if (angle === 360) return "Full angle";
+  if (angle < 360) return "Reflex angle";
+  return "Unknown angle";
 }
 
 console.assert(getAngleType(90) === "Right angle", "Right angle");
@@ -46,3 +38,7 @@ console.assert(getAngleType(120) === "Obtuse angle", "Obtuse angle");
 console.assert(getAngleType(180) === "Straight angle", "Straight angle");
 console.assert(getAngleType(270) === "Reflex angle", "Reflex angle");
 console.assert(getAngleType(360) === "Full angle", "Full angle");
+console.assert(
+  getAngleType(400) === "Full angle",
+  "Full angle or Unknown angle"
+);

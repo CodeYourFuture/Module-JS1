@@ -29,24 +29,24 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
-// Function to determine the numeric value of a blackjack card
 
 function getCardValue(card) {
-  const rank = card.slice(0, -1); // Extract the rank from the card string
-  const numericValue = parseInt(rank); // Try converting the rank to a number
+  const cardRank = card.slice(0, -1);
 
-  if (!isNaN(numericValue)) {
-    // If the rank is a number card (2-10), return its numeric value
-    return numericValue;
-  } else if (rank === "A") {
-    // Ace defaults to 11 points in blackjack
+  if (cardRank === "A") {
     return 11;
-  } else if (rank === "J" || rank === "Q" || rank === "K") {
-    // Face cards (J, Q, K) are worth 10 points each
+  } else if (cardRank === "K" || cardRank === "Q" || cardRank === "J") {
     return 10;
   } else {
-    // If it's an invalid rank, throw an error
-    throw new Error("Invalid card rank");
+    if (!isNaN(cardRank)) {
+      return parseInt(cardRank);
+    } else {
+      throw new Error("Invalid card rank");
+    }
   }
 }
-// The Exercise is very complicated. I tried it many times with chatgpt :) but still hard to understand
+
+console.assert(getCardValue("5♠") === 5, "5 should return 5");
+console.assert(getCardValue("J♦") === 10, "J should return 10");
+console.assert(getCardValue("A♣") === 11, "A should return 11");
+console.assert(() => getCardValue("P♠"), new Error("Invalid card rank"));
