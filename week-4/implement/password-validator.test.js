@@ -14,3 +14,24 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+function passwordValidator(string) {
+  if (string.length < 5) {
+    return false;
+  }
+  const lowerCaseRegex = /[a-z]/;
+  const upperCaseRegex = /[A-Z]/;
+  const numeroRegex = /[0 - 9]/;
+  const symbolRegex = /[!#$%.*&]/;
+
+  if (
+    !lowerCaseRegex.test(string) ||
+    !upperCaseRegex.test(string) ||
+    !numeroRegex.test(string) ||
+    !symbolRegex.test(string)
+  ) {
+    return false;
+  }
+  return true;
+}
+
+console.log(passwordValidator("!aAb9"));
