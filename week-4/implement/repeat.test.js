@@ -24,11 +24,11 @@
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
 function rePeat(str, count) {
+  if (count < 0) {
+    console.log("Error: Your input is negative");
+  }
     for (let i = 0; i < count; i++) {
-      if (count < 0) {
-        console.log("Error: Your input is negative"); // Error Message still not working //
-      }
-      else {console.log(str);}
+      {console.log(str);}
   }
   }
-  rePeat("My name is Haythem. I am a software developer in CYF", 3);
+  rePeat("My name is Haythem. I am a software developer in CYF", 1);
