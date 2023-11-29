@@ -26,11 +26,11 @@
 
 function repeatString(str, number) {
   if (number < 0) {
-    return "Negative counts are not valid";
+    return "Negative counts are not valid!";
   } else if (number === 0) {
     return "...";
   } else if (number > 0) {
     return str.repeat(number);
   }
 }
-console.log(repeatString("hola ", -1));
+console.log(repeatString("hola ", 5));
