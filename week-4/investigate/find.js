@@ -26,7 +26,7 @@ console.log(find("code your future", "z"));
 // Answer: The if statement is used to check the index position of the character we are looking for.
 
 // c) Why is index++ being used?
-// Answer: The index++ is used to increment the index position if the character we are looking for is not founded yet.
+// Answer: The index++ is used to increment the index position if the character we are lofinoking for is not founded yet.
 
 // d) What is the condition index < str.length used for?
 //Answer: Is to make the loop increasing one position until the index be smaller than the string length or the character were founded in the string.
