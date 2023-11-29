@@ -1,9 +1,25 @@
 function formatAs12HourClock(time) {
   if (Number(time.slice(0, 2)) > 12) {
-    return `${Number(time.slice(0, 2)) - 12}:00 pm`;
+    let a = `${Number(time.slice(0, 2)) - 12}`;
+    if (a < 9) {
+      a = ("0"+a).slice(-2);
+    }
+    let b = `${Number(time.slice(-2))}`;
+    if (b < 9) {
+      b = ("0"+b);
+    }
+    return(a + ":" + b + " " + "pm");
   }
-  return `${time} am`;
-}
+   let a = `${time.slice(0, 2)}`;
+  if (a < 9) {
+      a = ("0"+a).slice(-2);
+    }
+   let b = `${Number(time.slice(-2))}`;
+  if (b < 9) {
+      b = ("0"+b);
+    }
+      return(a + ":" + b + " " + "am");
+  }
 
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
@@ -22,6 +38,16 @@ console.assert(
   currentOutput2,
   targetOutput2
 );
+
+const currentOutput3 = formatAs12HourClock("17:42");
+const targetOutput3 = "05:42 pm";
+console.assert(
+  currentOutput3 === targetOutput3,
+  "current output: %s, target output: %s",
+  currentOutput3,
+  targetOutput3
+);
+console.log(formatAs12HourClock("17:42"));
 
 // formatAs12HourClock currently has a 🐛
 

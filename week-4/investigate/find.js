@@ -19,7 +19,7 @@ console.log(find("code your future", "z"));
 // Use the Python Visualiser to help you play computer with this example and observe how this code is executed
 // Pay particular attention to the following:
 
-// a) How the index variable updates during the call to find
-// b) What is the if statement used to check
-// c) Why is index++ being used?
-// d) What is the condition index < str.length used for?
+// a) How the index variable updates during the call to find // index variable updates by index++
+// b) What is the if statement used to check // to check if the char in the string str or not.
+// c) Why is index++ being used? // to check the next character in the string str.
+// d) What is the condition index < str.length used for? // to check the characters of the string str from the first character to the last one.
