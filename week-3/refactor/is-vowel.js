@@ -3,14 +3,13 @@ function isVowel(letter) {
     letter === "a" ||
     letter === "e" ||
     letter === "i" ||
-    letter === "i" ||
     letter === "o" ||
     letter === "u"
   );
 }
 
 // here is an implementation of isVowel - this function checks if a letter is a vowel
-
+//  i is duplicated two times.
 console.log("case: letter a...");
 const currentOutput = isVowel("a");
 const targetOutput = true;
