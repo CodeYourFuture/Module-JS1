@@ -3,7 +3,6 @@ function isVowel(letter) {
     letter === "a" ||
     letter === "e" ||
     letter === "i" ||
-    letter === "i" ||
     letter === "o" ||
     letter === "u"
   );
@@ -40,3 +39,5 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
+
+// letter = i used twice it doesn't change the function but can confuse and make the code harder to read. I deleted one of them and codes work.
