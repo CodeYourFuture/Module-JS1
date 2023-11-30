@@ -1,62 +1,95 @@
-function isProperFraction(numerator, denominator){ 
-    if (denominator === 0)
-return 'Denominator cannot be zero';
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) {
+    throw Error("Denominator cannot be zero");
+  }
 
-    if(numerator < denominator){
-return true ;
+  if (numerator < denominator) {
+    return true;
+  } else if (numerator > denominator || numerator === denominator) {
+    return false;
+  }
 }
-    else (numerator > denominator || numerator === denominator)
-return false;
-    }
 
 // Zero Denominator check: 3/0
 
-const zeroDenominatorOutput = isProperFraction(3, 0);
-console.assert(
-    zeroDenominatorOutput === 'Error, Denominator cannot be zero',' The denominator is zero, it is not a valid fraction')
-    
+test("zero denominator check", function () {
+  //GIVEN
+  const targetOutput = "Denominator cannot be zero";
+  const input1 = 3;
+  const input2 = 0;
+
+  //WHEN
+  const f = function () {
+    isProperFraction(input1, input2);
+  };
+
+  //THEN
+  expect(f).toThrow(targetOutput);
+});
 
 // Proper Fraction check: 2/3
 
-const currentOutput =isProperFraction(2,3)
-const targetOutput = true;
-console.assert(
-    currentOutput === targetOutput, 
-     "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput,
-)
+test("proper fraction check ", function () {
+  //GIVEN
+  const targetOutput = true;
+  const input1 = 2;
+  const input2 = 3;
+
+  //WHEN
+  const currentOutput = isProperFraction(input1, input2);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
 // Improper Fraction check: 5/2
 
-const currentOutput2 =isProperFraction(5,2)
-const targetOutput2 = false;
-console.assert(
-    currentOutput2 === targetOutput2, 
-     "current output: %s, target output: %s",
-  currentOutput2,
-  targetOutput2,
-)
+test("improper fraction check ", function () {
+  //GIVEN
+  const targetOutput = false;
+  const input1 = 5;
+  const input2 = 2;
+
+  //WHEN
+  const currentOutput = isProperFraction(input1, input2);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
 // Negative Fraction check: -4,7
 
-const currentOutput3 =isProperFraction(-4,7)
-const targetOutput3 = true;
-console.assert(
-    currentOutput3 === targetOutput3, 
-     "current output: %s, target output: %s", 
-  currentOutput3,
-  targetOutput3,'The function should return true.'
-)
+test("negative fraction check ", function () {
+  //GIVEN
+  const targetOutput = true;
+  const input1 = -4;
+  const input2 = 7;
+
+  //WHEN
+  const currentOutput = isProperFraction(input1, input2);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
 // Equal Numerator and Denominator check: 3,3
 
-const currentOutput4 =isProperFraction(3,3)
-const targetOutput4 = false;
-console.assert(
-    currentOutput4 === targetOutput4, 
-     "current output: %s, target output: %s",
-  currentOutput4,
-  targetOutput4,
-)
+test("equal numerator and denominator check ", function () {
+  //GIVEN
+  const targetOutput = false;
+  const input1 = 3;
+  const input2 = 3;
 
+  //WHEN
+  const currentOutput = isProperFraction(input1, input2);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
 
 // You wil need to implement a function isProperFraction
 // You need to write assertions for your function to check it works in different cases
