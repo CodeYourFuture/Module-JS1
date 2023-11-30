@@ -14,7 +14,7 @@ function getOrdinalNumber(num) {
     return `${num}st`;
   }
   if (lastDigit === "2") {
-    return `${num}th`;
+    return `${num}nd`;
   }
   if (lastDigit === "3") {
     return `${num}rd`;
@@ -22,11 +22,32 @@ function getOrdinalNumber(num) {
   return `${num}th`;
 }
 
-test("works for any number ending in 1", function () {
-  expect(getOrdinalNumber(1)).toBe("1st");
+
+
+test("works for any number ending in 11, 12,13", function () {
   expect(getOrdinalNumber(11)).toBe("11th");
-  expect(getOrdinalNumber(21)).toBe("21st");
-  expect(getOrdinalNumber(33)).toBe("33rd");
-  expect(getOrdinalNumber(19)).toBe("19th");
+  expect(getOrdinalNumber(212)).toBe("212th");
   expect(getOrdinalNumber(113)).toBe("113th");
 });
+
+test("works for any number ending in 1", function () {
+  expect(getOrdinalNumber(1)).toBe("1st");
+  expect(getOrdinalNumber(21)).toBe("21st");
+});
+
+test("works for any number ending in 2", function () {
+  expect(getOrdinalNumber(22)).toBe("22nd");
+  expect(getOrdinalNumber(32)).toBe("32nd");
+  expect(getOrdinalNumber(142)).toBe("142nd");
+});
+
+test("works for any number ending in 3", function () {
+  expect(getOrdinalNumber(23)).toBe("23rd");
+  expect(getOrdinalNumber(1443)).toBe("1443rd");
+});
+
+test("works for any other number", function () {
+  expect(getOrdinalNumber(7)).toBe("7th");
+  expect(getOrdinalNumber(99)).toBe("99th");
+});
+
