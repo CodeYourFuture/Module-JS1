@@ -14,6 +14,7 @@ function passwordValidator(password,oldPassword){
     else if (oldPassword.includes(password)){
         return false
     }
+    
     else {
         return true;
     }
