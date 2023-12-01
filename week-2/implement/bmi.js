@@ -14,3 +14,9 @@
 // When we call this function with the weight and height
 // Then it returns their Body Mass Index to 1 decimal place
 
+function bmi (w,h){
+    h = h*h;
+    let x = h/w;
+    return  (x);
+}
+console.log(Bmi("60"));
