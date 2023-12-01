@@ -1,13 +1,13 @@
-function isValidTriangle (a,b,c){
-    if(a <= 0 || b <= 0 || c <= 0 ){
-        return false 
-    }
- if (a + b <= c || a + c <= b || b + c <= a){
-    return false
+function isValidTriangle(a, b, c) {
+  if (a <= 0 || b <= 0 || c <= 0) {
+    return false;
+  }
+  if (a + b <= c || a + c <= b || b + c <= a) {
+    return false;
+  }
+  return true;
 }
-return true}
 
-console.log(isValidTriangle(5,3,3));
 
 // Implement a function isValidTriangle
 
@@ -37,15 +37,62 @@ console.log(isValidTriangle(5,3,3));
 // When the sum of any two side lengths is less than or equal to the length of the third side (i.e., a + b <= c, a + c <= b, b + c <= a),
 // Then it should return false because these conditions violate the Triangle Inequality, which states that the sum of the lengths of any two sides of a triangle must be greater than the length of the third side.
 
+test("invalid triangle ", function () {
+  //GIVEN
+  const targetOutput = false;
+  const a = 2;
+  const b = 2;
+  const c = 5;
+
+  //WHEN
+  const currentOutput = isValidTriangle(a, b, c);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
 // scenario: invalid triangle
 // Check for Valid Input:
 // Given the sides a, b, and c,
 // When any of the sides are less than or equal to zero,
 // Then it should return false because a triangle cannot have zero or negative side lengths.
 
+test("check for invalid input", function () {
+  //GIVEN
+  const targetOutput = false;
+  const a = 0;
+  const b = 2;
+  const c = 5;
+
+  //WHEN
+  const currentOutput = isValidTriangle(a, b, c);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
+
 // scenario: valid triangle
 // Given valid side lengths where the sum of any two sides is greater than the third side,
 // When the function is called with these values as input,
 // Then it should return true because the input forms a valid triangle.
+
+test("check for valid triangle", function () {
+  //GIVEN
+  const targetOutput = true;
+  const a = 3;
+  const b = 4;
+  const c = 5;
+
+  //WHEN
+  const currentOutput = isValidTriangle(a, b, c);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.

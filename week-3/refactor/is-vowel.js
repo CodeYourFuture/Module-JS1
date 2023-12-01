@@ -1,12 +1,7 @@
+let vowels = ["a", "e", "i", "o", "u"];
+
 function isVowel(letter) {
-  return (
-    letter === "a" ||
-    letter === "e" ||
-    letter === "i" ||
-    letter === "i" ||
-    letter === "o" ||
-    letter === "u"
-  );
+  return vowels.includes(letter);
 }
 
 // here is an implementation of isVowel - this function checks if a letter is a vowel

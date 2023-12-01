@@ -25,7 +25,7 @@
 
 function getAngleType(angle){
     if (angle === 90) {
-    return `${"Right Angles"}`;
+    return `${"Right angle"}`;
   }
  else if (angle < 90){
     return `${"Acute angle"}`;
@@ -43,4 +43,53 @@ function getAngleType(angle){
   return "This is not an angle"
 }
 
-console.log(getAngleType(275));
+
+test("identify right angles", function () {
+
+  //GIVEN 
+  const targetOutput= "Right angle";
+  const input=90;
+
+  //WHEN
+  const currentOutput = getAngleType(input);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
+test("identify acute angle", function () {
+  const targetOutput= "Acute angle";
+  const input= 50;
+
+  const currentOutput = getAngleType(input);
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
+test("identify obtuse angle", function () {
+  const targetOutput= "Obtuse angle";
+  const input= 120;
+
+  const currentOutput = getAngleType(input);
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
+test("identify straight angle", function () {
+  const targetOutput= "Straight angle";
+  const input= 180;
+
+  const currentOutput = getAngleType(input);
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
+test("identify reflex angle", function () {
+  const targetOutput= "Reflex angle";
+  const input= 250;
+
+  const currentOutput = getAngleType(input);
+
+  expect(currentOutput).toBe(targetOutput);
+});

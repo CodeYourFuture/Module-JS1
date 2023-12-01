@@ -47,34 +47,66 @@ function getCardValue(card){
 
 // Handle Ace (A):
 
-const currentOutput = getCardValue("A♠");
+test("handle ace (A)", function () {
+
+  //GIVEN 
 const targetOutput = 11;
-console.assert(
-  currentOutput === targetOutput,
-  "current output: %s, target output: %s",
-  currentOutput,
-  targetOutput
-);
+  const input="A♠";
+
+  //WHEN
+const currentOutput = getCardValue(input);
+
+  //THEN
+
+  expect(currentOutput).toBe(targetOutput);
+});
+
+
+
 
 // Handle Number Cards (2-10):
 
-const currentOutput2 = getCardValue("2♠");
-const targetOutput2 = 2;
-console.assert(
-  currentOutput2 === targetOutput2,
-  "current output: %s, target output: %s",
-  currentOutput2,
-  targetOutput2
-);
+test("handle number cards", function () {
+
+  //GIVEN 
+  const targetOutput = 2;
+  const input="2♠";
+
+  //WHEN
+  const currentOutput = getCardValue(input);
+
+  //THEN
+  expect(currentOutput).toBe(targetOutput);
+});
 
 // Handle Face Cards (J, Q, K):
 
-const currentOutput3 = getCardValue("s♠");
-const targetOutput3 = 10;
-console.assert(
-  currentOutput3 === targetOutput3,
-  "current output: %s, target output: %s",
-  currentOutput3,
-  targetOutput3
-);
+test("handle face cards", function () {
 
+  //GIVEN 
+  const targetOutput = 10;
+  const input="J♠";
+
+  //WHEN
+  const currentOutput = getCardValue(input);
+
+  //THEN
+  expect(currentOutput).toBe(targetOutput);
+});
+
+// Handle Invalid Card:
+
+test("handle invalid cards", function () {
+
+  //GIVEN 
+  const targetOutput = "Invalid card rank.";
+  const input="s♠";
+
+  //WHEN -- getCardValue function needs to be passed as a parameter in expect function. (for error test!)
+  const f = function () {
+    getCardValue(input);
+  };
+  //THEN
+  // expect(() => getCardValue(input)).toThrow(targetOutput); same thing but more tidy
+  expect(f).toThrow(targetOutput);
+});
