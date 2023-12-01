@@ -14,3 +14,22 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+function checkPassword(str) {
+    const hasUppercase = /[A-Z]/.test(str);
+    const haslowerCase = /[a-z]/.test(str);
+    const hasNumber = /\d/.test(str);
+    const hasChar = /[!#$%.&*]/.test(str);
+    if (hasUppercase && haslowerCase && hasNumber && hasChar && str.length >= 5) {
+        return "password is valid";}
+        else {return "password is not valid"}}
+// console.log(checkPassword("Ba8*xyz9")); 
+// console.log(checkPassword("fer"));
+// console.log(checkPassword("fert56"));
+// console.log(checkPassword("Fe8*"));
+test("check if password contains all characters", function(){
+    const str ="Fe34*";
+    const currentOutput = checkPassword(str);
+    const targetOutput = "password is valid";
+    expect(currentOutput).toBe(targetOutput);
+});
