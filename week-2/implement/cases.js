@@ -15,3 +15,11 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function snake_case(str) {
+  return str.replaceAll(/ /g, "_").toUpperCase();
+}
+
+console.log(snake_case("the lord of the rings"));
+console.log(snake_case("the great gatsby"));
+console.log(snake_case("home alone"));
