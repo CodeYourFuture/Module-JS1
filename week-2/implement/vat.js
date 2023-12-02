@@ -8,3 +8,13 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+function productCostWithVat(price) {
+  if (typeof price === "number") {
+    const vatPrice = price * 1.2;
+    return `£${vatPrice.toFixed(2)}`;
+  } else {
+    return "don't waste my time";
+  }
+}
+var price = 399;
+console.log(productCostWithVat(price));
