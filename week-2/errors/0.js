@@ -4,6 +4,8 @@
 // interpret the error message and figure out why it's happening, if your prediction was wrong
 
 function capitalise(str) {
-  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  var str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
+var str = "uygugbu";
+console.log(capitalise(str));

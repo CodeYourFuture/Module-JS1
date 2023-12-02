@@ -13,3 +13,15 @@
 // Given someone's weight in kg and height in metres
 // When we call this function with the weight and height
 // Then it returns their Body Mass Index to 1 decimal place
+function bmiCalculation(weight, height) {
+  if (typeof weight === "number" && typeof height === "number") {
+    const bmi = weight / (height * height);
+
+    return `${bmi.toFixed(1)}`;
+  } else {
+    return " please use the right unit";
+  }
+}
+var weight = 60;
+var height = 1.64;
+console.log(bmiCalculation(weight, height));
