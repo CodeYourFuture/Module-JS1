@@ -36,7 +36,7 @@ console.log(formatTimeDisplay(143));
 // Ans. "00"
 // d) What is the value assigned to the parameter num when pad
 // is called for the last time in this program?  Explain your answer
-//Ans. 
+//Ans. 23
 
 // e) What is the return value when pad is called
 // for the last time in this program?  Explain your answer
