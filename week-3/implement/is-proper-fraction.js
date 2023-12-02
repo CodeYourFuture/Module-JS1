@@ -11,7 +11,19 @@
 // Input: numerator = 2, denominator = 3
 // target output: true
 // Explanation: The fraction 2/3 is a proper fraction, where the numerator is less than the denominator. The function should return true.
-
+function isProperFraction(numerator, denominator) {
+  if (numerator >= denominator && denominator != 0) {
+    return "false";
+  } else if (numerator < denominator) {
+    return "True";
+  } else {
+    return "error";
+  }
+}
+console.log(isProperFraction(5, 2));
+console.log(isProperFraction(3, 0));
+console.log(isProperFraction(-4, 7));
+console.log(isProperFraction(3, 3));
 // Improper Fraction check:
 // Input: numerator = 5, denominator = 2
 // target output: false

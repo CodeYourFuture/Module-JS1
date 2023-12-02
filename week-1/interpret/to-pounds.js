@@ -1,16 +1,19 @@
 const penceString = "399p";
-
+//  "penceSting" variable declare  with "399p" value
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
 );
-
+// "penceStringWithoutTrailingP" is create new value by taking substring from "penceString"
+// function subString remove the last index by subtract -1 from  "penceString"length
 const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+//paddedPenceNumberString is create a value by add 0 in "penceStringWithoutTrailingP"
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
 );
-
+//"pounds" is create a value by taking subString from "paddedPenceNumberString"
+//function subString remove the last index by subtract -2 from  "paddedPenceNumberString"length
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
   .padEnd(2, "0");
