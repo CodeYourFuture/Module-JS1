@@ -1,6 +1,8 @@
 // You wil need to implement a function isProperFraction
 // You need to write assertions for your function to check it works in different cases
 
+const { log } = require("console");
+
 // Terms:
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
@@ -38,19 +40,21 @@ function isProperFraction (a,b){
     if (a<b){
         return true;
     }
-    else if(a>b){
+    if(a>b){
         return false;
     }
-    else if (b=0){
-        return ;
+    if (b===0){
+        return "error";
     }
-    else if (a<0){
+    if (a<0){
         return true;
     }
-    else if (a===b){
+    if (a===b){
         return false;
     }
 }
+
+console.log(isProperFraction(3,0));
 
 console.log("This Assertion is fails when it's not a proper fraction");
 const currentOutput = isProperFraction(8,9); 
