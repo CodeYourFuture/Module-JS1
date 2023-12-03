@@ -2,16 +2,17 @@ const penceString = "399p";
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
-);
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+); // clears p
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); // 339 no need to 0
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
-);
+); // it takes out last 2 characters so we only have 3
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
-console.log(`£${pounds}.${pence}`);
+  .padEnd(2, "0"); // make it  2 characters long and add 0 but no need it's already 2 character and still 99
+
+console.log(`£${pounds}.${pence}`); // 3,99
 
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
