@@ -1,5 +1,7 @@
 // Implement a function isValidTriangle
 
+const { default: expect } = require("expect");
+
 // 🗝️ Terms
 // the Triangle Inequality says: the sum of any two sides is always greater than the third side.
 // practical examples:
@@ -38,3 +40,22 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+function isValidTriangle(a,b,c){
+    if (a+b<=c || a+c<=b || b+c<=a){
+        return false;
+    }
+    else if (a<=0 || b<=0 || c<=0){
+        return false;
+    }
+    else if(a+b>c && a+c>b && b+c>a){
+    return true;
+    }
+}
+
+test("Check if the triangle is valid or not", function () {
+    
+    expect(isValidTriangle(3, 3, 3)).toBe(true);
+    expect(isValidTriangle(3, -3, 3)).toBe(false);
+    expect(isValidTriangle(1, 2, 5)).toBe(false);
+});

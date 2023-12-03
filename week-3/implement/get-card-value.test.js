@@ -1,5 +1,7 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
+const { default: expect } = require("expect");
+
 // You will need to implement a function getCardValue
 
 // You need to write assertions for your function to check it works in different cases
@@ -29,3 +31,22 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(str) {
+  if (str === "A") {
+    return 11;
+  } else if (str === "J" || str === "Q" || str === "K") {
+    return 10;
+  } else if (str > 1 && str < 11) {
+    return +str;
+  } else return "Invalid card rank";
+}
+
+test("Check if function is returning right value for BlackJack game", function () {
+  
+  expect(getCardValue("A")).toBe(11);
+  expect(getCardValue("J")).toBe(10);
+  expect(getCardValue("K")).toBe(10);
+  expect(getCardValue("2")).toBe(2);
+  expect(getCardValue("5")).toBe(5);
+});
