@@ -2,6 +2,7 @@
 // You need to write assertions for your function to check it works in different cases
 
 const { log } = require("console");
+const { default: expect } = require("expect");
 
 // Terms:
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
@@ -36,39 +37,30 @@ const { log } = require("console");
 
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 
-function isProperFraction (a,b){
-    if (a<b){
-        return true;
-    }
-    if(a>b){
-        return false;
-    }
-    if (b===0){
-        return "error";
-    }
-    if (a<0){
-        return true;
-    }
-    if (a===b){
-        return false;
-    }
+function isProperFraction(a, b) {
+  if (b === 0) {
+    return "error";
+  }
+  if (a === b) {
+    return false;
+  }
+  if (a < b) {
+    return true;
+  }
+  if (a > b) {
+    return false;
+  }
+  if (a < 0) {
+    return true;
+  }
 }
 
-console.log(isProperFraction(3,0));
-
-console.log("This Assertion is fails when it's not a proper fraction");
-const currentOutput = isProperFraction(8,9); 
-const targetOutput = true;
-console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput} `
-);
-
-console.log("This Assertion is fails when it's a proper fraction");
-const currentOutput1 = isProperFraction(8, 4); 
-const targetOutput1 = false;
-console.assert(
-  currentOutput1 === targetOutput1,
-  `current output: ${currentOutput1}, target output: ${targetOutput1} `
-);
+test("Check if the fraction is a proper fraction or not ", function () {
+    
+    expect(isProperFraction(4, 7)).toBe(true);
+    expect(isProperFraction(7, 7)).toBe(false);
+    expect(isProperFraction(-4, 7)).toBe(true);
+    expect(isProperFraction(4, 0)).toBe("error");
+    expect(isProperFraction(5, 2)).toBe(false);
+});
 

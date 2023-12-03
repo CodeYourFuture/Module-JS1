@@ -1,5 +1,8 @@
 // Implement a function getAngleType, and tests for each of the acceptance criteria.
 
+const { default: expect } = require("expect");
+const { get } = require("http");
+
 // Acceptance criteria:
 
 // Identify Right Angles:
@@ -36,4 +39,10 @@ function getAngleType(angle) {
   } else return "Angle cannot be greater than 360 or less than 0";
 }
 
-console.log(getAngleType(90));
+test("This is to check if our function is returning the correct type of triangle based on given angle", function () {
+  expect(getAngleType(90)).toBe("Right Angle");
+  expect(getAngleType(180)).toBe("Straight Angle");
+  expect(getAngleType(45)).toBe("Acute Angle");
+  expect(getAngleType(120)).toBe("Obtuse Angle");
+  expect(getAngleType(190)).toBe("Reflex Angle");
+});

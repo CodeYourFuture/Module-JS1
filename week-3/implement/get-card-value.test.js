@@ -1,5 +1,7 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
+const { default: expect } = require("expect");
+
 // You will need to implement a function getCardValue
 
 // You need to write assertions for your function to check it works in different cases
@@ -39,36 +41,12 @@ function getCardValue(str) {
     return +str;
   } else return "Invalid card rank";
 }
-//  console.log( typeof getCardValue("2"));
 
-console.log("Checking result for 2");
-const currentOutput = getCardValue("2"); 
-const targetOutput = 2;
-console.assert(
-  currentOutput === targetOutput,
-  `current output: ${currentOutput}, target output: ${targetOutput} `
-);
-
-console.log("Checking result for 5");
-const currentOutput1 = getCardValue("5"); 
-const targetOutput1 = 5;
-console.assert(
-  currentOutput1 === targetOutput1,
-  `current output: ${currentOutput1}, target output: ${targetOutput1} `
-);
-
-console.log("Checking result for K");
-const currentOutput2 = getCardValue("K"); 
-const targetOutput2 = 10; // This will be true for "10", "J", "K" and "Q"
-console.assert(
-  currentOutput2 === targetOutput2,
-  `current output: ${currentOutput2}, target output: ${targetOutput2} `
-);
-
-console.log("Checking result for A");
-const currentOutput3 = getCardValue("A"); 
-const targetOutput3 = 11;
-console.assert(
-  currentOutput3 === targetOutput3,
-  `current output: ${currentOutput3}, target output: ${targetOutput3} `
-);
+test("Check if function is returning right value for BlackJack game", function () {
+  
+  expect(getCardValue("A")).toBe(11);
+  expect(getCardValue("J")).toBe(10);
+  expect(getCardValue("K")).toBe(10);
+  expect(getCardValue("2")).toBe(2);
+  expect(getCardValue("5")).toBe(5);
+});
