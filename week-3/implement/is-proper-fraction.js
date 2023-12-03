@@ -36,28 +36,28 @@ const { log } = require("console");
 
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
 
-function isProperFraction (a,b){
-    if (a<b){
-        return true;
-    }
-    if(a>b){
-        return false;
-    }
-    if (b===0){
-        return "error";
-    }
-    if (a<0){
-        return true;
-    }
-    if (a===b){
-        return false;
-    }
+function isProperFraction(a, b) {
+  if (b === 0) {
+    return "error";
+  }
+  if (a < b) {
+    return true;
+  }
+  if (a > b) {
+    return false;
+  }
+  if (a < 0) {
+    return true;
+  }
+  if (a === b) {
+    return false;
+  }
 }
 
-console.log(isProperFraction(3,0));
+console.log(isProperFraction(3, 3));
 
 console.log("This Assertion is fails when it's not a proper fraction");
-const currentOutput = isProperFraction(8,9); 
+const currentOutput = isProperFraction(8, 9);
 const targetOutput = true;
 console.assert(
   currentOutput === targetOutput,
@@ -65,10 +65,9 @@ console.assert(
 );
 
 console.log("This Assertion is fails when it's a proper fraction");
-const currentOutput1 = isProperFraction(8, 4); 
+const currentOutput1 = isProperFraction(8, 4);
 const targetOutput1 = false;
 console.assert(
   currentOutput1 === targetOutput1,
   `current output: ${currentOutput1}, target output: ${targetOutput1} `
 );
-

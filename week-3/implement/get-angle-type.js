@@ -43,4 +43,5 @@ function getAngleType(angle){
     return "Angle cannot be greater than 360 or less than 0"
 }
 
-console.log (getAngleType(90));
+console.log(getAngleType(90));
+
