@@ -3,12 +3,11 @@ function isVowel(letter) {
     letter === "a" ||
     letter === "e" ||
     letter === "i" ||
-    letter === "i" ||
     letter === "o" ||
     letter === "u"
   );
 }
-
+//letter i
 // here is an implementation of isVowel - this function checks if a letter is a vowel
 
 console.log("case: letter a...");
