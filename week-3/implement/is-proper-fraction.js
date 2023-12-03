@@ -1,6 +1,8 @@
 // You wil need to implement a function isProperFraction
 // You need to write assertions for your function to check it works in different cases
 
+const { log } = require("console");
+
 // Terms:
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
@@ -33,3 +35,39 @@
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+function isProperFraction(a, b) {
+  if (b === 0) {
+    return "error";
+  }
+  if (a < b) {
+    return true;
+  }
+  if (a > b) {
+    return false;
+  }
+  if (a < 0) {
+    return true;
+  }
+  if (a === b) {
+    return false;
+  }
+}
+
+console.log(isProperFraction(3, 3));
+
+console.log("This Assertion is fails when it's not a proper fraction");
+const currentOutput = isProperFraction(8, 9);
+const targetOutput = true;
+console.assert(
+  currentOutput === targetOutput,
+  `current output: ${currentOutput}, target output: ${targetOutput} `
+);
+
+console.log("This Assertion is fails when it's a proper fraction");
+const currentOutput1 = isProperFraction(8, 4);
+const targetOutput1 = false;
+console.assert(
+  currentOutput1 === targetOutput1,
+  `current output: ${currentOutput1}, target output: ${targetOutput1} `
+);

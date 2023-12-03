@@ -21,3 +21,27 @@
 // Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+
+
+function getAngleType(angle){
+    if (angle===90){
+        return "Right Angle"
+    }
+    else if (angle<90){
+        return "Acute Angle"
+    }
+    else if (angle>90 && angle<180){
+        return "Obtuse Angle"
+    }
+    else if (angle===180){
+        return "Straight Angle"
+    }
+    else if (angle>180 && angle<360){
+    return "Reflex Angle"
+    }
+    else 
+    return "Angle cannot be greater than 360 or less than 0"
+}
+
+console.log(getAngleType(90));
+
