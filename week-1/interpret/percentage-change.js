@@ -1,7 +1,7 @@
 let carPrice = "10,000";
 let priceAfterOneYear = "8,543";
 
-carPrice = Number(carPrice.replaceAll(",", "")); // converts to number takes the  string quato
+carPrice = Number(carPrice.replaceAll(",", "")); // converts to number takes the  string quota
 priceAfterOneYear = Number(priceAfterOneYear.replaceAll(",", ""));
 
 const priceDifference = carPrice - priceAfterOneYear;
@@ -12,7 +12,10 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 /* a) How many function calls are there in this file? Write down all the lines where a function call is made
-    Number is a function.  replaceAll is a method
+    There are two distinct functions being used: replaceAll() and Number().
+The replaceAll() function is called twice, once for carPrice and once for priceAfterOneYear.
+The Number() function is also called twice, once for converting carPrice to a number and once for priceAfterOneYear.
+Therefore, there are two different functions used, but a total of four function calls (two calls to replaceAll and two calls to Number).
 
     how many function calls would you say are in this file?
     carPrice.replaceAll(",", ""): This function call is used to replace commas in the string representation of carPrice with an empty string.

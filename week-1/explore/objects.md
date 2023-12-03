@@ -38,6 +38,8 @@ console.log("I am :", myAge);
 let myAge = 17;
 console.assert(myAge >= 18, "Eligible");
 
+// Assertion failed: Eligible
+
 In particular, what does the `.` mean?
 
 The . (dot) in JavaScript is called the dot notation and is used to access properties and methods of objects.
