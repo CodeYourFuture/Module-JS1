@@ -9,7 +9,7 @@ function isPrime(num) {
     if (num != Math.round(num)) {
         return false;
     }
-    for (var i = 2; i <= Math.sqrt(num); i++){
+    for (var i = 2; i < num; i++){
         if(num%i===0)
         return false;
     }
@@ -22,4 +22,5 @@ test("Check if the number is a positive prime number", function () {
     expect(isPrime(-7)).toBe(false);
     expect(isPrime(0)).toBe(false);
     expect(isPrime(17)).toBe(true);
+    expect(isPrime(3.5)).toBe(false);
 });
