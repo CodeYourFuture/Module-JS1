@@ -20,8 +20,8 @@ It combines the uppercase first letter with the rest of the text to create a new
   To solve this issue, just rename the second "str" to something else, like "modifiedStr": */
 
 function capitalise(str) {
-  let modifiedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return modifiedStr;
+  Str = `${str[0].toUpperCase()}${str.slice(1)}`;
+  return Str;
 }
 console.log(capitalise("hello "));
 //This way, each variable has its own unique name and the function will work without any errors.
