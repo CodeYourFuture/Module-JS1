@@ -31,11 +31,12 @@ function validCardNumber(cardNumber) {
 
 // Test cases
 
-console.log(validCardNumber("3333333333333330")); // false
+console.log(validCardNumber("3333333333333330")); // true
 console.log(validCardNumber("2222222222222222")); // false
 
 console.log(validCardNumber("3549777788880000")); // true
 console.log(validCardNumber("6236699363666166")); // true
 
 console.log(validCardNumber("a92332119c011112")); // false
+
 console.log(validCardNumber("4999999999999999")); // false
