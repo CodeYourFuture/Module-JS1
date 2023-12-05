@@ -1,0 +1,10 @@
+{
+  "name": "week-4-implement",
+  "description": "An application for files in week-4/implement directory to write tests using the jest framework",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
