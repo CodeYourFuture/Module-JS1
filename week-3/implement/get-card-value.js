@@ -46,7 +46,7 @@ function getCardValue(card) {
   }
 }
 
-console.assert(getCardValue("5♠") === 5, "5 should return 5");
+console.assert(getCardValue("5♠") === 7, "5 should return 5"); // i wanted to see assertion message
 console.assert(getCardValue("J♦") === 10, "J should return 10");
 console.assert(getCardValue("A♣") === 11, "A should return 11");
 console.assert(() => getCardValue("P♠"), new Error("Invalid card rank"));

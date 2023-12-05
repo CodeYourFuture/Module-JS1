@@ -43,6 +43,7 @@ function isProperFraction(numerator, denominator) {
     return false;
   } else if (numerator < 0 && Math.abs(numerator) < denominator) {
     return true;
+    //  condition checks if the fraction has a negative numerator. The Math.abs() function finds the absolute value, which is the positive size or amount of a number, no matter if it's negative or positive. So, for a negative number, its absolute value gives the positive size of that number.
   } else if (numerator === denominator) {
     return false;
   }
@@ -59,6 +60,14 @@ console.assert(
 
 console.assert(isProperFraction(-4, 7) === true, "Negative Fraction  failed");
 console.assert(
-  isProperFraction(3, 3) === false,
+  isProperFraction(3, 3) === false, // to see assertion message we can change (7,8)
   "Equal Numerator and Denominator  failed"
 );
+
+/*
+isProperFraction(2, 3) → It's a proper fraction because the numerator is less than the denominator. The test should return true.
+isProperFraction(5, 2) → This is not a proper fraction because the numerator is greater than or equal to the denominator. The test should return false.
+isProperFraction(3, 0) → It should return an error because the denominator is zero.
+isProperFraction(-4, 7) → It's a proper fraction because the numerator is negative and its absolute value is less than the denominator. The test should return true.
+isProperFraction(3, 3) → This is not a proper fraction because the numerator and the denominator are equal. The test should return false.
+*/

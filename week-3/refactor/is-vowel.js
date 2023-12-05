@@ -7,6 +7,7 @@ function isVowel(letter) {
     letter === "u"
   );
 }
+// letter = i used twice it doesn't change the function but can confuse and make the code harder to read. I deleted one of them and codes work.
 
 // here is an implementation of isVowel - this function checks if a letter is a vowel
 
@@ -21,7 +22,7 @@ console.assert(
 );
 
 console.log("case: letter e...");
-const currentOutput2 = isVowel("e");
+const currentOutput2 = isVowel("l"); // here I Intentionally made a mistake
 const targetOutput2 = true;
 console.assert(
   currentOutput2 === targetOutput2,
@@ -39,5 +40,3 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
-
-// letter = i used twice it doesn't change the function but can confuse and make the code harder to read. I deleted one of them and codes work.
