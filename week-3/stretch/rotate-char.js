@@ -115,4 +115,4 @@ function rotateCharacter(char, shift) {
 console.log(rotateCharacter("z", 3)); // Output: "c" (wraps 'z' to 'c')
 console.log(rotateCharacter("Z", 3)); // Output: "C" (wraps 'Z' to 'C')
 
-// too long to understand  I feel a bit overwhelmed when faced with complex code.  :( I used Ai to understand.
+// too long to understand  I feel a bit overwhelmed when faced with complex code.  :( I used Ai to understand this exercise.
