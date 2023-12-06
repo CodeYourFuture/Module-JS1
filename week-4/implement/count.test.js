@@ -18,6 +18,7 @@ function countChar(str, char) {
 const stringInput = "Harry Potter and the Philosopher's Stone";
 const countCharacter = "o";
 const result = countChar(stringInput, countCharacter);
+
 console.log(
   `The character '${countCharacter}' appears ${result} times consecutively in '${stringInput}'.`
 );
