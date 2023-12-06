@@ -14,7 +14,7 @@ function countChar(str, char) {
   return str.split(char).length - 1;
 }
 
-// Example usage:
+// Example
 const stringInput = "Harry Potter and the Philosopher's Stone";
 const countCharacter = "o";
 const result = countChar(stringInput, countCharacter);
