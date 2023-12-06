@@ -10,6 +10,18 @@
 // When the function is called with these inputs,
 // Then it should correctly count consecutive occurrences of char (e.g., 'a' appears five times in 'aaaaa').
 
+function countChar(str, char) {
+  return str.split(char).length - 1;
+}
+
+// Example usage:
+const stringInput = "Harry Potter and the Philosopher's Stone";
+const countCharacter = "o";
+const result = countChar(stringInput, countCharacter);
+console.log(
+  `The character '${countCharacter}' appears ${result} times consecutively in '${stringInput}'.`
+);
+
 // Scenario: No Occurrences
 // Given the input string str,
 // And a character char that does not exist within the case-sensitive str,
