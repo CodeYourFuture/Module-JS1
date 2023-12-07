@@ -28,7 +28,7 @@ console.log(
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
 
-function countChar(str, char) {
+/*function countChar(str, char) {
   let count = 0;
   for (let i = 0; i < str.length; i++) {
     if (str[i] === char) {
@@ -41,6 +41,7 @@ function countChar(str, char) {
 
 const StringInput = "Harry Potter and the Philosopher's Stone";
 const countCharacter = "e";
+
 console.log(
   `The character '${countCharacter}' appears ${countChar(
     StringInput,
@@ -50,10 +51,42 @@ console.log(
 // Output: The character 'e' appears 4 times in "Harry Potter and the Philosopher's Stone".
 
 const noOccurrenceChar = "z";
+
 console.log(
   `The character '${noOccurrenceChar}' appears ${countChar(
     StringInput,
     noOccurrenceChar
   )} times in "${StringInput}".`
 );
-// Output The character 'z' appears 0 times in "Harry Potter and the Philosopher's Stone".
+// Output The character 'z' appears 0 times in "Harry Potter and the Philosopher's Stone".  */
+
+function countChar(str, char) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      count++;
+    }
+  }
+  return count;
+}
+const stringInput = "Harry Potter and the Philosopher's Stone";
+
+function countChar(str, char) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      count++;
+    }
+  }
+  return count;
+}
+//const stringInput = "Harry Potter and the Philosopher's Stone"; stringInput gives a redeclaration error in here. I cleared it and still working
+test("countChar - character 'e'", () => {
+  const countCharacter = "e";
+  expect(countChar(stringInput, countCharacter)).toBe(4);
+});
+
+test("countChar - character 'z'", () => {
+  const noOccurrenceChar = "z";
+  expect(countChar(stringInput, noOccurrenceChar)).toBe(0);
+});
