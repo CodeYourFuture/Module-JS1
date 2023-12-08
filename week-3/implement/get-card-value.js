@@ -53,9 +53,7 @@ function getCardValue(card) {
       default:
         return `Invalid card rank.`;
     }
-  } else {
-    return "Invalid card suit. Please use one of the following: ♡,♢,♣,♠.";
-  }
+  } return "Invalid card suit. Please use one of the following: ♡,♢,♣,♠.";
 }
 
 function assertion(card, targetOutput) {
