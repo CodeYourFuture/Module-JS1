@@ -18,5 +18,5 @@ console.log(lastSlashIndex);
 // Create a variable to store the ext part of the variable
 let = filePath ("/")
 console.log (dirPart,filePath);
-
+const 
 console.log(filePath+ lastSlashIndex)
