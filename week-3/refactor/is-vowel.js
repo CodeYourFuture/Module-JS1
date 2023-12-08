@@ -2,7 +2,7 @@ function isVowel(letter) {
   return (
     letter === "a" ||
     letter === "e" ||
-    letter === "i" ||
+   // letter === "i" ||
     letter === "i" ||
     letter === "o" ||
     letter === "u"
