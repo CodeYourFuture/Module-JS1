@@ -9,9 +9,24 @@
 // When we call this function with the input string
 // Then it returns the string in UPPER_SNAKE_CASE, so "HELLO_THERE"
 
+
+function cases (str){
+    str =`${str.Uppercase()}`
+    str =`${str.Snake_cases()}`
+    return
+}
+console.log("cases");
+
 // Test case: we expect "lord of the rings" to be "LORD_OF_THE_RINGS"
 // Test case: we expect "the great gatsby" to be "THE_GREAT_GATSBY"
 // Test case: we expect "the da vinci code" to be "THE_DA_VINCI_CODE"
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+
+
+
+
+     
+  
