@@ -1,5 +1,5 @@
 function getOrdinalNumber(num){
-	var ordinal = +num.toString().split('').pop();
+	let ordinal = +num.toString().split('').pop();
   if (num == "11"){
     return `${num}th`;
   }
