@@ -1,10 +1,31 @@
+// function formatAs12HourClock(time) {
+//   if (Number(time.slice(0, 2)) > 12) {
+//     return `${Number(time.slice(0, 2)) - 12}:00 pm`;
+//   }
+//   return `${time} am`;
+// }
 function formatAs12HourClock(time) {
   if (Number(time.slice(0, 2)) > 12) {
-    return `${Number(time.slice(0, 2)) - 12}:00 pm`;
+    let a = `${Number(time.slice(0, 2)) - 12}`;
+    if (a < 9) {
+      a = ("0" + a).slice(-2);
+    }
+    let b = `${Number(time.slice(-2))}`;
+    if (b < 9) {
+      b = ("0" + b);
+    }
+    return (a + ":" + b + " " + "pm");
   }
-  return `${time} am`;
-}
-
+  let a = `${time.slice(0, 2)}`;
+  if (a < 9) {
+    a = ("0" + a).slice(-2);
+  }
+  let b = `${Number(time.slice(-2))}`;
+  if (b < 9) {
+    b = ("0" + b);
+  }
+  return (a + ":" + b + " " + "am");
+  }
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
 console.assert(
@@ -22,6 +43,8 @@ console.assert(
   currentOutput2,
   targetOutput2
 );
+
+console.log(formatAs12HourClock('11:00'));
 
 // formatAs12HourClock currently has a 🐛
 
