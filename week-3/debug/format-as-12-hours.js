@@ -1,10 +1,31 @@
+// formatAs12HourClock currently has a 🐛
+
+// a) Write an assertion to check the return value of formatAs12HourClock when it is called with an input "17:42"
+// b) Check the assertion output and explain what the bug is
+// c) Now fix the bug and re-run all your assertions
+
 function formatAs12HourClock(time) {
   if (Number(time.slice(0, 2)) > 12) {
-    return `${Number(time.slice(0, 2)) - 12}:00 pm`;
+    let a = `${Number(time.slice(0, 2)) - 12}`;
+    if (a < 9) {
+      a = ("0" + a).slice(-2);
+    }
+    let b = `${Number(time.slice(-2))}`;
+    if (b < 9) {
+      b = "0" + b;
+    }
+    return a + ":" + b + " " + "pm";
   }
-  return `${time} am`;
+  let a = `${time.slice(0, 2)}`;
+  if (a < 9) {
+    a = ("0" + a).slice(-2);
+  }
+  let b = `${Number(time.slice(-2))}`;
+  if (b < 9) {
+    b = "0" + b;
+  }
+  return a + ":" + b + " " + "am";
 }
-
 const currentOutput = formatAs12HourClock("08:00");
 const targetOutput = "08:00 am";
 console.assert(
@@ -23,8 +44,4 @@ console.assert(
   targetOutput2
 );
 
-// formatAs12HourClock currently has a 🐛
-
-// a) Write an assertion to check the return value of formatAs12HourClock when it is called with an input "17:42"
-// b) Check the assertion output and explain what the bug is
-// c) Now fix the bug and re-run all your assertions
+console.log(formatAs12HourClock("11:00"));
