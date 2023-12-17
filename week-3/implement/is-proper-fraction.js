@@ -53,6 +53,7 @@ console.assert(isProperFraction(2, 3) === true, "Proper Fraction  failed");
 console.assert(isProperFraction(5, 2) === false, "Improper Fraction failed");
 
 const zeroDenominatorResult = isProperFraction(3, 0);
+
 console.assert(
   zeroDenominatorResult === "Error: Denom cannot be 0",
   "Zero Denominator failed"
@@ -60,9 +61,9 @@ console.assert(
 
 console.assert(isProperFraction(-4, 7) === true, "Negative Fraction  failed");
 console.assert(
-  isProperFraction(3, 3) === false, // to see assertion message we can change (7,8)
+  isProperFraction(3, 3) === false,
   "Equal Numerator and Denominator  failed"
-);
+); // to see assertion message we can change (7,8)
 
 /*
 isProperFraction(2, 3) → It's a proper fraction because the numerator is less than the denominator. The test should return true.

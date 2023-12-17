@@ -2,13 +2,13 @@ function formatAs12HourClock(time) {
   if (Number(time.slice(0, 2)) > 12) {
     return `${(Number(time.slice(0, 2)) - 12)
       .toString()
-      .padStart(2, "0")}:${time.slice(time.indexOf(":") + 1)} pm`;
+      .padStart(2, "0")}:${time.slice(time.indexOf(":") + 1)} pm`; // I really got this part
   }
   return `${time} am`;
 }
 
 const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "08:00 am";
+const targetOutput = "09:00 am";
 console.assert(
   currentOutput === targetOutput,
   "current output: %s, target output: %s",
@@ -40,3 +40,6 @@ console.assert(
 //because minute is not passed to return value
 
 // c) Now fix the bug and re-run all your assertions
+
+// the "%s" symbols represent string expressions like inputs .
+//The expression "current output: %s, and  target output: %s" serves as a template representing two string values. This expression expects to be replaced by two actual string values. here is  the terminal display    Assertion failed: current output: 08:00 am,       target output: 09:00 am

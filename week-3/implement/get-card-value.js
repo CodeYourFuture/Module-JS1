@@ -39,7 +39,7 @@ function getCardValue(card) {
     return 10;
   } else {
     if (!isNaN(cardRank)) {
-      return parseInt(cardRank);
+      return parseInt(cardRank); // returns integer numbers, remember parseFloat it was for float num
     } else {
       throw new Error("Invalid card rank");
     }
@@ -49,4 +49,5 @@ function getCardValue(card) {
 console.assert(getCardValue("5♠") === 7, "5 should return 5"); // i wanted to see assertion message
 console.assert(getCardValue("J♦") === 10, "J should return 10");
 console.assert(getCardValue("A♣") === 11, "A should return 11");
-console.assert(() => getCardValue("P♠"), new Error("Invalid card rank"));
+
+console.assert(getCardValue("P♠"), new Error("Invalid card rank"));

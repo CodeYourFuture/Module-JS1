@@ -27,7 +27,6 @@ console.log(rotateCharacter("a", 3)); // Output: "d"
 console.log(rotateCharacter("f", 1)); // Output: "g"
 console.log(rotateCharacter("x", 5)); // Output: "c"
 console.log(rotateCharacter("z", 10)); // Output: "j"
-console.log(rotateCharacter("m", 15)); // Output: "h"
 
 // Scenario: Rotate Uppercase Letters:
 // Given an uppercase letter character (char) and a positive integer shift,
@@ -37,19 +36,33 @@ console.log(rotateCharacter("m", 15)); // Output: "h"
 // The function takes a character (char) and a shift value (shift)
 
 function rotateCharacter(char, shift) {
+  const rotate = function (alphabet) {
+    return function (char) {
+      const index = alphabet.indexOf(char);
+      return index === -1 ? char : alphabet[(index + shift) % 26];
+    };
+  };
+
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+  const rotateLower = rotate(lowercase);
+  const rotateUpper = rotate(uppercase);
+
   if (lowercase.includes(char)) {
-    const index = (lowercase.indexOf(char) + shift) % 26;
-    return lowercase[index];
+    return rotateLower(char);
   } else if (uppercase.includes(char)) {
-    const index = (uppercase.indexOf(char) + shift) % 26;
-    return uppercase[index];
+    return rotateUpper(char);
   } else {
     return char;
   }
 }
+
+console.log(rotateCharacter("z", 3)); // Output: "c"
+console.log(rotateCharacter("n", 1)); // Output: "o"
+console.log(rotateCharacter("o", 5)); // Output: "t"
+console.log(rotateCharacter("K", 7)); // Output: "R"
+console.log(rotateCharacter("P", 6)); // Output: "V"
 
 // 1 Check if the character is in the lowercase alphabet
 // 2 Find the index of the character in the lowercase alphabet
@@ -94,6 +107,7 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // When the rotateCharacter function is called with char and shift as inputs,
 // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
+
 console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
 
 function rotateCharacter(char, shift) {
@@ -114,5 +128,7 @@ function rotateCharacter(char, shift) {
 
 console.log(rotateCharacter("z", 3)); // Output: "c" (wraps 'z' to 'c')
 console.log(rotateCharacter("Z", 3)); // Output: "C" (wraps 'Z' to 'C')
+console.log(rotateCharacter("b", 4)); // Output: "c" (wraps 'z' to 'c')
+console.log(rotateCharacter("K", 1)); // Output: "C" (wraps 'Z' to 'C')
 
-// too long to understand  I feel a bit overwhelmed when faced with complex code.  :( I used Ai to understand this exercise.
+// too long to understand  I feel a bit overwhelmed when faced with this kind of complex code.  :( I used Ai to understand this exercise, but still find it very complex.
