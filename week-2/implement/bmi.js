@@ -16,9 +16,15 @@
 
 function calculateBMI(weight, height) {
   const bmi = weight / (height * height);
-  return parseFloat(bmi.toFixed(1));
-  // Round to 1 decimal place (parseFloat(bmi.toFixed(1)) takes the calculated BMI, rounds it to one decimal place as a string, and then converts it back to a floating-point number, ensuring that the BMI returned by the function has only one decimal place. This helps keep the BMI value precise to the specified decimal point.)
+
+  //return parseFloat(bmi.toFixed(1));
+
+  // parsefloat finds the first number in a string and ignores other num
+  // foFixed(1 ) rounds the number to one decimal place as a string,  I want a number so used parseFloat. But actually here is no need for a number we can use a string as well.
+
+  return bmi.toFixed(1);
 }
+
 console.log(calculateBMI(70, 1.73)); // Example input: weight 70kg, height 1.73m
 console.log(calculateBMI(56, 1.65));
 console.log(calculateBMI(87, 1.63));

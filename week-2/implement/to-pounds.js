@@ -11,10 +11,11 @@ function toPounds(str) {
   return `£${pounds}.${pence}`;
 }
 
-// Test cases
+//Test cases
 console.log(toPounds("399p")); // Output: £3.99
 console.log(toPounds("5p")); // Output: £0.05
 console.log(toPounds("1094p")); // Output: £10.24
+console.log${pounds("1094p")}; // Output: £10.24 *
 
 /* The toPounds function:
 Takes a string str representing an amount in pence.

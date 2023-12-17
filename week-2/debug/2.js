@@ -23,7 +23,7 @@ console.log(`The last digit of 806 is ${getLastDigit(806)}`); */
 //here is my solution ;
 
 function getLastDigit(number) {
-  return number.toString().slice(-1);
+  return number.toString().slice(-1); // we need only -1
 }
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
