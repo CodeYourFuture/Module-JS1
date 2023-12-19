@@ -20,6 +20,7 @@
 function rotateCharacter(char, shift) {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const rotatedIndex = (alphabet.indexOf(char) + shift) % 26;
+
   return alphabet[rotatedIndex];
 }
 
@@ -35,35 +36,6 @@ console.log(rotateCharacter("z", 10)); // Output: "j"
 
 // The function takes a character (char) and a shift value (shift)
 
-function rotateCharacter(char, shift) {
-  const rotate = function (alphabet) {
-    return function (char) {
-      const index = alphabet.indexOf(char);
-      return index === -1 ? char : alphabet[(index + shift) % 26];
-    };
-  };
-
-  const lowercase = "abcdefghijklmnopqrstuvwxyz";
-  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-  const rotateLower = rotate(lowercase);
-  const rotateUpper = rotate(uppercase);
-
-  if (lowercase.includes(char)) {
-    return rotateLower(char);
-  } else if (uppercase.includes(char)) {
-    return rotateUpper(char);
-  } else {
-    return char;
-  }
-}
-
-console.log(rotateCharacter("z", 3)); // Output: "c"
-console.log(rotateCharacter("n", 1)); // Output: "o"
-console.log(rotateCharacter("o", 5)); // Output: "t"
-console.log(rotateCharacter("K", 7)); // Output: "R"
-console.log(rotateCharacter("P", 6)); // Output: "V"
-
 // 1 Check if the character is in the lowercase alphabet
 // 2 Find the index of the character in the lowercase alphabet
 //  3 Calculate the new index after rotation
@@ -73,6 +45,20 @@ console.log(rotateCharacter("P", 6)); // Output: "V"
 // 7 Return the rotated character
 // 8 If the character is not a letter, return it unchanged
 
+function rotateCharacter(char, shift) {
+  const lowercaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  const uppercaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  if (lowercaseAlphabet.includes(char)) {
+    const rotatedIndex = (lowercaseAlphabet.indexOf(char) + shift) % 26;
+    return lowercaseAlphabet[rotatedIndex];
+  } else if (uppercaseAlphabet.includes(char)) {
+    const rotatedIndex = (uppercaseAlphabet.indexOf(char) + shift) % 26;
+    return uppercaseAlphabet[rotatedIndex];
+  } else {
+    return char; // (non-letter remains unchanged)
+  }
+}
 console.log(rotateCharacter("a", 3)); // Output: "d" (rotate 'a' by 3 positions in the lowercase)
 console.log(rotateCharacter("F", 1)); // Output: "G" (rotate 'F' by 1 position in the uppercase)
 console.log(rotateCharacter("?", 5)); // Output: "?" (non-letter remains unchanged)
@@ -82,22 +68,6 @@ console.log(rotateCharacter("?", 5)); // Output: "?" (non-letter remains unchang
 // When the function is called with these inputs,
 // Then it should return the character unchanged.
 // This specification outlines the behavior of the rotateCharacter function for different input scenarios, including valid and invalid characters, and defines the expected output or action for each case.
-
-function rotateCharacter(char, shift) {
-  const lowercase = "abcdefghijklmnopqrstuvwxyz";
-  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-  if (lowercase.includes(char)) {
-    const index = (lowercase.indexOf(char) + shift) % 26;
-    return lowercase[index];
-  } else if (uppercase.includes(char)) {
-    const index = (uppercase.indexOf(char) + shift) % 26;
-    return uppercase[index];
-  } else {
-    // If the character is not a letter, return it unchanged
-    return char;
-  }
-}
 
 console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 
