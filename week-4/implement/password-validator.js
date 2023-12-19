@@ -1,5 +1,6 @@
-function passwordValidator(password,oldPassword){
-    if (password.length >= 5){
+function passwordValidator(password){
+    const oldPassword = '';
+    if (password.length > 5){
         return false;
     }
     else if (!/[A-Z]/.test(password)){
@@ -24,7 +25,7 @@ function passwordValidator(password,oldPassword){
 const oldPassword = ("bbds", "flbe8")
 const password = ("khadIja2")
 
-//console.log(passwordValidator(p, op))
+//console.log(passwordValidator('g8gfd'))
 
 
 module.exports = passwordValidator;
