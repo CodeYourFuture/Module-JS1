@@ -14,3 +14,12 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+
+const passwordValidator = require("./password-validator");
+
+test("Write a program that should check if a password is valid and return true or false.", () => {
+
+expect(passwordValidator("khadIja2")).toBe(false);    
+})
+
