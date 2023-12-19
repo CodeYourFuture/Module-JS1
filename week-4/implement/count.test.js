@@ -20,10 +20,15 @@ const countChar = require("./count");
 
 
 
-test('When the function is called with these inputs,Then it should correctly count consecutive occurrences of char (e.g., \'a\' appears five times in \'aaaaa\'). ". ', () => {
+test('When the function is called with these inputs,Then it should correctly count', () => {
 
-    expect(countChar("a", 3)).toBe("aaa");
+    expect(countChar("aaabbee", 'a')).toBe(3);
     
 });
 
+test('When char that does not exist within the case-sensitive str,Then it should return 0', () => {
+
+    expect(countChar("aaabbee", 'c')).toBe(0);
+    
+});
 
