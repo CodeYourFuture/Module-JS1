@@ -7,4 +7,4 @@ console.log(last4Digits);
 // However, the code isn't working
 // Make and explain a prediction about why the code won't work
 //ans: because we used const to declared variable and we can not reassign variable by using const.
-// Then try updating the expression last4Digits is assigned to, in order to get the correct value
+// Then try updating the expression last4Digits is assigned to, in order to get the correct value.
