@@ -29,6 +29,12 @@ console.log(rotateCharacter("f", 1)); // Output: "g"
 console.log(rotateCharacter("x", 5)); // Output: "c"
 console.log(rotateCharacter("z", 10)); // Output: "j"
 
+/* for me : When indexOf(char) is 2 (representing 'c' in the alphabet) and shift is 5:
+
+indexOf(char) + shift equals 2 + 5 = 7.
+The modulo operation 7 % 26 results in 7.
+Counting seven positions from the starting point (index 0), it refers to the character at index 7 within the alphabet.*/
+
 // Scenario: Rotate Uppercase Letters:
 // Given an uppercase letter character (char) and a positive integer shift,
 // When the function is called with these inputs,
@@ -50,10 +56,11 @@ function rotateCharacter(char, shift) {
   const uppercaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   if (lowercaseAlphabet.includes(char)) {
-    const rotatedIndex = (lowercaseAlphabet.indexOf(char) + shift) % 26;
+    // if  lowercase letter
+    const rotatedIndex = (lowercaseAlphabet.indexOf(char) + shift) % 26; // read for me comment
     return lowercaseAlphabet[rotatedIndex];
   } else if (uppercaseAlphabet.includes(char)) {
-    const rotatedIndex = (uppercaseAlphabet.indexOf(char) + shift) % 26;
+    const rotatedIndex = (uppercaseAlphabet.indexOf(char) + shift) % 26; // same for upperAlphabet
     return uppercaseAlphabet[rotatedIndex];
   } else {
     return char; // (non-letter remains unchanged)
@@ -80,25 +87,4 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 
 console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
 
-function rotateCharacter(char, shift) {
-  const lowercase = "abcdefghijklmnopqrstuvwxyz";
-  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-  if (lowercase.includes(char)) {
-    const index = (lowercase.indexOf(char) + shift) % 26;
-    return lowercase[index >= 0 ? index : index + 26];
-  } else if (uppercase.includes(char)) {
-    const index = (uppercase.indexOf(char) + shift) % 26;
-    return uppercase[index >= 0 ? index : index + 26];
-  } else {
-    // If the character is not a letter, return it unchanged
-    return char;
-  }
-}
-
-console.log(rotateCharacter("z", 3)); // Output: "c" (wraps 'z' to 'c')
-console.log(rotateCharacter("Z", 3)); // Output: "C" (wraps 'Z' to 'C')
-console.log(rotateCharacter("b", 4)); // Output: "c" (wraps 'z' to 'c')
-console.log(rotateCharacter("K", 1)); // Output: "C" (wraps 'Z' to 'C')
-
-// too long to understand  I feel a bit overwhelmed when faced with this kind of complex code.  :( I used Ai to understand this exercise, but still find it very complex.
+// I worked on this exercise very much but now understand it
