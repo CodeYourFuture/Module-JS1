@@ -16,6 +16,6 @@ function getOrdinalNumber(num){
     return `${num}th`;
   }
 }
-//console.log(getOrdinalNumber(21))
+console.log(getOrdinalNumber(11))
 
 module.exports = getOrdinalNumber;
