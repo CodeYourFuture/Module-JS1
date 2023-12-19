@@ -1,12 +1,13 @@
 function repeat(str, count){
-    if(count < 0){
+if (count >= 1) {
+        return str.repeat(count);
+}else if(count < 0){
         return "negative counts are not valid";
 }
-else if (str.repeat(count) !== '') {
-        return str.repeat(count);
+else{
+        return "";
 }
-return ;
 };
-//console.log(repeat("Bgft", -8)) 
+console.log(repeat("Bgft", 0)) 
 
 module.exports = repeat;
