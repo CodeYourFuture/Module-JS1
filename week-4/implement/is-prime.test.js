@@ -10,3 +10,8 @@ test("When the function is called with num as input,Then it should return a bool
 
     expect(isPrime(17)).toBe(true);
 });
+
+test("When the function is called with num as input,Then it should return a boolean representing whether the num is prime", () =>{
+
+    expect(isPrime(9)).toBe(false);
+});

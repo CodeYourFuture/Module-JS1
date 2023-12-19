@@ -39,7 +39,7 @@ test("When the repeat function is called with 1 inputs, then it should return th
 
 test("When the repeat function is called with o inputs, then it should return empty string.", () => {
 
-    expect(repeat("eff", 0)).toBe();
+    expect(repeat("eff", 0)).toBe("");
 })
 
 test("When the repeat function is called with negative inputs, then it should return negative counts are not valid .", () => {
