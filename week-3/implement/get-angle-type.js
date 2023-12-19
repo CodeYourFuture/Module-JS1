@@ -40,11 +40,11 @@ console.assert(getAngleType(270) === "Reflex angle", "Reflex angle");
 console.assert(getAngleType(360) === "Full angle", "Full angle");
 console.assert(getAngleType(400) === "Unknown angle", " Unknown angle");
 
-/* I have just wondered and tried with console.log
+//I have just wondered and tried with console.log
 console.log(getAngleType(180)); // Output: "Straight angle"
 console.log(getAngleType(45)); // Output: "Acute angle"
 console.log(getAngleType(100)); // Output: "Obtuse angle"
 console.log(getAngleType(360)); // Output: "Full angle"
 console.log(getAngleType(30)); // Output: "Acute angle"
 console.log(getAngleType(270)); // Output: "Reflex angle"
-console.log(getAngleType(400)); // Output: "Unknown angle" */
+console.log(getAngleType(400)); // Output: "Unknown angle"

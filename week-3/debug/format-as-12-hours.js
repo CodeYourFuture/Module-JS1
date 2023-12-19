@@ -2,13 +2,13 @@ function formatAs12HourClock(time) {
   if (Number(time.slice(0, 2)) > 12) {
     return `${(Number(time.slice(0, 2)) - 12)
       .toString()
-      .padStart(2, "0")}:${time.slice(time.indexOf(":") + 1)} pm`; // I really got this part
+      .padStart(2, "0")}:${time.slice(time.indexOf(":") + 1)} pm`; // I  got this part
   }
   return `${time} am`;
 }
 
 const currentOutput = formatAs12HourClock("08:00");
-const targetOutput = "09:00 am";
+const targetOutput = "08:00 am";
 console.assert(
   currentOutput === targetOutput,
   "current output: %s, target output: %s",
