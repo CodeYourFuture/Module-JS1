@@ -27,14 +27,17 @@ function validatePassword(password, previousPasswords) {
 }
 
 test("Validating passwords against prior usage", () => {
-  const previousPasswords = ["greenworld39", "mimoza@!09", "whoisThere?"];
+  const previousPasswords = ["greenworld39", "mimoza@!09", "whoIsThere?"];
 
-  // valid password
-  expect(validatePassword("greenworld@39", previousPasswords)).toBe(true);
+  // valid password  meets all criteria
+  expect(validatePassword("GreatPassword!1", previousPasswords)).toBe(true);
 
-  // previousPasswords
+  //  previousPasswords
   expect(validatePassword("mimoza@!09", previousPasswords)).toBe(false);
 
-  // invalid password (doesn't meet criteria)
+  // invalid password. doesn't meet criteria,
   expect(validatePassword("weak", previousPasswords)).toBe(false);
+
+  // invalid password, doesn't have special character
+  expect(validatePassword("Weak12", previousPasswords)).toBe(false);
 });

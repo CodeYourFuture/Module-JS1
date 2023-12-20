@@ -59,7 +59,7 @@ console.log(
   )} times in "${StringInput}".`
 );
 // Output The character 'z' appears 0 times in "Harry Potter and the Philosopher's Stone".  */
-
+// ------------------------------------------
 function countChar(str, char) {
   let count = 0;
   for (let i = 0; i < str.length; i++) {
@@ -71,22 +71,12 @@ function countChar(str, char) {
 }
 const stringInput = "Harry Potter and the Philosopher's Stone";
 
-function countChar(str, char) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === char) {
-      count++;
-    }
-  }
-  return count;
-}
-//const stringInput = "Harry Potter and the Philosopher's Stone"; stringInput gives a redeclaration error in here. I cleared it and still working
-test("countChar - character 'e'", () => {
-  const countCharacter = "e";
-  expect(countChar(stringInput, countCharacter)).toBe(4);
-});
-
-test("countChar - character 'z'", () => {
+test("Count occurrences of character 'z'", () => {
   const noOccurrenceChar = "z";
   expect(countChar(stringInput, noOccurrenceChar)).toBe(0);
+});
+
+test("Count occurrences of character 'e'", () => {
+  const countCharacter = "e";
+  expect(countChar(stringInput, countCharacter)).toBe(4);
 });
