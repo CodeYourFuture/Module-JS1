@@ -20,7 +20,7 @@ const result = countChar(stringInput, countCharacter);
 
 console.log(
   `The character '${countCharacter}' appears ${result} times consecutively in '${stringInput}'.`
-);*/
+);
 
 // Scenario: No Occurrences
 // Given the input string str,
@@ -28,7 +28,7 @@ console.log(
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
 
-/*function countChar(str, char) {
+function countChar(str, char) {
   let count = 0;
   for (let i = 0; i < str.length; i++) {
     if (str[i] === char) {
