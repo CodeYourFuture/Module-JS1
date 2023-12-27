@@ -15,3 +15,20 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function upperSnakeCase(inputString){
+    let stringWords = inputString.split(" ");
+    let upperCaseWords = stringWords.map(letter => letter.toUpperCase());
+    let underScoreWords = upperCaseWords.join("_");
+    return underScoreWords;
+
+}
+console.log(upperSnakeCase("lord of the rings"));
+
+
+
+// function upperSnakeCase(inputString) {
+//     // Replace spaces with underscores, then convert to uppercase
+//     return inputString.replace(/\s+/g, '_').toUpperCase();
+// }
+// console.log(upperSnakeCase("lord of the rings"));
