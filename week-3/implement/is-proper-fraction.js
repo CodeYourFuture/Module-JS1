@@ -5,31 +5,60 @@
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
 
+function isProperFraction(numerator, denominator) {
+  const fraction = numerator / denominator;
+  if (denominator === 0) {
+    return "Error (Denominator cannot be zero)";
+  } else if (
+    (fraction < 1 && fraction > 0) ||
+    (fraction > -1 && fraction < 0)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // Acceptance criteria:
 
 // Proper Fraction check:
 // Input: numerator = 2, denominator = 3
 // target output: true
 // Explanation: The fraction 2/3 is a proper fraction, where the numerator is less than the denominator. The function should return true.
-
+console.assert(
+  isProperFraction(2, 3) === true,
+  "proper fraction check failed, input 2, 3"
+);
 // Improper Fraction check:
 // Input: numerator = 5, denominator = 2
 // target output: false
 // Explanation: The fraction 5/2 is an improper fraction, where the numerator is greater than or equal to the denominator. The function should return false.
-
+console.assert(
+  isProperFraction(5, 2) === false,
+  "improper fraction check failed, input 5, 2"
+);
 // Zero Denominator check:
 // Input: numerator = 3, denominator = 0
 // No target output: Error (Denominator cannot be zero)
 // Explanation: The function should throw an error when the denominator is zero, as it's not a valid fraction.
-
+console.assert(
+  isProperFraction(3, 0) === "Error (Denominator cannot be zero)",
+  "zero dominator check failed, input 3, 0"
+);
 // Negative Fraction check:
 // Input: numerator = -4, denominator = 7
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
-
+console.assert(
+  isProperFraction(-4, 7) === true,
+  "negative fraction check failed, input -4, 7"
+);
 // Equal Numerator and Denominator check:
 // Input: numerator = 3, denominator = 3
 // target output: false
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
-
+console.assert(
+  isProperFraction(3, 3) === false,
+  "equal numerator and denominator check failed, input 3, 3"
+);
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
