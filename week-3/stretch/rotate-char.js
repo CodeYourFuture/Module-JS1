@@ -8,6 +8,74 @@
 
 // Acceptance criteria:
 
+function rotateCharacter(char, shift) {
+  const alphabetLower = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  const alphabetUpper = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  if (alphabetLower.includes(char)) {
+    const value = (alphabetLower.indexOf(char) + shift) % 26;
+    return alphabetLower[value];
+  } else if (alphabetUpper.includes(char)) {
+    const value = (alphabetUpper.indexOf(char) + shift) % 26;
+    return alphabetUpper[value];
+  } else {
+    return char;
+  }
+}
+
 // Given a character (char) and a shift value (shift),
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
