@@ -48,3 +48,5 @@ console.log(getAngleType(360)); // Output: "Full angle"
 console.log(getAngleType(30)); // Output: "Acute angle"
 console.log(getAngleType(270)); // Output: "Reflex angle"
 console.log(getAngleType(400)); // Output: "Unknown angle"
+
+//write tests here and ans then change the name od the  file to an .test.js file do it for implement week 3
