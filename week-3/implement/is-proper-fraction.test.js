@@ -72,3 +72,22 @@ isProperFraction(3, 0) → It should return an error because the denominator is 
 isProperFraction(-4, 7) → It's a proper fraction because the numerator is negative and its absolute value is less than the denominator. The test should return true.
 isProperFraction(3, 3) → This is not a proper fraction because the numerator and the denominator are equal. The test should return false.
 */
+test("Proper fraction with numerator less than denominator should return true", () => {
+  expect(isProperFraction(2, 3)).toBe(true);
+});
+
+test("Improper fraction with numerator greater than or equal to denominator should return false", () => {
+  expect(isProperFraction(5, 2)).toBe(false);
+});
+
+test("Zero denominator should return error message", () => {
+  expect(isProperFraction(3, 0)).toBe("Error: Denom cannot be 0");
+});
+
+test("Negative numerator less than denominator in absolute value should return true", () => {
+  expect(isProperFraction(-4, 7)).toBe(true);
+});
+
+test("Equal numerator and denominator should return false", () => {
+  expect(isProperFraction(3, 3)).toBe(false);
+});

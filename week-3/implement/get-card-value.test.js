@@ -45,9 +45,27 @@ function getCardValue(card) {
     }
   }
 }
-
+/*
 console.assert(getCardValue("5♠") === 7, "5 should return 5"); // i wanted to see assertion message
 console.assert(getCardValue("J♦") === 10, "J should return 10");
 console.assert(getCardValue("A♣") === 11, "A should return 11");
 
-console.assert(getCardValue("P♠"), new Error("Invalid card rank"));
+console.assert(getCardValue("P♠"), new Error("Invalid card rank"));  */
+
+test('Card value of "5♠" should return 5', () => {
+  expect(getCardValue("5♠")).toBe(5);
+});
+
+test('Card value of "J♦" should return 10', () => {
+  expect(getCardValue("J♦")).toBe(10);
+});
+
+test('Card value of "A♣" should return 11', () => {
+  expect(getCardValue("A♣")).toBe(11);
+});
+
+test("Invalid card rank should throw an Error", () => {
+  expect(() => {
+    getCardValue("P♠");
+  }).toThrow("Invalid card rank");
+});

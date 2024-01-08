@@ -50,3 +50,31 @@ console.log(getAngleType(270)); // Output: "Reflex angle"
 console.log(getAngleType(400)); // Output: "Unknown angle"
 
 //write tests here and ans then change the name od the  file to an .test.js file do it for implement week 3
+
+test('Angle of 90 should return "Right angle"', () => {
+  expect(getAngleType(90)).toBe("Right angle");
+});
+
+test('Angle of 45 should return "Acute angle"', () => {
+  expect(getAngleType(45)).toBe("Acute angle");
+});
+
+test('Angle of 120 should return "Obtuse angle"', () => {
+  expect(getAngleType(120)).toBe("Obtuse angle");
+});
+
+test('Angle of 180 should return "Straight angle"', () => {
+  expect(getAngleType(180)).toBe("Straight angle");
+});
+
+test('Angle of 270 should return "Reflex angle"', () => {
+  expect(getAngleType(270)).toBe("Reflex angle");
+});
+
+test('Angle of 360 should return "Full angle"', () => {
+  expect(getAngleType(360)).toBe("Full angle");
+});
+
+test('Angle of 400 should return "Unknown angle"', () => {
+  expect(getAngleType(400)).toBe("Unknown angle");
+});

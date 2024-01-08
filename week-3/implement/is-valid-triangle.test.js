@@ -63,3 +63,17 @@ console.assert(
   isValidTriangle(0, 3, 3) === false,
   "Zero side length is invalid"
 );
+
+//week 4
+
+test("Equilateral triangle is valid", () => {
+  expect(isValidTriangle(3, 3, 3)).toBe(true);
+});
+
+test("Sum of two sides not greater than the third side is invalid", () => {
+  expect(isValidTriangle(3, 3, 0)).toBe(false);
+});
+
+test("Zero side length is invalid", () => {
+  expect(isValidTriangle(0, 3, 3)).toBe(false);
+});
