@@ -29,3 +29,43 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+function getCardValue(card) {
+  const cardRank = card.slice(0, -1);
+
+  if (cardRank === "A") {
+    return 11;
+  } else if (cardRank === "K" || cardRank === "Q" || cardRank === "J") {
+    return 10;
+  } else {
+    if (!isNaN(cardRank)) {
+      return parseInt(cardRank); // returns integer numbers, remember parseFloat it was for float num
+    } else {
+      throw new Error("Invalid card rank");
+    }
+  }
+}
+/*
+console.assert(getCardValue("5♠") === 7, "5 should return 5"); // i wanted to see assertion message
+console.assert(getCardValue("J♦") === 10, "J should return 10");
+console.assert(getCardValue("A♣") === 11, "A should return 11");
+
+console.assert(getCardValue("P♠"), new Error("Invalid card rank"));  */
+
+test('Card value of "5♠" should return 5', () => {
+  expect(getCardValue("5♠")).toBe(5);
+});
+
+test('Card value of "J♦" should return 10', () => {
+  expect(getCardValue("J♦")).toBe(10);
+});
+
+test('Card value of "A♣" should return 11', () => {
+  expect(getCardValue("A♣")).toBe(11);
+});
+
+test("Invalid card rank should throw an Error", () => {
+  expect(() => {
+    getCardValue("P♠");
+  }).toThrow("Invalid card rank");
+});
