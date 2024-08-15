@@ -11,5 +11,15 @@
 // Implement a function that calculates the BMI of someone using their weight and height
 
 // Given someone's weight in kg and height in metres
-// When we call this function with the weight and height
-// Then it returns their Body Mass Index to 1 decimal place
+// Then when we call this function with the weight and height
+// It should return their Body Mass Index to 1 decimal place
+
+function bodyMassIndex(height, weight) {
+  const sum = weight / (height * height);
+  const roundSum = sum.toFixed(1);
+  return roundSum;
+}
+
+const test = bodyMassIndex(1.73, 70);
+
+console.log(test);
