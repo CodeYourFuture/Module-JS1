@@ -15,3 +15,12 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+
+function convertToUpperCaseCamelCase(inputStr){
+    return inputStr.replaceAll(" ","_").toUpperCase();
+}
+
+console.log(convertToUpperCaseCamelCase("lord of the rings"));             
+console.log(convertToUpperCaseCamelCase("the great gatsby"));         
+console.log(convertToUpperCaseCamelCase("the da vinci code"));         

@@ -3,7 +3,9 @@ const maximum = 100;
 
 const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
-// In this exercise, you will need to work out what num represents?
-// Try breaking down the expression and using documentation to explain what it means
-// It will help to think about the order in which expressions are evaluated
-// Try logging the value of num several times to build an idea of what the program is doing
+// math.random gives a value between 0 (inclusive) and 1 (exclusive).
+// max - min + 1 is 100, so a random number multiplied by 100 is between 0 (inclusive) and 100 (exclusive).
+// Adding +1 shifts the range to be between 1 and 101 (exclusive).
+// Math.floor rounds the number, so this function gives us a random whole number between 1 and 100 (inclusive).
+
+console.log(num);
