@@ -15,3 +15,17 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+const test1 = "lord of the rings";
+const test2 = "the great gatsby";
+const test3 = "the da vinci code";
+
+function upperSnakeCase(givenSentence) {
+  const replacedSentence = givenSentence.replaceAll(" ", "_");
+  const upperCasedSentence = replacedSentence.toUpperCase();
+  return upperCasedSentence;
+}
+
+console.log(upperSnakeCase(test1));
+console.log(upperSnakeCase(test2));
+console.log(upperSnakeCase(test3));

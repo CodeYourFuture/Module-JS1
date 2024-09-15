@@ -4,10 +4,13 @@
 // Play computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
   const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
 }
 
-console.log(decimalNumber);
+console.log(convertToPercentage(0.6));
+
+// because of the variable decimalNumber is declared inside the function we can not give another value to the function to see the percentage value
+
+// the variable is already declared as in the parameter section we dont need to give a value inside the function

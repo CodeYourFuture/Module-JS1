@@ -8,3 +8,16 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function priceWithVAT(basePrice) {
+  const totalPrice = basePrice * 1.2;
+  return `£${(Math.round(totalPrice * 100) / 100).toFixed(2)}`;
+}
+
+const test1 = 100;
+const test2 = 78344234;
+const test3 = 7.367;
+
+console.log(priceWithVAT(test1));
+console.log(priceWithVAT(test2));
+console.log(priceWithVAT(test3));
