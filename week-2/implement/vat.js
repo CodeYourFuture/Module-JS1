@@ -8,3 +8,11 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function priceWithVAT(price) {
+    let tax = 1.2;
+    newPrice = price * tax
+    return parseFloat(newPrice.toFixed(1));
+}
+
+// console.log(priceWithVAT(50));

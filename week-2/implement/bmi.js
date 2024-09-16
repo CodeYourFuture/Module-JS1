@@ -13,3 +13,15 @@
 // Given someone's weight in kg and height in metres
 // When we call this function with the weight and height
 // Then it returns their Body Mass Index to 1 decimal place
+
+
+
+
+function calculationOfBMI(height, weight){
+    // calculate bmi
+let bmi = weight / (height * height);
+
+// rounded BMI to 1 decimal place
+let roundedBMI = parseFloat(bmi.toFixed(1));
+    return roundedBMI;
+}

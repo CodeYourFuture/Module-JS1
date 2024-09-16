@@ -26,6 +26,7 @@ console.log(formatTimeDisplay(143));
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
+// =>The pad function will be called three times within the formatTimeDisplay function: once for hours, once for minutes, and once for seconds.
 
 // Call formatTimeDisplay with an input of 143, now answer the following:
 
