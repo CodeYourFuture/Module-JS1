@@ -14,7 +14,7 @@ console.log(result);
 // For the piece of code above, read the code and then answer the following questions
 
 // a) How many variable declarations are there in this program?
-
+there are seven variable  declared 
 // b) How many function calls are there?
 
 // c) Using documentation on MDN, explain what the expression movieLength % 60 represents
