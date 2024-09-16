@@ -15,3 +15,11 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+let string = "";
+function upperSnakeCase(string) {
+  const wordSplit = string.split(" ");
+  const wordToCapital = wordSplit.map((word) => word.toUpperCase());
+  const wordJoin = wordToCapital.join("_");
+  return wordJoin;
+}
+console.log(upperSnakeCase("nohe tekel mariyam"));
