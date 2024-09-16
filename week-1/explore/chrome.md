@@ -10,9 +10,15 @@ Let's try an example.
 In the Chrome console,
 invoke the function `alert` with an input string of `"Hello world!"`;
 
+
 What effect does calling the `alert` function have?
+// was unable to do this. it only worked when I used console.log.
 
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
+
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
+..........................
+
+// I was only able to use console.log

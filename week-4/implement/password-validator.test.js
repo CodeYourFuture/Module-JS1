@@ -14,3 +14,36 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
+
+
+
+function isPasswordValid(password, previousPasswords = []) {
+    if (password.length < 5) {
+      return false;
+    }
+    if (!/[A-Z]/.test(password)) {
+      return false;
+    }
+    if (!/[a-z]/.test(password)) {
+      return false;
+    }
+    if (!/\d/.test(password)) {
+      return false;
+    }
+    if (!/[!#$%.&*]/.test(password)) {
+      return false;
+    }
+    if (previousPasswords.includes(password)) {
+      return false;
+    }
+    return true;
+  }
+  
+  
+
+  test('returns true for a valid password meeting all criteria', () => {
+    const password = 'Secure123!';
+    const previousPasswords = ['WeakPassword1!', 'InsecurePass2'];
+    expect(isPasswordValid(password, previousPasswords)).toBe(true);
+  });
+    
