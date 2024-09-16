@@ -2,3 +2,8 @@
 
 const age = 33;
 age = age + 1;
+// you cannot re-assign const instead we can use: let.
+
+//let age = 33;
+//age = age + 1;
+
