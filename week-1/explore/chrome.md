@@ -12,7 +12,12 @@ invoke the function `alert` with an input string of `"Hello world!"`;
 
 What effect does calling the `alert` function have?
 
+The Alert function pops out message whenever the user logs on the website.
+
 Now try invoking the function `prompt` with a string input of `"What is your name?"` - store the return value of your call to `prompt` in an variable called `myName`.
 
 What effect does calling the `prompt` function have?
+The prompt function pops out the message whenever the user logs on the web page.
+
 What is the return value of `prompt`?
+The return vale of Prompt is the user's name.
