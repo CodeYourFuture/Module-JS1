@@ -1,3 +1,63 @@
+function isProperFraction(numerator, denominator){ 
+    if (denominator === 0)
+return 'Denominator cannot be zero';
+
+    if(numerator < denominator){
+return true ;
+}
+    else (numerator > denominator || numerator === denominator)
+return false;
+    }
+
+// Zero Denominator check: 3/0
+
+const zeroDenominatorOutput = isProperFraction(3, 0);
+console.assert(
+    zeroDenominatorOutput === 'Error, Denominator cannot be zero',' The denominator is zero, it is not a valid fraction')
+    
+
+// Proper Fraction check: 2/3
+
+const currentOutput =isProperFraction(2,3)
+const targetOutput = true;
+console.assert(
+    currentOutput === targetOutput, 
+     "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput,
+)
+// Improper Fraction check: 5/2
+
+const currentOutput2 =isProperFraction(5,2)
+const targetOutput2 = false;
+console.assert(
+    currentOutput2 === targetOutput2, 
+     "current output: %s, target output: %s",
+  currentOutput2,
+  targetOutput2,
+)
+// Negative Fraction check: -4,7
+
+const currentOutput3 =isProperFraction(-4,7)
+const targetOutput3 = true;
+console.assert(
+    currentOutput3 === targetOutput3, 
+     "current output: %s, target output: %s", 
+  currentOutput3,
+  targetOutput3,'The function should return true.'
+)
+// Equal Numerator and Denominator check: 3,3
+
+const currentOutput4 =isProperFraction(3,3)
+const targetOutput4 = false;
+console.assert(
+    currentOutput4 === targetOutput4, 
+     "current output: %s, target output: %s",
+  currentOutput4,
+  targetOutput4,
+)
+
+
 // You wil need to implement a function isProperFraction
 // You need to write assertions for your function to check it works in different cases
 
