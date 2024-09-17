@@ -29,3 +29,18 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+function getCardValue(cardValue) {
+  const numberCards = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  const faceCard = ["10", "J", "Q", "k"];
+  cardValue = cardValue[0];
+  if (numberCards.includes(cardValue)) {
+    return Number(cardValue);
+  } else if (faceCard.includes(cardValue)) {
+    return 10;
+  } else if (cardValue === "A") {
+    return 11;
+  } else return `please a valid card`;
+}
+console.log(getCardValue(5));
+
+// completed with Withe Elmira
