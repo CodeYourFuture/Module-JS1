@@ -38,3 +38,35 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+//....................................................................
+//Answer
+
+// we start with a function to check if three numbers can form a triangle
+function isValidTriangle(a, b, c) {
+    // here we are saying that sides should be greater than zero
+    if (a <= 0 || b <= 0 || c <= 0) {
+      return false;
+    }
+  
+    // then we need to check if the sum of any two sides is greater than the length of the third side for all possible combinations of sides
+    if (a + b > c && a + c > b && b + c > a) {
+      return true; //  this means it is  a valid triangle
+    } else {
+      return false; // It's not a valid triangle
+    }
+  }
+  
+  // Test examples
+  
+  // Test for (Invalid )Triangle
+  const testInvalidTriangle = isValidTriangle(2, 3, 6);
+  console.assert(testInvalidTriangle === false);
+  
+  // Test for Invalid Input: A side is less than or equal to zero
+  const testInvalidInput = isValidTriangle(0, 4, 5);
+  console.assert(testInvalidInput === false);
+  
+  // Test for a Valid Triangle
+  const testValidTriangle = isValidTriangle(3, 4, 5);
+  console.assert(testValidTriangle === true);
+  

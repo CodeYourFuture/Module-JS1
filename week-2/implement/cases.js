@@ -15,3 +15,22 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+//..........................................
+
+// ANSWER
+
+function convertToUpperCaseWithUnderscores(inputString) {
+
+    const words = inputString.split(" ");
+  
+    const upperCamelCaseString = words.map(word => word.toUpperCase()).join("_");
+  
+    return upperCamelCaseString;
+  }
+  
+  // Test cases
+  console.log(convertToUpperCaseWithUnderscores("lord of the rings")); 
+  console.log(convertToUpperCaseWithUnderscores("the great gatsby")); 
+  console.log(convertToUpperCaseWithUnderscores("the da vinci code")); 
+  
