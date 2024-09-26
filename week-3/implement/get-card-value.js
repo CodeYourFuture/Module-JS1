@@ -29,3 +29,34 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+function enterCards(card){
+    cardSlice = card.slice(0,1);
+   blackjack= cardSlice +"♠";
+   blackflower= cardSlice +"♣";
+   reddimond= cardSlice +"♦";
+   redheart= cardSlice +"♥";
+ 
+   if( card == "10♠" || card == "10♣" || card == "10♦" || card == "10♥"){
+    return 10;
+   }
+   if ((cardSlice == "J" || cardSlice == "Q" || cardSlice == "K")&&(card == blackjack || card == blackflower || card == reddimond || card == redheart) && (cardSlice != 1) 
+       )
+       {return 10;}
+    if(card == blackjack || card == blackflower || card == reddimond || card == redheart && cardSlice != 1){
+      
+        return card.slice(0,1);
+        
+    }
+    
+    if(card == "A♠" || card == "A♣" || card == "A♦" || card == "1A♥"){
+        return 11;
+       }
+    else{
+        return "Invalid card rank.";
+    }
+    }
+console.log(enterCards("J"));
+console.log(enterCards("J♠"));
+console.log(enterCards("10♣"));
+console.log(enterCards("2"));
+console.log(enterCards("11"));
