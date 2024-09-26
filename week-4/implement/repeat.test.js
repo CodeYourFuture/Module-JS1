@@ -23,3 +23,24 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+function repeatSth(str , num){
+if(num >= 1 ){
+   return str.repeat(num);
+}
+
+if(num == 0){
+    return "";
+}
+if(num <0 ||num != Number(num) ){
+    return "error";
+}
+}
+// console.log(repeatSth("hey", "3"))
+test("repeat a given string num times",function(){
+    const num = 3;
+    const str = "hey";
+    const currentOutput = repeatSth(str,num);
+    const targetOutput = "heyheyhey";
+    expect(currentOutput).toBe(targetOutput)
+   
+} )

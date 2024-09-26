@@ -15,3 +15,23 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+function countOccurrences(input, char) {
+    const num = input.split(char).length - 1 
+    if(num => 1)
+    return `${char} occurs ${num} times`;
+else{`${char} occurs 0 times`;
+
+}
+  }
+ 
+//   console.log(countOccurrences('aaaaa', 'a'));
+//   console.log(countOccurrences('aaaaa', 'b'));
+  test("count number of a in aaaaa", function () {
+    const input= 'aaaaa';
+    const char= 'a';
+    const currentOutput = countOccurrences(input , char);
+    const targetOutput = "a occurs 5 times";
+  
+    expect(currentOutput).toBe(targetOutput);
+
+});
