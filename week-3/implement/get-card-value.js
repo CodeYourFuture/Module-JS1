@@ -9,7 +9,7 @@
 // Given a card string in the format "A♠" (representing a card in blackjack),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
-
+function getCardValue() {}
 // Handle Number Cards (2-10):
 // Given a card with a rank between "2" and "10",
 // When the function is called with such a card,

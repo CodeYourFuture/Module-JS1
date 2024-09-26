@@ -12,19 +12,36 @@
 // It's also true that b + c > a
 // It's also true that a + c > b
 
-// In our function isValidTriangle, we need to return false for any triangle where the sum of any two sides is less than or equal to the length of the third side.
-// and we need to return true for any triangle where the sum of any two sides is greater than the length of the third side.
+// In our function isValidTriangle, we need to return false for any triangle where the sum of any two
+//..sides is less than or equal to the length of the third side.
+// and we need to return true for any triangle where the sum of any two sides is greater than the length
+//..of the third side.
 
 // Acceptance criteria:
 
 // Given the lengths of three sides of a triangle (a, b, c),
 // When the function isValidTriangle is called with these side lengths as input,
 // Then it should:
-
+function isValidTriangle(side1, side2, side3) {
+  if (
+    side1 + side2 <= side3 ||
+    side1 + side3 <= side2 ||
+    (side2 + side3 <= side1 && side1 <= 0) ||
+    side2 <= 0 ||
+    side3 <= 0
+  ) {
+    return "false";
+  } else {
+    return "turn";
+  }
+}
 // scenario: invalid triangle
 // Given the side lengths a, b, and c,
-// When the sum of any two side lengths is less than or equal to the length of the third side (i.e., a + b <= c, a + c <= b, b + c <= a),
-// Then it should return false because these conditions violate the Triangle Inequality, which states that the sum of the lengths of any two sides of a triangle must be greater than the length of the third side.
+// When the sum of any two side lengths is less than or equal to the length of the third side
+//.. (i.e., a + b <= c, a + c <= b, b + c <= a),
+// Then it should return false because these conditions violate the Triangle Inequality,
+//..which states that the sum of the lengths of any two sides of a triangle must be greater than the
+//..length of the third side.
 
 // scenario: invalid triangle
 // Check for Valid Input:
