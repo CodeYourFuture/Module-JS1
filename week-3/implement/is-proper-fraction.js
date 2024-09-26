@@ -33,3 +33,28 @@
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) {
+    throw new Error("Denominator cannot be zero");
+  } else {
+    if (Math.abs(numerator) < Math.abs(denominator)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+console.assert(isProperFraction(2, 3) === true, "Test 1");
+console.assert(isProperFraction(5, 2) === false, "Test 2");
+console.assert(isProperFraction(-4, 7) === true, "Test 3");
+console.assert(isProperFraction(3, 3) === false, "Test 4");
+console.assert(() => isProperFraction(3, 0), "Test 5");
+
+console.log(isProperFraction(-3, 1));
+console.log(isProperFraction(3, 11));
+console.log(isProperFraction(1, 1));
+console.log(isProperFraction(2, -21));
+console.log(isProperFraction(-31, -1));
+console.log(isProperFraction(-3, 0));

@@ -3,7 +3,6 @@ function isVowel(letter) {
     letter === "a" ||
     letter === "e" ||
     letter === "i" ||
-    letter === "i" ||
     letter === "o" ||
     letter === "u"
   );
@@ -11,7 +10,17 @@ function isVowel(letter) {
 
 // here is an implementation of isVowel - this function checks if a letter is a vowel
 
-console.log("case: letter a...");
+let letter = "a";
+
+console.log(
+  "It is " +
+    (isVowel(letter) ? "true" : "false") +
+    " that letter '" +
+    letter +
+    "' is a vowel."
+);
+
+// console.log("case: letter a...");
 const currentOutput = isVowel("a");
 const targetOutput = true;
 console.assert(
@@ -21,7 +30,17 @@ console.assert(
   targetOutput
 );
 
-console.log("case: letter e...");
+letter = "e";
+
+console.log(
+  "It is " +
+    (isVowel(letter) ? "true" : "false") +
+    " that letter '" +
+    letter +
+    "' is a vowel."
+);
+
+// console.log("case: letter e...");
 const currentOutput2 = isVowel("e");
 const targetOutput2 = true;
 console.assert(
@@ -31,7 +50,17 @@ console.assert(
   targetOutput2
 );
 
-console.log("case: letter k...");
+letter = "k";
+
+console.log(
+  "It is " +
+    (isVowel(letter) ? "true" : "false") +
+    " that letter '" +
+    letter +
+    "' is a vowel."
+);
+
+// console.log("case: letter k...");
 const currentOutput3 = isVowel("k");
 const targetOutput3 = false;
 console.assert(
