@@ -1,5 +1,7 @@
 // Implement a function repeat
 
+const { default: expect } = require("expect");
+
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
 // Then it should:
@@ -23,3 +25,24 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+function repeatString(str, num) {
+  if (num < 0) {
+    return "negative count is not valid";
+  }
+  let repeatedString = str.repeat(num);
+  if (num === 0) {
+    return "";
+  }
+  if (num === 1) {
+    return str;
+  } else return repeatedString;
+}
+
+test("Check if the string is being repeated correctly", function () {
+  expect(repeatString("Ali", 2)).toBe("AliAli");
+  expect(repeatString("Ali", 5)).toBe("AliAliAliAliAli");
+  expect(repeatString("Ali", 0)).toBe("");
+  expect(repeatString("Ali", 1)).toBe("Ali");
+  expect(repeatString("Ali", -2)).toBe("negative count is not valid");
+});
