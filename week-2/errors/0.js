@@ -7,3 +7,4 @@ function capitalise(str) {
   let str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
+/*"str" has already been declared, you don't need to use the key word "let".*/

@@ -11,3 +11,14 @@ function convertToPercentage(decimalNumber) {
 }
 
 console.log(decimalNumber);
+
+/*We need to erase the declaration for the variable inside the function because leads a conflict between the
+parameter and the value of the variable, resulting a syntaxis error. If we want to declare a variable we
+must have to do it outside of the function, or we can rewrite the code as followeing:
+
+function convertToPercentage (decimalNumber) {
+decimalNumber = `${decimalNumber * 100}%`;
+return decimalNumber;
+}
+cosnt decimalNumber = 0.5;
+console.log(convertToPercentage(decimalNumber))*/
