@@ -16,21 +16,66 @@
 // Given a lowercase letter character (char) and a positive integer shift,
 // When the function is called with these inputs,
 // Then it should rotate the lowercase letter by shift positions within the lowercase alphabet, wrapping around if necessary, and return the rotated lowercase letter as a string.
+
+function rotateCharacter(char, shift) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const rotatedIndex = (alphabet.indexOf(char) + shift) % 26;
+
+  return alphabet[rotatedIndex];
+}
+
 console.log(rotateCharacter("a", 3)); // Output: "d"
 console.log(rotateCharacter("f", 1)); // Output: "g"
+console.log(rotateCharacter("x", 5)); // Output: "c"
+console.log(rotateCharacter("z", 10)); // Output: "j"
+
+/* for me : When indexOf(char) is 2 (representing 'c' in the alphabet) and shift is 5:
+
+indexOf(char) + shift equals 2 + 5 = 7.
+The modulo operation 7 % 26 results in 7.
+Counting seven positions from the starting point (index 0), it refers to the character at index 7 within the alphabet.*/
 
 // Scenario: Rotate Uppercase Letters:
 // Given an uppercase letter character (char) and a positive integer shift,
 // When the function is called with these inputs,
 // Then it should rotate the uppercase letter by shift positions within the uppercase alphabet, wrapping around if necessary, and return the rotated uppercase letter as a string.
-console.log(rotateCharacter("A", 3)); // Output: "D"
-console.log(rotateCharacter("F", 1)); // Output: "G"
+
+// The function takes a character (char) and a shift value (shift)
+
+// 1 Check if the character is in the lowercase alphabet
+// 2 Find the index of the character in the lowercase alphabet
+//  3 Calculate the new index after rotation
+// 4 Return the rotated character
+// 5 Check if the character is in the uppercase alphabet
+// 6 Calculate the new index after rotation
+// 7 Return the rotated character
+// 8 If the character is not a letter, return it unchanged
+
+function rotateCharacter(char, shift) {
+  const lowercaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  const uppercaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  if (lowercaseAlphabet.includes(char)) {
+    // if  lowercase letter
+    const rotatedIndex = (lowercaseAlphabet.indexOf(char) + shift) % 26; // read for me comment
+    return lowercaseAlphabet[rotatedIndex];
+  } else if (uppercaseAlphabet.includes(char)) {
+    const rotatedIndex = (uppercaseAlphabet.indexOf(char) + shift) % 26; // same for upperAlphabet
+    return uppercaseAlphabet[rotatedIndex];
+  } else {
+    return char; // (non-letter remains unchanged)
+  }
+}
+console.log(rotateCharacter("a", 3)); // Output: "d" (rotate 'a' by 3 positions in the lowercase)
+console.log(rotateCharacter("F", 1)); // Output: "G" (rotate 'F' by 1 position in the uppercase)
+console.log(rotateCharacter("?", 5)); // Output: "?" (non-letter remains unchanged)
 
 // Scenario: Leave Non-Letter Characters Unchanged:
 // Given a character (char) that is not a letter (neither uppercase nor lowercase) and any positive or negative shift value,
 // When the function is called with these inputs,
 // Then it should return the character unchanged.
 // This specification outlines the behavior of the rotateCharacter function for different input scenarios, including valid and invalid characters, and defines the expected output or action for each case.
+
 console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 
 // Scenario: Shifting a Character with Wraparound
@@ -39,4 +84,7 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // When the rotateCharacter function is called with char and shift as inputs,
 // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
+
 console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
+
+// I worked on this exercise very much but now understand it
