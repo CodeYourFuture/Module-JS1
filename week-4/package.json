@@ -1,0 +1,9 @@
+{
+  "description": "JS-1 Week 4 Exercises",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
