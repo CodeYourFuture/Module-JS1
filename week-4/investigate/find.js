@@ -20,6 +20,10 @@ console.log(find("code your future", "z"));
 // Pay particular attention to the following:
 
 // a) How the index variable updates during the call to find
+//Ans: when we call a function the copy of variable index passed through the function and changes made to the parameter value.
 // b) What is the if statement used to check
+//Ans: The if statement checks if the string of index has those character return the index.
 // c) Why is index++ being used?
+//Ans; To increase the index value by one each time. as like this index = index + 1; 
 // d) What is the condition index < str.length used for?
+//Ans ; here while loop is used to insure to continous if the string index is less then 0 .
