@@ -11,3 +11,6 @@ function convertToPercentage(decimalNumber) {
 }
 
 console.log(decimalNumber);
+ // you can't declare constant with the same name as a parameter within the same scope
+ // decimalNumber is not defined. 
+ // value  numbers should not take string 
