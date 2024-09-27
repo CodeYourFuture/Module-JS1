@@ -1,6 +1,13 @@
 function formatAs12HourClock(time) {
-  if (Number(time.slice(0, 2)) > 12) {
-    return `${Number(time.slice(0, 2)) - 12}:00 pm`;
+  let hours = time.slice(0, 2);
+  let numberHours = Number(hours);
+  let hourCalculation = numberHours - 12;
+  let strHour = String(hourCalculation);
+  let finalHour = strHour.padStart(2, 0);
+  let minutes = time.slice(3);
+
+  if (numberHours > 12) {
+    return `${finalHour}:${minutes} pm`;
   }
   return `${time} am`;
 }
@@ -26,5 +33,16 @@ console.assert(
 // formatAs12HourClock currently has a 🐛
 
 // a) Write an assertion to check the return value of formatAs12HourClock when it is called with an input "17:42"
+
+const currentOutput3 = formatAs12HourClock("17:42");
+const targetOutput3 = "05:42 pm";
+console.assert(
+  currentOutput3 === targetOutput3,
+  "current output: %s, target output: %s",
+  currentOutput3,
+  targetOutput3
+);
 // b) Check the assertion output and explain what the bug is
+//The current output is "5:00 pm" while target output is supposed to be "05:42 pm"
 // c) Now fix the bug and re-run all your assertions
+//

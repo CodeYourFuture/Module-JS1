@@ -33,3 +33,63 @@
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+function isProperFraction(numerator, denominator) {
+  if (denominator === 0) {
+    return "Error";
+  } else if (numerator > denominator) {
+    return "false";
+  } else if (numerator < denominator) {
+    return "true";
+  } else if (numerator < 0 && denominator > 0) {
+    return "true";
+  } else if (numerator === denominator) {
+    return "false";
+  }
+}
+
+const currentOutput = isProperFraction(2, 5);
+const targetOutput = "true";
+console.assert(
+  currentOutput === targetOutput,
+  "current output: %s, target output: %s",
+  currentOutput,
+  targetOutput
+);
+
+const currentOutput2 = isProperFraction(4, 2);
+const targetOutput2 = "false";
+console.assert(
+  currentOutput2 === targetOutput2,
+  "current output: %s, target output: %s",
+  currentOutput2,
+  targetOutput2
+);
+
+const currentOutput3 = isProperFraction(3, 3);
+const targetOutput3 = "false";
+console.assert(
+  currentOutput3 === targetOutput3,
+  "current output: %s, target output: %s",
+  currentOutput3,
+  targetOutput3
+);
+
+const currentOutput4 = isProperFraction(3, 0);
+const targetOutput4 = "Error";
+console.assert(
+  currentOutput4 === targetOutput4,
+  "current output: %s, target output: %s",
+  currentOutput4,
+  targetOutput4
+);
+
+const currentOutput5 = isProperFraction(-5, 4);
+const targetOutput5 = "true";
+console.assert(
+  currentOutput5 === targetOutput5,
+  "current output: %s, target output: %s",
+  currentOutput5,
+  targetOutput5
+);
+
