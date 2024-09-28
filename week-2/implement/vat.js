@@ -8,3 +8,9 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function totalPriceWithVAT(num) {
+  return `The total price with VAT added is: £${num * 1.2}`;
+}
+
+console.log(totalPriceWithVAT(1000000));
