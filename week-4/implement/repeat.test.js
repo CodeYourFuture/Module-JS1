@@ -23,3 +23,42 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+function repeatString(str, count) {
+  if (count < 0) {
+    throw Error("Negative counts are not valid..");
+  }
+  let index = 1;
+  let output = "";
+
+  while (index <= count) {
+    output = `${output}${str}`;
+    // output = output + str; another way
+    index++;
+  }
+  return output;
+}
+
+test("works for case: repeat String", function () {
+  expect(repeatString("hey", 3)).toBe("heyheyhey");
+});
+
+test("works case: handle count of 1", function () {
+  expect(repeatString("hey", 1)).toBe("hey");
+});
+
+test("works case: handle count of 0", function () {
+  expect(repeatString("hey", 0)).toBe("");
+});
+
+test("works case: negative count", function () {
+  const targetOutput = "Negative counts are not valid..";
+  const str = "hey";
+  const count = -3;
+
+  const f = function () {
+    repeatString(str, count);
+  };
+
+  expect(f).toThrow(targetOutput);
+});

@@ -15,3 +15,29 @@
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+function countChar(char, str){
+
+    let count = 0;
+    let index = 0;
+
+    while (index < str.length){
+        if (char === str[index]){
+            count++;
+        } 
+        index++;
+    }
+    return count;
+}
+
+test("works for multiple occurrences", function () {
+  expect(countChar("a", "aaaaa")).toBe(5);
+
+});
+
+
+test("works for no occurrences", function () {
+  expect(countChar("b", "aaaaa")).toBe(0);
+  expect(countChar("B", "aaaa")).toBe(0);
+
+});

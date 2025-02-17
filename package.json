@@ -1,0 +1,12 @@
+{
+
+   "name": "week-4",
+  "description": "",
+  "scripts": {
+    "test": "jest"
+  },
+
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
